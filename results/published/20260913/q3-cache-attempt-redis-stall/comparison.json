@@ -1,0 +1,385 @@
+{
+  "schema": "dpl.load-comparison.v1",
+  "status": "invalid",
+  "runs": [
+    {
+      "repetition": 1,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/1-AB-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 1,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 6.017505911740217,
+            "medMs": 4.8302,
+            "p95Ms": 14.2753,
+            "p99Ms": 25.5136,
+            "minMs": 1.1845,
+            "maxMs": 80.9765,
+            "count": 1201
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 14.2753
+    },
+    {
+      "repetition": 1,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/1-AB-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 1,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 6.212994088259776,
+            "medMs": 4.7221,
+            "p95Ms": 15.0449,
+            "p99Ms": 26.6947,
+            "minMs": 0.6946,
+            "maxMs": 90.5513,
+            "count": 1201
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 15.0449
+    },
+    {
+      "repetition": 2,
+      "order": "BA",
+      "arm": "cache-on",
+      "summaryFile": "runs/2-BA-cache-on.summary.json",
+      "invalidReason": "\u0027runs/2-BA-cache-on.summary.json\u0027: k6 exited 99; its own thresholds did not hold.",
+      "warmupExitCode": 0,
+      "measuredExitCode": 99,
+      "isValid": false,
+      "p95Ms": null
+    },
+    {
+      "repetition": 2,
+      "order": "BA",
+      "arm": "cache-off",
+      "summaryFile": "runs/2-BA-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 2,
+        "order": "BA",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1200,
+          "httpReqs": 1200,
+          "httpReqFailed": 0,
+          "checksTotal": 10800,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 4.8426681666666616,
+            "medMs": 3.7522,
+            "p95Ms": 10.976405,
+            "p99Ms": 19.614526,
+            "minMs": 1.247,
+            "maxMs": 85.1702,
+            "count": 1200
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 10.976405
+    },
+    {
+      "repetition": 3,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/3-AB-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 3,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 3.3960373022481276,
+            "medMs": 2.5222,
+            "p95Ms": 6.8132,
+            "p99Ms": 16.8923,
+            "minMs": 0.5122,
+            "maxMs": 54.0964,
+            "count": 1201
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 6.8132
+    },
+    {
+      "repetition": 3,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/3-AB-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 3,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 5.941116652789338,
+            "medMs": 4.6458,
+            "p95Ms": 13.7921,
+            "p99Ms": 32.1267,
+            "minMs": 0.6314,
+            "maxMs": 78.4252,
+            "count": 1201
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 13.7921
+    },
+    {
+      "repetition": 4,
+      "order": "BA",
+      "arm": "cache-on",
+      "summaryFile": "runs/4-BA-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 4,
+        "order": "BA",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 8.273222897585335,
+            "medMs": 6.7375,
+            "p95Ms": 18.8567,
+            "p99Ms": 36.3753,
+            "minMs": 0.6694,
+            "maxMs": 86.5242,
+            "count": 1201
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 18.8567
+    },
+    {
+      "repetition": 4,
+      "order": "BA",
+      "arm": "cache-off",
+      "summaryFile": "runs/4-BA-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 4,
+        "order": "BA",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 3.6422492922564547,
+            "medMs": 2.6718,
+            "p95Ms": 7.6677,
+            "p99Ms": 18.8661,
+            "minMs": 0.6394,
+            "maxMs": 52.6401,
+            "count": 1201
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 7.6677
+    },
+    {
+      "repetition": 5,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/5-AB-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 5,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 4.451172189841802,
+            "medMs": 3.7182,
+            "p95Ms": 9.4255,
+            "p99Ms": 16.2273,
+            "minMs": 0,
+            "maxMs": 49.8621,
+            "count": 1201
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 9.4255
+    },
+    {
+      "repetition": 5,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/5-AB-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 5,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 6.1173481265611995,
+            "medMs": 4.6924,
+            "p95Ms": 15.0977,
+            "p99Ms": 29.9748,
+            "minMs": 0.7886,
+            "maxMs": 68.9215,
+            "count": 1201
+          }
+        }
+      },
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "isValid": true,
+      "p95Ms": 15.0977
+    }
+  ],
+  "arms": [
+    {
+      "arm": "cache-off",
+      "runCount": 5,
+      "validRunCount": 5,
+      "totalRequests": 6004,
+      "medianOfRunP95Ms": 9.4255,
+      "minRunP95Ms": 6.8132,
+      "maxRunP95Ms": 14.2753,
+      "medianOfRunMedianMs": 3.7182
+    },
+    {
+      "arm": "cache-on",
+      "runCount": 5,
+      "validRunCount": 4,
+      "totalRequests": 4804,
+      "medianOfRunP95Ms": 15.0449,
+      "minRunP95Ms": 13.7921,
+      "maxRunP95Ms": 18.8567,
+      "medianOfRunMedianMs": 4.6924
+    }
+  ],
+  "invalidReasons": [
+    "\u0027runs/2-BA-cache-on.summary.json\u0027: k6 exited 99; its own thresholds did not hold.",
+    "the arms have different valid run counts; the comparison is unbalanced. cache-off=5, cache-on=4"
+  ]
+}

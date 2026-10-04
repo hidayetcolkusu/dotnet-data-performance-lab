@@ -1,0 +1,2 @@
+Job 6b79f85a-80d5-4912-9718-4d35c37b6053 status=CompletedWithErrors total=3 inserted=2 skipped=0 rejected=1
+Wrote report.json, rejected-rows.csv to results/local/import-final/reports/5-resumed

@@ -1,0 +1,65 @@
+{
+  "schema": "dpl.load-run-index.v1",
+  "runs": [
+    {
+      "repetition": 1,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/1-AB-cache-off.summary.json"
+    },
+    {
+      "repetition": 1,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/1-AB-cache-on.summary.json"
+    },
+    {
+      "repetition": 2,
+      "order": "BA",
+      "arm": "cache-on",
+      "summaryFile": "runs/2-BA-cache-on.summary.json"
+    },
+    {
+      "repetition": 2,
+      "order": "BA",
+      "arm": "cache-off",
+      "summaryFile": "runs/2-BA-cache-off.summary.json"
+    },
+    {
+      "repetition": 3,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/3-AB-cache-off.summary.json"
+    },
+    {
+      "repetition": 3,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/3-AB-cache-on.summary.json"
+    },
+    {
+      "repetition": 4,
+      "order": "BA",
+      "arm": "cache-on",
+      "summaryFile": "runs/4-BA-cache-on.summary.json"
+    },
+    {
+      "repetition": 4,
+      "order": "BA",
+      "arm": "cache-off",
+      "summaryFile": "runs/4-BA-cache-off.summary.json"
+    },
+    {
+      "repetition": 5,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/5-AB-cache-off.summary.json"
+    },
+    {
+      "repetition": 5,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/5-AB-cache-on.summary.json"
+    }
+  ]
+}

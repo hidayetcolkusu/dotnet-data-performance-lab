@@ -1,0 +1,46 @@
+{
+  "runId": "20260911T165919Z",
+  "experiment": "query-index",
+  "status": "completed",
+  "startedAtUtc": "2026-09-11T16:59:19.4471661Z",
+  "completedAtUtc": "2026-09-11T16:59:28.3236072Z",
+  "database": "DataPerformanceLab_Experiment",
+  "git": {
+    "commitSha": "4d22206264039ce4d8ad8e7407d1497836a7b2c0",
+    "isDirty": false
+  },
+  "environment": {
+    "operatingSystem": "Microsoft Windows 10.0.26200",
+    "architecture": "X64",
+    "processorCount": 32,
+    "runtimeVersion": ".NET 10.0.11",
+    "workingSetLimitBytes": 33342455808
+  },
+  "dataset": {
+    "seed": 20260910,
+    "generatorVersion": 1,
+    "profile": "default",
+    "productCount": 100000,
+    "dataHash": "DC7DE2FF4977DE5FD927CFA575794FED422B7D96A6F0103D16C5ACE8AED632C3"
+  },
+  "parameters": {
+    "experiment": "Index",
+    "categoryId": "20",
+    "pageSize": "50",
+    "warmupPerVariant": "5",
+    "rounds": "5",
+    "samplesPerRoundPerVariant": "20",
+    "roundOrder": "AB/BA/AB/BA/AB",
+    "indexStateBeforeRun": "present"
+  },
+  "resultFiles": [
+    "query-samples.json",
+    "index-cat20-IndexAbsent.sqlplan",
+    "index-cat20-IndexAbsent.sql",
+    "index-cat20-IndexAbsent.txt",
+    "index-cat20-IndexPresent.sqlplan",
+    "index-cat20-IndexPresent.sql",
+    "index-cat20-IndexPresent.txt"
+  ],
+  "command": "dpl query --experiment index --category 20 --output results\\published\\20260911\\q1-cat20"
+}

@@ -1,0 +1,3 @@
+Job 5a3ddd40-50ca-4953-8988-3b0c5978db5b was already staged; continued from its stored checkpoint.
+  status=CompletedWithErrors total=9 inserted=2 skipped=0 rejected=7 checkpoint=9
+  7 record(s) were rejected. Run: dpl report --job-id 5a3ddd40-50ca-4953-8988-3b0c5978db5b --output <directory>

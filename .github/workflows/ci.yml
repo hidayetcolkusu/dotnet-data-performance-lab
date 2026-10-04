@@ -1,0 +1,284 @@
+name: ci
+
+# What CI proves: the repository restores from a locked graph, builds, and passes every
+# correctness test against real SQL Server and Redis — plus a short k6 check that the API
+# serves the seeded catalog correctly.
+#
+# What CI deliberately does NOT do: gate on performance. A shared GitHub runner makes no
+# promise about timing, so a latency threshold there would be noise dressed as a result.
+# The cache off/on comparison is run locally and published with its manifest.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DOTNET_NOLOGO: 'true'
+  DOTNET_CLI_TELEMETRY_OPTOUT: 'true'
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 'true'
+  # Pinned by digest, not 'latest' and not a bare tag: the same k6 version the published local
+  # comparison was measured with (results/published/**/manifest.json records k6 v2.2.0). A tag can
+  # be moved; a digest cannot, so a green run stays reproducible. The version is asserted below as
+  # well, which is what makes a future digest bump visible instead of silent.
+  # Resolved and verified 2026-09-12: grafana/k6:2.2.0 reports "k6 v2.2.0 (commit/00a9a1b7f5)".
+  K6_IMAGE: 'grafana/k6@sha256:9bd01d6941fca969cb61bb57d2da5ee9b385fe2aa8881df3798c196564d6ace6'
+  K6_EXPECTED_VERSION: 'v2.2.0'
+
+jobs:
+  build-and-test:
+    # A named image, not ubuntu-latest: the label moves to a new Ubuntu release on GitHub's
+    # schedule, which would change the runner under an otherwise identical commit.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Pinned by global.json (rollForward: disable), so CI compiles with the same SDK
+      # a local clean checkout does.
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Report toolchain
+        run: |
+          dotnet --version
+          docker version --format 'docker {{.Server.Version}}'
+
+      # Docker must be present. The integration fixtures fail loudly rather than skipping
+      # when it is not, so this is a fast, explicit check rather than the safety net.
+      # It asks the daemon directly instead of running an unpinned hello-world image: the
+      # question is "is the engine up", not "can we pull a floating tag from Docker Hub".
+      - name: Require a working Docker engine
+        run: |
+          set -euo pipefail
+          docker info --format '{{.ServerVersion}}'
+          # Proves the daemon actually serves work, still without pulling any image.
+          docker image ls > /dev/null
+
+      - name: Restore (locked)
+        run: dotnet restore --locked-mode
+
+      - name: Build (Release)
+        run: dotnet build -c Release --no-restore
+
+      - name: Unit tests
+        run: >
+          dotnet test tests/Lab.UnitTests -c Release --no-build
+          --logger "trx;LogFileName=unit.trx"
+          --results-directory artifacts/test-results
+
+      # Testcontainers starts SQL Server and Redis and waits on their own readiness probes;
+      # nothing here sleeps for a fixed time. Each test creates its own database and cache
+      # namespace, and the xUnit collections keep shared-database tests off parallel threads.
+      - name: Integration tests (real SQL Server + Redis)
+        run: >
+          dotnet test tests/Lab.IntegrationTests -c Release --no-build
+          --logger "trx;LogFileName=integration.trx"
+          --results-directory artifacts/test-results
+
+      # ---------------------------------------------------------------------------------
+      # Correctness smoke against a running API. Not a benchmark.
+      # ---------------------------------------------------------------------------------
+
+      - name: Start lab containers
+        run: |
+          cp .env.example .env
+          docker compose up -d --wait
+          docker compose ps
+
+      - name: Migrate and seed the CI profile
+        env:
+          # Synthetic, local-only container credential; the same value .env.example ships.
+          # There is no real data and no reachable service behind it.
+          MSSQL_SA_PASSWORD: Lab_Local_2026!
+          DOTNET_ENVIRONMENT: Development
+        run: |
+          dotnet run --project src/Lab.Cli -c Release --no-build -- db migrate
+          dotnet run --project src/Lab.Cli -c Release --no-build -- seed --profile ci
+          dotnet run --project src/Lab.Cli -c Release --no-build -- fixture \
+            --output artifacts/ci-fixture.json --count 200
+
+      - name: Start the API
+        env:
+          MSSQL_SA_PASSWORD: Lab_Local_2026!
+          ASPNETCORE_ENVIRONMENT: Development
+          ASPNETCORE_URLS: http://127.0.0.1:8080
+          Cache__Enabled: 'true'
+          Cache__InstanceId: ci
+        run: |
+          mkdir -p artifacts
+          nohup dotnet src/Lab.Api/bin/Release/net*/Lab.Api.dll > artifacts/api.log 2>&1 &
+          echo $! > artifacts/api.pid
+          # Poll readiness instead of sleeping: the API is ready when it says so.
+          for i in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:8080/health/ready > /dev/null 2>&1; then
+              echo "API ready after ${i}s"; exit 0
+            fi
+            if ! kill -0 "$(cat artifacts/api.pid)" 2>/dev/null; then
+              echo "API exited before becoming ready:"; cat artifacts/api.log; exit 1
+            fi
+            sleep 1
+          done
+          echo "API did not become ready in 60s:"; cat artifacts/api.log; exit 1
+
+      # k6 via its official image rather than an apt repository: fewer moving parts, and the
+      # version is pinned and asserted rather than merely logged.
+      - name: Pull and verify the pinned k6 image
+        run: |
+          set -euo pipefail
+          docker pull "$K6_IMAGE"
+          # Record the reference the run actually used, next to the summary it produced.
+          mkdir -p artifacts
+          printf '%s\n' "$K6_IMAGE" | tee artifacts/k6-image-digest.txt
+          reported=$(docker run --rm "$K6_IMAGE" version)
+          echo "$reported"
+          case "$reported" in
+            *"$K6_EXPECTED_VERSION"*) echo "k6 version matches the pin" ;;
+            *) echo "::error::Expected k6 $K6_EXPECTED_VERSION but the image reports: $reported"
+               exit 1 ;;
+          esac
+
+      # Two mounts on purpose: the source tree read-only at /repo, and the artifacts directory
+      # writable at /out. handleSummary writes to /out — pointing it inside the read-only mount
+      # is how the summary used to fail to appear while the step still reported success.
+      # k6 runs as the runner's own uid so upload-artifact can read what it wrote.
+      #
+      # --network host reaches the API on 127.0.0.1 because this is a Linux runner. On Docker
+      # Desktop (macOS/Windows) that does not work; use --add-host=host.docker.internal:host-gateway
+      # and BASE_URL=http://host.docker.internal:8080 to run the equivalent locally.
+      - name: k6 correctness smoke
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts
+          docker run --rm --network host \
+            --user "$(id -u):$(id -g)" \
+            -v "$PWD:/repo:ro" \
+            -v "$PWD/artifacts:/out" \
+            "$K6_IMAGE" run \
+            -e BASE_URL=http://127.0.0.1:8080 \
+            -e FIXTURE=/out/ci-fixture.json \
+            -e SMOKE_ITERATIONS=100 \
+            -e SUMMARY_OUT=/out/smoke-summary.json \
+            /repo/experiments/k6/smoke.js
+          # handleSummary failing silently used to be indistinguishable from a passing smoke,
+          # so the summary's existence and parseability are now part of the gate.
+          test -s artifacts/smoke-summary.json
+          python3 -c 'import json; json.load(open("artifacts/smoke-summary.json"))'
+          echo "smoke summary written and parses on the host"
+
+      - name: Stop the API
+        if: always()
+        run: |
+          if [ -f artifacts/api.pid ]; then kill "$(cat artifacts/api.pid)" 2>/dev/null || true; fi
+
+      # Uploaded on failure too: a red run is exactly when the reports are needed. Only the
+      # small artifacts — raw benchmark streams are local-only and are never produced here.
+      - name: Upload test reports and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-reports
+          path: |
+            artifacts/test-results/**
+            artifacts/api.log
+            artifacts/smoke-summary.json
+            artifacts/k6-image-digest.txt
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Tear down containers
+        if: always()
+        run: docker compose down -v
+
+  hygiene:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Local secrets and generated results must be ignored, while the files a
+      # reader needs to reproduce a run must stay tracked.
+      - name: Ignore rules cover local secrets and generated results
+        run: |
+          set -e
+          for path in .env data/generated/catalog.csv results/local/run.json; do
+            if ! git check-ignore -q "$path"; then
+              echo "::error::'$path' is NOT ignored but must be."; exit 1
+            fi
+            echo "ignored: $path"
+          done
+          for path in .env.example compose.yaml global.json; do
+            if git check-ignore -q "$path"; then
+              echo "::error::'$path' is ignored but must stay tracked."; exit 1
+            fi
+            echo "tracked: $path"
+          done
+
+      - name: No secrets or local absolute paths in tracked files
+        run: |
+          set -e
+          # Scans tracked files only, and prints just the offending path and rule — never
+          # the file contents or the environment.
+          #
+          # The exclusions belong on `git ls-files`, not on `grep`: passed to grep they are read as
+          # filenames to search rather than as pathspecs, so the exemptions silently did nothing and
+          # the check was stricter than it documented.
+          #
+          # Exempt: prose (docs/**, *.md), where a path is an example rather than a leak; published
+          # source-diff copies, which duplicate files this scan already reads in place; and the
+          # frozen 20260911 k6 banners. k6 echoes the script and output paths it was invoked with
+          # into its own log; the 20260911 runs predate compare-cache.ps1 handing k6 repo-relative
+          # paths (scripts/compare-cache.ps1:44) and are published untouched (results/published/
+          # 20260913/source-diff/README.md), so only those banners are exempt. Later runs are
+          # generated relative and stay scanned, so an absolute-path regression still fails.
+          offenders=$(git ls-files -z -- ':!docs/**' ':!*.md' ':!results/published/**/source-diff/**' \
+              ':!results/published/20260911/**/*.k6.log' ':!results/published/20260911/**/*.warmup.log' \
+              | xargs -0 grep -lIE 'C:\\Users\\|/home/[a-z0-9_-]+/|/Users/[a-z0-9_-]+/' 2>/dev/null || true)
+          if [ -n "$offenders" ]; then
+            echo "::error::A tracked file contains a local absolute user path:"
+            echo "$offenders"
+            exit 1
+          fi
+          # Literal connection material. '{' is excluded so an interpolated template such as
+          # Pass''word={ResolvePassword()} — which contains no secret — is not a match at all.
+          # The needles are split with '' (adjacent shell-quoted strings concatenate) so this
+          # file does not contain the literals it searches for. Without that the scanner
+          # matches itself and the hygiene job fails on every run.
+          # results/published/**/source-diff/** is excluded: it is a verbatim copy of source files
+          # that this same scan already reads in their real locations, so scanning the copy adds
+          # nothing — and a diff of this very file would reintroduce the unsplit needles above and
+          # fail the job. A credential that exists only in a published diff of files that do not
+          # contain it is not a coherent scenario.
+          matches=$(git ls-files -z -- ':!results/published/**/source-diff/**' \
+              | xargs -0 grep -lIE \
+              'Pass''word=[^;${]|User'' ID=[^;${]|Account''Key=|BEGIN [A-Z ]*PRIVATE KEY' || true)
+          # The only permitted literal: EF's design-time factory, which needs a syntactically
+          # valid string it never connects with. Allowlisted by path, so a NEW file carrying a
+          # real credential still fails this check.
+          unexpected=$(echo "$matches" | grep -v '^$' \
+              | grep -vxF 'src/Lab.Core/Data/LabDbContextDesignTimeFactory.cs' || true)
+          if [ -n "$unexpected" ]; then
+            echo "::error::Tracked files contain connection material:"; echo "$unexpected"; exit 1
+          fi
+          echo "no unexpected secrets or local paths in tracked files"
+
+      - name: SQL samples carry no connection information
+        run: |
+          set -e
+          if git ls-files -z -- '*.sql' '*.sqlplan' | xargs -0 -r grep -lIE \
+              'Password|User ID|Data Source=|Server=' | grep -q .; then
+            echo "::error::A tracked SQL file contains connection information."; exit 1
+          fi
+          echo "SQL samples are clean"

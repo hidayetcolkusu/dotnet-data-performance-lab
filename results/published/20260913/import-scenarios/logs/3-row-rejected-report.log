@@ -1,0 +1,2 @@
+Job 5a3ddd40-50ca-4953-8988-3b0c5978db5b status=CompletedWithErrors total=9 inserted=2 skipped=0 rejected=7
+Wrote report.json, rejected-rows.csv to results/local/import-final/reports/3-row-rejected

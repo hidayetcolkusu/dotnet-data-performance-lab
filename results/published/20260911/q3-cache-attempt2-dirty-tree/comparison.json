@@ -1,0 +1,389 @@
+{
+  "schema": "dpl.load-comparison.v1",
+  "status": "valid",
+  "runs": [
+    {
+      "repetition": 1,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/1-AB-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 1,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 1.7048472106577857,
+            "medMs": 1.6135,
+            "p95Ms": 2.5551,
+            "p99Ms": 3.9911,
+            "minMs": 0.5045,
+            "maxMs": 9.8806,
+            "count": 1201
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 2.5551
+    },
+    {
+      "repetition": 1,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/1-AB-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 1,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1200,
+          "httpReqs": 1200,
+          "httpReqFailed": 0,
+          "checksTotal": 10800,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 2.7233347500000025,
+            "medMs": 2.62365,
+            "p95Ms": 4.23428,
+            "p99Ms": 5.433778999999998,
+            "minMs": 0.503,
+            "maxMs": 13.2977,
+            "count": 1200
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 4.23428
+    },
+    {
+      "repetition": 2,
+      "order": "BA",
+      "arm": "cache-on",
+      "summaryFile": "runs/2-BA-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 2,
+        "order": "BA",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 2.719408076602828,
+            "medMs": 2.6189,
+            "p95Ms": 4.3414,
+            "p99Ms": 5.747,
+            "minMs": 0.5041,
+            "maxMs": 14.687,
+            "count": 1201
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 4.3414
+    },
+    {
+      "repetition": 2,
+      "order": "BA",
+      "arm": "cache-off",
+      "summaryFile": "runs/2-BA-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 2,
+        "order": "BA",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 1.703219233971689,
+            "medMs": 1.6184,
+            "p95Ms": 2.5726,
+            "p99Ms": 4.0309,
+            "minMs": 0.5076,
+            "maxMs": 9.9493,
+            "count": 1201
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 2.5726
+    },
+    {
+      "repetition": 3,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/3-AB-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 3,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1200,
+          "httpReqs": 1200,
+          "httpReqFailed": 0,
+          "checksTotal": 10800,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 1.6057825000000012,
+            "medMs": 1.5527,
+            "p95Ms": 2.369714999999999,
+            "p99Ms": 2.8952349999999996,
+            "minMs": 0.5035,
+            "maxMs": 7.1885,
+            "count": 1200
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 2.369714999999999
+    },
+    {
+      "repetition": 3,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/3-AB-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 3,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1200,
+          "httpReqs": 1200,
+          "httpReqFailed": 0,
+          "checksTotal": 10800,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 2.696638916666666,
+            "medMs": 2.6155999999999997,
+            "p95Ms": 4.149535,
+            "p99Ms": 6.4784489999999995,
+            "minMs": 0.509,
+            "maxMs": 11.9586,
+            "count": 1200
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 4.149535
+    },
+    {
+      "repetition": 4,
+      "order": "BA",
+      "arm": "cache-on",
+      "summaryFile": "runs/4-BA-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 4,
+        "order": "BA",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 2.7250988343047458,
+            "medMs": 2.7296,
+            "p95Ms": 4.0551,
+            "p99Ms": 4.88,
+            "minMs": 0.5033,
+            "maxMs": 11.9304,
+            "count": 1201
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 4.0551
+    },
+    {
+      "repetition": 4,
+      "order": "BA",
+      "arm": "cache-off",
+      "summaryFile": "runs/4-BA-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 4,
+        "order": "BA",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1201,
+          "httpReqs": 1201,
+          "httpReqFailed": 0,
+          "checksTotal": 10809,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 1.6468040799333896,
+            "medMs": 1.5741,
+            "p95Ms": 2.4779,
+            "p99Ms": 3.3074,
+            "minMs": 0.5052,
+            "maxMs": 5.3194,
+            "count": 1201
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 2.4779
+    },
+    {
+      "repetition": 5,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/5-AB-cache-off.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-off",
+        "repetition": 5,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1200,
+          "httpReqs": 1200,
+          "httpReqFailed": 0,
+          "checksTotal": 10800,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 1.7069878333333341,
+            "medMs": 1.639,
+            "p95Ms": 2.58718,
+            "p99Ms": 3.3576759999999983,
+            "minMs": 0.5975,
+            "maxMs": 7.853,
+            "count": 1200
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 2.58718
+    },
+    {
+      "repetition": 5,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/5-AB-cache-on.summary.json",
+      "summary": {
+        "schema": "dpl.load-summary.v1",
+        "arm": "cache-on",
+        "repetition": 5,
+        "order": "AB",
+        "baseUrl": "http://127.0.0.1:8080",
+        "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+        "fixtureSkuCount": 1000,
+        "rate": 20,
+        "duration": "60s",
+        "metrics": {
+          "iterations": 1200,
+          "httpReqs": 1200,
+          "httpReqFailed": 0,
+          "checksTotal": 10800,
+          "checksFailed": 0,
+          "droppedIterations": 0,
+          "detailLatencyMs": {
+            "avgMs": 2.828013166666666,
+            "medMs": 2.6989,
+            "p95Ms": 4.272719999999999,
+            "p99Ms": 8.755452999999994,
+            "minMs": 0.5043,
+            "maxMs": 25.4609,
+            "count": 1200
+          }
+        }
+      },
+      "isValid": true,
+      "p95Ms": 4.272719999999999
+    }
+  ],
+  "arms": [
+    {
+      "arm": "cache-off",
+      "runCount": 5,
+      "validRunCount": 5,
+      "totalRequests": 6003,
+      "medianOfRunP95Ms": 2.5551,
+      "minRunP95Ms": 2.369714999999999,
+      "maxRunP95Ms": 2.58718,
+      "medianOfRunMedianMs": 1.6135
+    },
+    {
+      "arm": "cache-on",
+      "runCount": 5,
+      "validRunCount": 5,
+      "totalRequests": 6002,
+      "medianOfRunP95Ms": 4.23428,
+      "minRunP95Ms": 4.0551,
+      "maxRunP95Ms": 4.3414,
+      "medianOfRunMedianMs": 2.62365
+    }
+  ],
+  "invalidReasons": []
+}

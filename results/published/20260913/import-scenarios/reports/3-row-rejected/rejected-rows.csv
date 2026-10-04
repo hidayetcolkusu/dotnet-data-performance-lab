@@ -1,0 +1,8 @@
+recordNumber,sku,errorCode,outcome
+2,IMP LOWER SPACE,InvalidSku,Rejected
+3,IMP-0000000103,MissingName,Rejected
+4,IMP-0000000104,InvalidCategoryId,Rejected
+5,IMP-0000000105,InvalidUnitPrice,Rejected
+6,IMP-0000000106,InvalidUnitPrice,Rejected
+7,IMP-0000000107,InvalidIsActive,Rejected
+9,IMP-0000000101,DuplicateSkuInFile,Rejected

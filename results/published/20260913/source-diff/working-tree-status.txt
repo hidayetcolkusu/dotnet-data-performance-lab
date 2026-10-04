@@ -1,0 +1,30 @@
+ M .github/workflows/ci.yml
+ M AGENTS.md
+ M README.md
+ M docs/content-map.md
+ M docs/decisions/003-cache-consistency.md
+ M docs/experiments.md
+ M docs/learning-guide.md
+ M docs/runbook.md
+ M scripts/bootstrap.ps1
+ M scripts/collect-manifest.ps1
+ M scripts/compare-cache.ps1
+ M src/Lab.Api/Endpoints/CacheMetricsEndpoints.cs
+ M src/Lab.Cli/Commands/CompareReportCommand.cs
+ M src/Lab.Cli/Commands/ImportCommands.cs
+ M src/Lab.Cli/Commands/LoadFixtureCommand.cs
+ M src/Lab.Cli/Commands/QueryExperimentCommand.cs
+ M src/Lab.Cli/Experiments/ExperimentManifest.cs
+ M src/Lab.Cli/Experiments/LoadComparison.cs
+ M src/Lab.Cli/Program.cs
+ M src/Lab.Core/Data/LabDbMigrator.cs
+ M src/Lab.Core/Import/CsvImportParser.cs
+ M src/Lab.Core/Import/ImportRunner.cs
+ M tests/Lab.IntegrationTests/ImportRecoveryTests.cs
+ M tests/Lab.UnitTests/ExperimentSummaryTests.cs
+ M tests/Lab.UnitTests/ImportValidationTests.cs
+?? docs/plan/implementation-gap-remediation-prompt.md
+?? scripts/import-experiment.ps1
+?? src/Lab.Cli/Commands/ColdCacheCommand.cs
+?? tests/Lab.IntegrationTests/DatabaseSafetyTests.cs
+?? tests/Lab.UnitTests/ManifestSchemaTests.cs

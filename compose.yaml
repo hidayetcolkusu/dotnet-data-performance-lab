@@ -1,0 +1,49 @@
+# Local lab infrastructure: SQL Server 2022 Developer + Redis 7.4.
+# Images are pinned by digest; update deliberately via `docker compose pull`.
+# Ports are published on loopback only (127.0.0.1) - this is not a public service.
+#
+# Host ports are configurable because a developer machine often already runs SQL Server on
+# 1433 or Redis on 6379. Set DPL_SQL_PORT / DPL_REDIS_PORT in .env; scripts/bootstrap.ps1
+# passes the same values to the application as Data__SqlServer__Port / Data__Redis__Port,
+# so the container and the app can never disagree about where the database is.
+#
+# A second checkout on the same machine (a clean-clone check, say) must not attach to the first
+# one's containers and volumes. Set DPL_COMPOSE_PROJECT and DPL_CONTAINER_PREFIX in that
+# checkout's .env; the volumes follow the project name, the scripts follow the prefix.
+name: ${DPL_COMPOSE_PROJECT:-dotnet-data-performance-lab}
+
+services:
+  sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest@sha256:97b448857967be55e005424a660056fe6d51814435804dc07e8f79f028bab5fb
+    container_name: ${DPL_CONTAINER_PREFIX:-dpl}-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?Set MSSQL_SA_PASSWORD in .env (see .env.example)}
+    ports:
+      - "127.0.0.1:${DPL_SQL_PORT:-1433}:1433"
+    volumes:
+      - dpl-sql-data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q \"SELECT 1\" -b -o /dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  redis:
+    image: redis:7.4@sha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7
+    container_name: ${DPL_CONTAINER_PREFIX:-dpl}-redis
+    ports:
+      - "127.0.0.1:${DPL_REDIS_PORT:-6379}:6379"
+    volumes:
+      - dpl-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+
+volumes:
+  dpl-sql-data:
+  dpl-redis-data:

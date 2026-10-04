@@ -1,0 +1,28 @@
+{
+  "schema": "dpl.load-summary.v1",
+  "arm": "cache-on",
+  "repetition": 1,
+  "order": "AB",
+  "baseUrl": "http://127.0.0.1:8080",
+  "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+  "fixtureSkuCount": 1000,
+  "rate": 20,
+  "duration": "60s",
+  "metrics": {
+    "iterations": 1200,
+    "httpReqs": 1200,
+    "httpReqFailed": 0,
+    "checksTotal": 10800,
+    "checksFailed": 0,
+    "droppedIterations": 0,
+    "detailLatencyMs": {
+      "avgMs": 2.7233347500000025,
+      "medMs": 2.62365,
+      "p95Ms": 4.23428,
+      "p99Ms": 5.433778999999998,
+      "minMs": 0.503,
+      "maxMs": 13.2977,
+      "count": 1200
+    }
+  }
+}

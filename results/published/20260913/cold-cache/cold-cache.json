@@ -1,0 +1,72 @@
+{
+  "schema": "dpl.cold-cache.v1",
+  "runId": "20260913T110752Z",
+  "sku": "SKU-0000000004",
+  "baseUrl": "http://127.0.0.1:8081",
+  "cache": {
+    "ttlSeconds": 60,
+    "instanceId": "local"
+  },
+  "evictionScope": "one key: the requested SKU in this lab\u0027s namespace. No FLUSHALL.",
+  "coldnessScope": "Redis only. SQL Server\u0027s buffer pool and plan cache, and the .NET JIT, were warm throughout; a cold Redis read is not a cold-database read.",
+  "reads": [
+    {
+      "readNumber": 1,
+      "expectation": "miss",
+      "statusCode": 200,
+      "elapsedMs": 306.8988,
+      "delta": {
+        "hits": 0,
+        "misses": 1,
+        "bypasses": 0,
+        "sqlFallbacks": 1,
+        "readFailures": 0
+      },
+      "matchedExpectation": true
+    },
+    {
+      "readNumber": 2,
+      "expectation": "hit",
+      "statusCode": 200,
+      "elapsedMs": 8.5807,
+      "delta": {
+        "hits": 1,
+        "misses": 0,
+        "bypasses": 0,
+        "sqlFallbacks": 0,
+        "readFailures": 0
+      },
+      "matchedExpectation": true
+    },
+    {
+      "readNumber": 3,
+      "expectation": "hit",
+      "statusCode": 200,
+      "elapsedMs": 3.6647,
+      "delta": {
+        "hits": 1,
+        "misses": 0,
+        "bypasses": 0,
+        "sqlFallbacks": 0,
+        "readFailures": 0
+      },
+      "matchedExpectation": true
+    },
+    {
+      "readNumber": 4,
+      "expectation": "hit",
+      "statusCode": 200,
+      "elapsedMs": 1.3476,
+      "delta": {
+        "hits": 1,
+        "misses": 0,
+        "bypasses": 0,
+        "sqlFallbacks": 0,
+        "readFailures": 0
+      },
+      "matchedExpectation": true
+    }
+  ],
+  "status": "completed",
+  "failureReason": null
+}

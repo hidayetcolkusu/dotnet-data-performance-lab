@@ -1,0 +1,2 @@
+recordNumber,sku,errorCode,outcome
+3,IMP-0000000201,DuplicateSkuInFile,Rejected

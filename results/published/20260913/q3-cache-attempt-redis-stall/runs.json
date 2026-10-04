@@ -1,0 +1,154 @@
+{
+  "schema": "dpl.load-run-index.v1",
+  "expected": {
+    "repetitions": 5,
+    "profile": "default",
+    "rate": 20,
+    "duration": "60s",
+    "warmupDuration": "30s",
+    "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+    "fixtureSkuCount": 1000
+  },
+  "runs": [
+    {
+      "repetition": 1,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/1-AB-cache-off.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/1-AB-cache-off.summary.json",
+        "runs/1-AB-cache-off.k6.log",
+        "runs/1-AB-cache-off.warmup.log",
+        "runs/1-AB-cache-off.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 1,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/1-AB-cache-on.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/1-AB-cache-on.summary.json",
+        "runs/1-AB-cache-on.k6.log",
+        "runs/1-AB-cache-on.warmup.log",
+        "runs/1-AB-cache-on.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 2,
+      "order": "BA",
+      "arm": "cache-on",
+      "summaryFile": "runs/2-BA-cache-on.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 99,
+      "requiredArtifacts": [
+        "runs/2-BA-cache-on.summary.json",
+        "runs/2-BA-cache-on.k6.log",
+        "runs/2-BA-cache-on.warmup.log",
+        "runs/2-BA-cache-on.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 2,
+      "order": "BA",
+      "arm": "cache-off",
+      "summaryFile": "runs/2-BA-cache-off.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/2-BA-cache-off.summary.json",
+        "runs/2-BA-cache-off.k6.log",
+        "runs/2-BA-cache-off.warmup.log",
+        "runs/2-BA-cache-off.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 3,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/3-AB-cache-off.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/3-AB-cache-off.summary.json",
+        "runs/3-AB-cache-off.k6.log",
+        "runs/3-AB-cache-off.warmup.log",
+        "runs/3-AB-cache-off.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 3,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/3-AB-cache-on.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/3-AB-cache-on.summary.json",
+        "runs/3-AB-cache-on.k6.log",
+        "runs/3-AB-cache-on.warmup.log",
+        "runs/3-AB-cache-on.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 4,
+      "order": "BA",
+      "arm": "cache-on",
+      "summaryFile": "runs/4-BA-cache-on.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/4-BA-cache-on.summary.json",
+        "runs/4-BA-cache-on.k6.log",
+        "runs/4-BA-cache-on.warmup.log",
+        "runs/4-BA-cache-on.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 4,
+      "order": "BA",
+      "arm": "cache-off",
+      "summaryFile": "runs/4-BA-cache-off.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/4-BA-cache-off.summary.json",
+        "runs/4-BA-cache-off.k6.log",
+        "runs/4-BA-cache-off.warmup.log",
+        "runs/4-BA-cache-off.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 5,
+      "order": "AB",
+      "arm": "cache-off",
+      "summaryFile": "runs/5-AB-cache-off.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/5-AB-cache-off.summary.json",
+        "runs/5-AB-cache-off.k6.log",
+        "runs/5-AB-cache-off.warmup.log",
+        "runs/5-AB-cache-off.cache-metrics-delta.json"
+      ]
+    },
+    {
+      "repetition": 5,
+      "order": "AB",
+      "arm": "cache-on",
+      "summaryFile": "runs/5-AB-cache-on.summary.json",
+      "warmupExitCode": 0,
+      "measuredExitCode": 0,
+      "requiredArtifacts": [
+        "runs/5-AB-cache-on.summary.json",
+        "runs/5-AB-cache-on.k6.log",
+        "runs/5-AB-cache-on.warmup.log",
+        "runs/5-AB-cache-on.cache-metrics-delta.json"
+      ]
+    }
+  ]
+}

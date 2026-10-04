@@ -1,0 +1,2 @@
+The file was rejected as a whole (InvalidHeader): Header must be exactly 'sku,name,categoryId,unitPrice,isActive,description' but was 'sku,name,category,unitPrice,isActive,description'.
+No import job was created, so there is nothing to resume.

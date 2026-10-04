@@ -1,0 +1,194 @@
+{
+  "runId": "20260913T110918Z",
+  "experiment": "cache-load-comparison",
+  "status": "completed",
+  "startedAtUtc": "2026-09-13T11:09:18.4324304Z",
+  "completedAtUtc": "2026-09-13T11:09:51.3437836Z",
+  "database": "DataPerformanceLab",
+  "git": {
+    "commitSha": "1268385f904e9e6f600bd3180e592ec3c1276421",
+    "isDirty": true
+  },
+  "environment": {
+    "operatingSystem": "Microsoft Windows 10.0.26200",
+    "architecture": "X64",
+    "processorCount": 32,
+    "totalMemoryBytes": 33342455808,
+    "powerShell": "7.6.6",
+    "dotnetSdk": "10.0.400",
+    "dotnetRuntime": ".NET 10.0.12",
+    "k6": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+    "docker": "Docker version 29.6.1, build 8900f1d",
+    "packageVersions": {
+      "Microsoft.EntityFrameworkCore": "10.0.12",
+      "Microsoft.EntityFrameworkCore.SqlServer": "10.0.12",
+      "Microsoft.Data.SqlClient": "7.0.2+8c70cec98444338ddb0b97be94c34fde93970241",
+      "StackExchange.Redis": "3.2.0+611e478ffd",
+      "CsvHelper": "33.1.0+5dad8b8b1d8b074f8353cfd482e939db788a8927"
+    },
+    "containers": [
+      {
+        "service": "sql",
+        "image": "mcr.microsoft.com/mssql/server:2022-latest@sha256:97b448857967be55e005424a660056fe6d51814435804dc07e8f79f028bab5fb",
+        "imageDigest": "sha256:97b448857967be55e005424a660056fe6d51814435804dc07e8f79f028bab5fb",
+        "cpuLimit": "unlimited (all host CPUs)",
+        "memoryLimit": "unlimited (all host memory)"
+      },
+      {
+        "service": "redis",
+        "image": "redis:7.4@sha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7",
+        "imageDigest": "sha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7",
+        "cpuLimit": "unlimited (all host CPUs)",
+        "memoryLimit": "unlimited (all host memory)"
+      }
+    ]
+  },
+  "parameters": {
+    "batchSize": "100",
+    "database": "DataPerformanceLab_Test_import110918",
+    "environment": "Testing (required to arm import fault injection)",
+    "experiment": "import-scenarios",
+    "samples": "data/samples/catalog-valid.csv, catalog-bad-header.csv, catalog-mixed.csv, catalog-duplicate-sku.csv"
+  },
+  "resultFiles": [
+    "logs/1-success.log",
+    "logs/1-success-report.log",
+    "reports/1-success/report.json",
+    "reports/1-success/rejected-rows.csv",
+    "logs/2-file-rejected.log",
+    "logs/3-row-rejected.log",
+    "logs/3-row-rejected-report.log",
+    "reports/3-row-rejected/report.json",
+    "reports/3-row-rejected/rejected-rows.csv",
+    "logs/4-interrupted-before-commit.log",
+    "logs/5-resumed.log",
+    "logs/5-resumed-report.log",
+    "reports/5-resumed/report.json",
+    "reports/5-resumed/rejected-rows.csv",
+    "logs/6-reimport-same-bytes.log",
+    "logs/7-busy.log",
+    "import-experiment.json"
+  ],
+  "command": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100",
+  "storedFiles": [
+    {
+      "path": "logs/1-success.log",
+      "storage": "published",
+      "sizeBytes": 137,
+      "sha256": "381f3021daaa797d588aafb231e45a39b8670d036d3b06b6ef854d4fdab1d513",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/1-success-report.log",
+      "storage": "published",
+      "sizeBytes": 185,
+      "sha256": "129fefa5c3e9ee939d380f27ab025adf1fb6378e7e6e399d71e3caf2e24d77da",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "reports/1-success/report.json",
+      "storage": "published",
+      "sizeBytes": 442,
+      "sha256": "614aa026751410b4ce21bef8919dc64c54025beee8e4d9cf13b7ef846062fb78",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "reports/1-success/rejected-rows.csv",
+      "storage": "published",
+      "sizeBytes": 35,
+      "sha256": "ed4df09d28a540bd881d603030cd9bfecc3a7408e376d23eef88a346a8eebff0",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/2-file-rejected.log",
+      "storage": "published",
+      "sizeBytes": 246,
+      "sha256": "296856edb6167c37c556446b0693488d901760d28ec46e196fbc8489124fdf3a",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/3-row-rejected.log",
+      "storage": "published",
+      "sizeBytes": 260,
+      "sha256": "235cc86641fe640e7a8414c62fc402a6dbee658a5dcbb7feb2c5eed5469394b9",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/3-row-rejected-report.log",
+      "storage": "published",
+      "sizeBytes": 200,
+      "sha256": "572cdf0c272105a1b91fa9ccff7fa955523f0dc9c92a63d245b42dfddd232410",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "reports/3-row-rejected/report.json",
+      "storage": "published",
+      "sizeBytes": 1441,
+      "sha256": "af848557d323d7d67351ea0adf3b4a2a496f1bd8e5c28c41a67602c1b2c9f362",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "reports/3-row-rejected/rejected-rows.csv",
+      "storage": "published",
+      "sizeBytes": 328,
+      "sha256": "aaba3b58c3edfbee59346df2798b06077955cd75703509908e4f86980bfc3cd0",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/4-interrupted-before-commit.log",
+      "storage": "published",
+      "sizeBytes": 406,
+      "sha256": "e158d3ff45b935ea261fb24c0dddb6ed6370de073a6a99065a89100fde780f96",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/5-resumed.log",
+      "storage": "published",
+      "sizeBytes": 296,
+      "sha256": "54c6b99821102b8af841e55236b972449ed3ca424269186cf09ec21f96b19117",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/5-resumed-report.log",
+      "storage": "published",
+      "sizeBytes": 195,
+      "sha256": "039d6cdd1454404c766b4ae373a5f420e4042ed7b1477fdfb676b9e1730b9fed",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "reports/5-resumed/report.json",
+      "storage": "published",
+      "sizeBytes": 625,
+      "sha256": "4a92ec1ac695e4c1097b78dfe9c61ba90cf2689f3e792c3e3d1f0c3c41804bdb",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "reports/5-resumed/rejected-rows.csv",
+      "storage": "published",
+      "sizeBytes": 80,
+      "sha256": "0a54572fac4de3b70c951ce2d51d037c119294785224d083bad8ac4c5484af24",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/6-reimport-same-bytes.log",
+      "storage": "published",
+      "sizeBytes": 296,
+      "sha256": "9abf1607d0129892aded174a9725d35812c3462b2a4182e945fb01efbc9d5d48",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "logs/7-busy.log",
+      "storage": "published",
+      "sizeBytes": 86,
+      "sha256": "251e384a0ad927bbe9f667aa04bf818af19808a9ca4560d0d13e03e2478d1ca6",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    },
+    {
+      "path": "import-experiment.json",
+      "storage": "published",
+      "sizeBytes": 3706,
+      "sha256": "0c2eaf965f606b674c1f2dfee0a951aaf55dac23a396abdfaae362cc797facf3",
+      "reproduceCommand": "./scripts/import-experiment.ps1 -Output results/local/import-final -BatchSize 100"
+    }
+  ]
+}

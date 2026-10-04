@@ -1,0 +1,66 @@
+{
+  "runId": "20260913T110752Z",
+  "experiment": "cache-cold-read",
+  "status": "completed",
+  "startedAtUtc": "2026-09-13T11:07:52.8295015Z",
+  "completedAtUtc": "2026-09-13T11:07:53.3758234Z",
+  "database": "DataPerformanceLab",
+  "git": {
+    "commitSha": "1268385f904e9e6f600bd3180e592ec3c1276421",
+    "isDirty": true
+  },
+  "environment": {
+    "operatingSystem": "Microsoft Windows 10.0.26200",
+    "architecture": "X64",
+    "processorCount": 32,
+    "runtimeVersion": ".NET 10.0.11",
+    "workingSetLimitBytes": 33342455808,
+    "sdkVersion": "10.0.400",
+    "packageVersions": {
+      "Microsoft.EntityFrameworkCore": "10.0.12.0",
+      "Microsoft.EntityFrameworkCore.SqlServer": "unavailable",
+      "Microsoft.Data.SqlClient": "unavailable",
+      "StackExchange.Redis": "3.0.0.0",
+      "CsvHelper": "unavailable"
+    },
+    "containers": [
+      {
+        "service": "sql",
+        "image": "mcr.microsoft.com/mssql/server:2022-latest@sha256:97b448857967be55e005424a660056fe6d51814435804dc07e8f79f028bab5fb",
+        "imageDigest": "sha256:97b448857967be55e005424a660056fe6d51814435804dc07e8f79f028bab5fb",
+        "cpuLimit": "unlimited (all host CPUs)",
+        "memoryLimit": "unlimited (all host memory)"
+      },
+      {
+        "service": "redis",
+        "image": "redis:7.4@sha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7",
+        "imageDigest": "sha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7",
+        "cpuLimit": "unlimited (all host CPUs)",
+        "memoryLimit": "unlimited (all host memory)"
+      }
+    ]
+  },
+  "dataset": null,
+  "parameters": {
+    "sku": "SKU-0000000004",
+    "baseUrl": "http://127.0.0.1:8081",
+    "reads": "4",
+    "cacheTtlSeconds": "60",
+    "cacheInstanceId": "local",
+    "evictionScope": "one key: the requested SKU in this lab\u0027s namespace",
+    "coldnessScope": "Redis only. SQL Server\u0027s buffer pool, its plan cache and the .NET JIT are all still warm, so this is not a cold-database measurement."
+  },
+  "resultFiles": [
+    "cold-cache.json"
+  ],
+  "command": "dpl cold-cache --sku SKU-0000000004 --output results/local/cold-final --base-url http://127.0.0.1:8081 --reads 4",
+  "storedFiles": [
+    {
+      "path": "cold-cache.json",
+      "storage": "published",
+      "sizeBytes": 1761,
+      "sha256": "e8bdb06fcfc8e64c065cb09c89dc935d83c439229d5d37fb9d5ab086e1f60227",
+      "reproduceCommand": "dpl cold-cache --sku SKU-0000000004 --output results/local/cold-final --base-url http://127.0.0.1:8081 --reads 4"
+    }
+  ]
+}

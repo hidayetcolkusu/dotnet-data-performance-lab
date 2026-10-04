@@ -1,0 +1,180 @@
+{
+  "schema": "dpl.test-record.v1",
+  "purpose": "Recorded results of the controlled cache tests the cold-cache and load packages rely on: invalidation, degraded Redis, the stale-refill race, counter deltas and optimistic concurrency. Derived from the dotnet test .trx; the .trx itself is not published because it embeds absolute machine paths.",
+  "filter": "FullyQualifiedName~CacheBehaviorTests|FullyQualifiedName~PriceConcurrencyTests|FullyQualifiedName~CacheMetricsEndpointTests",
+  "command": "dotnet test tests/Lab.IntegrationTests -c Release --no-build --filter \"<filter>\" --logger \"trx;LogFileName=cache-behaviour.trx\" --results-directory <output>",
+  "infrastructure": "real SQL Server 2022 and Redis 7.4 via Testcontainers; not mocks",
+  "total": 28,
+  "passed": 28,
+  "failed": 0,
+  "results": [
+    {
+      "class": "CacheBehaviorTests",
+      "test": "ACommittedPriceUpdateInvalidatesTheKeyAndTheNextReadSeesTheNewPrice",
+      "outcome": "Passed",
+      "durationSeconds": 0.162
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "ACorruptCacheEntryIsDiscardedAndRepairedFromSql",
+      "outcome": "Passed",
+      "durationSeconds": 0.03
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "AMissReadsSqlAndFillsTheCacheAndTheNextReadIsAHit",
+      "outcome": "Passed",
+      "durationSeconds": 0.019
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "APriceUpdateStillCommitsWhenInvalidationCannotReachRedis",
+      "outcome": "Passed",
+      "durationSeconds": 2.079
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "AProductThatDoesNotExistIsNotCached",
+      "outcome": "Passed",
+      "durationSeconds": 0.017
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "AReaderCanRefillAStaleValueAfterInvalidationAndTheTtlBoundsIt",
+      "outcome": "Passed",
+      "durationSeconds": 3.178
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "HitRateIsUndefinedWhenNoCacheEligibleLookupHappened",
+      "outcome": "Passed",
+      "durationSeconds": 0.0
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "MetricDeltasIsolateOneWindowOfActivity",
+      "outcome": "Passed",
+      "durationSeconds": 0.022
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "WhenRedisIsUnreachableReadsStillSucceedFromSqlAndDegradationIsRecorded",
+      "outcome": "Passed",
+      "durationSeconds": 6.143
+    },
+    {
+      "class": "CacheBehaviorTests",
+      "test": "WithTheCacheOffRedisIsNeverContactedAndEveryReadHitsSql",
+      "outcome": "Passed",
+      "durationSeconds": 0.026
+    },
+    {
+      "class": "CacheMetricsEndpointTests",
+      "test": "AMissThenAHitAreCountedSeparatelyAndProduceAHitRate",
+      "outcome": "Passed",
+      "durationSeconds": 0.137
+    },
+    {
+      "class": "CacheMetricsEndpointTests",
+      "test": "AMissingProductIsCountedAsAMissButNeverCachedAsOne",
+      "outcome": "Passed",
+      "durationSeconds": 0.085
+    },
+    {
+      "class": "CacheMetricsEndpointTests",
+      "test": "AnUnreachableRedisIsCountedAsReadFailuresWhileTheApiKeepsServing",
+      "outcome": "Passed",
+      "durationSeconds": 3.105
+    },
+    {
+      "class": "CacheMetricsEndpointTests",
+      "test": "WithTheCacheOffEveryLookupIsABypassAndThereIsNoHitRate",
+      "outcome": "Passed",
+      "durationSeconds": 0.117
+    },
+    {
+      "class": "InvalidPricesAreRejectedBeforeReachingSql(unitPrice: \"-0",
+      "test": "01\")",
+      "outcome": "Passed",
+      "durationSeconds": 0.0
+    },
+    {
+      "class": "InvalidPricesAreRejectedBeforeReachingSql(unitPrice: \"1",
+      "test": "005\")",
+      "outcome": "Passed",
+      "durationSeconds": 0.0
+    },
+    {
+      "class": "InvalidPricesAreRejectedBeforeReachingSql(unitPrice: \"10000000000000000",
+      "test": "00\")",
+      "outcome": "Passed",
+      "durationSeconds": 0.0
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "AMissingProductIsReportedAsNotFoundRatherThanAsAConflict",
+      "outcome": "Passed",
+      "durationSeconds": 0.056
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "ASuccessfulUpdateReturnsTheNewVersionThatTheNextUpdateNeeds",
+      "outcome": "Passed",
+      "durationSeconds": 0.11
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "ConcurrentUpdatesWithTheSameVersionProduceExactlyOneWinner",
+      "outcome": "Passed",
+      "durationSeconds": 0.137
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "OfTwoUpdatesSharingAVersionOnlyOneSucceeds",
+      "outcome": "Passed",
+      "durationSeconds": 0.044
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "ReadinessReportsSqlAndCacheSeparately",
+      "outcome": "Passed",
+      "durationSeconds": 1.68
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "TheHttpEndpointRejectsAMalformedExpectedVersion",
+      "outcome": "Passed",
+      "durationSeconds": 0.065
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "TheHttpEndpointRejectsAnInvalidPrice",
+      "outcome": "Passed",
+      "durationSeconds": 3.839
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "TheHttpEndpointReturns409WithTheProblemDetailsContract",
+      "outcome": "Passed",
+      "durationSeconds": 4.75
+    },
+    {
+      "class": "PriceConcurrencyTests",
+      "test": "ValidPricesAreAccepted(unitPrice: \"0\")",
+      "outcome": "Passed",
+      "durationSeconds": 0.085
+    },
+    {
+      "class": "ValidPricesAreAccepted(unitPrice: \"10",
+      "test": "5\")",
+      "outcome": "Passed",
+      "durationSeconds": 0.0
+    },
+    {
+      "class": "ValidPricesAreAccepted(unitPrice: \"9999999999999999",
+      "test": "99\")",
+      "outcome": "Passed",
+      "durationSeconds": 0.001
+    }
+  ]
+}

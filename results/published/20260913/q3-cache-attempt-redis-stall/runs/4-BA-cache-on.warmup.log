@@ -1,0 +1,221 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: experiments/k6/warmup.js
+        output: -
+
+     scenarios: (100.00%) 2 scenarios, 110 max VUs, 1m20s max duration (incl. graceful stop):
+              * preload: 1000 iterations shared among 10 VUs (maxDuration: 20s, gracefulStop: 30s)
+              * settle: 20.00 iterations/s for 30s (maxVUs: 20-100, startTime: 20s, gracefulStop: 30s)
+
+
+running (0m00.8s), 010/030 VUs, 14 complete and 0 interrupted iterations
+preload   [   2% ] 10 VUs   00.8s/20s  0016/1000 shared iters
+settle  • [   0% ] waiting  19.2s     
+
+running (0m01.8s), 010/030 VUs, 646 complete and 0 interrupted iterations
+preload   [  65% ] 10 VUs   01.8s/20s  0646/1000 shared iters
+settle  • [   0% ] waiting  18.2s     
+
+running (0m02.8s), 010/030 VUs, 963 complete and 0 interrupted iterations
+preload   [  96% ] 10 VUs   02.8s/20s  0963/1000 shared iters
+settle  • [   0% ] waiting  17.2s     
+
+running (0m03.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  16.2s     
+
+running (0m04.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  15.2s     
+
+running (0m05.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  14.2s     
+
+running (0m06.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  13.2s     
+
+running (0m07.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  12.2s     
+
+running (0m08.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  11.2s     
+
+running (0m09.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  10.2s     
+
+running (0m10.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  09.2s     
+
+running (0m11.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  08.2s     
+
+running (0m12.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  07.2s     
+
+running (0m13.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  06.2s     
+
+running (0m14.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  05.2s     
+
+running (0m15.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  04.2s     
+
+running (0m16.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  03.2s     
+
+running (0m17.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  02.2s     
+
+running (0m18.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  01.2s     
+
+running (0m19.8s), 000/030 VUs, 1000 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs   02.9s/20s  1000/1000 shared iters
+settle  • [   0% ] waiting  00.2s     
+
+running (0m20.8s), 000/030 VUs, 1017 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [   3% ] 000/020 VUs  00.8s/30s  20.00 iters/s
+
+running (0m21.8s), 000/030 VUs, 1037 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [   6% ] 000/020 VUs  01.8s/30s  20.00 iters/s
+
+running (0m22.8s), 000/030 VUs, 1057 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [   9% ] 000/020 VUs  02.8s/30s  20.00 iters/s
+
+running (0m23.8s), 000/030 VUs, 1077 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  13% ] 000/020 VUs  03.8s/30s  20.00 iters/s
+
+running (0m24.8s), 000/030 VUs, 1097 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  16% ] 000/020 VUs  04.8s/30s  20.00 iters/s
+
+running (0m25.8s), 000/030 VUs, 1117 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  19% ] 000/020 VUs  05.8s/30s  20.00 iters/s
+
+running (0m26.8s), 000/030 VUs, 1137 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  23% ] 000/020 VUs  06.8s/30s  20.00 iters/s
+
+running (0m27.8s), 000/030 VUs, 1157 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  26% ] 000/020 VUs  07.8s/30s  20.00 iters/s
+
+running (0m28.8s), 000/030 VUs, 1177 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  29% ] 000/020 VUs  08.8s/30s  20.00 iters/s
+
+running (0m29.8s), 000/030 VUs, 1197 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  33% ] 000/020 VUs  09.8s/30s  20.00 iters/s
+
+running (0m30.8s), 000/030 VUs, 1217 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  36% ] 000/020 VUs  10.8s/30s  20.00 iters/s
+
+running (0m31.8s), 000/030 VUs, 1237 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  39% ] 000/020 VUs  11.8s/30s  20.00 iters/s
+
+running (0m32.8s), 000/030 VUs, 1257 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  43% ] 000/020 VUs  12.8s/30s  20.00 iters/s
+
+running (0m33.8s), 000/030 VUs, 1277 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  46% ] 000/020 VUs  13.8s/30s  20.00 iters/s
+
+running (0m34.8s), 000/030 VUs, 1297 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  49% ] 000/020 VUs  14.8s/30s  20.00 iters/s
+
+running (0m35.8s), 000/030 VUs, 1317 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  53% ] 000/020 VUs  15.8s/30s  20.00 iters/s
+
+running (0m36.8s), 000/030 VUs, 1337 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  56% ] 000/020 VUs  16.8s/30s  20.00 iters/s
+
+running (0m37.8s), 000/030 VUs, 1357 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  59% ] 000/020 VUs  17.8s/30s  20.00 iters/s
+
+running (0m38.8s), 000/030 VUs, 1377 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  63% ] 000/020 VUs  18.8s/30s  20.00 iters/s
+
+running (0m39.8s), 000/030 VUs, 1397 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  66% ] 000/020 VUs  19.8s/30s  20.00 iters/s
+
+running (0m40.8s), 000/030 VUs, 1417 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  69% ] 000/020 VUs  20.8s/30s  20.00 iters/s
+
+running (0m41.8s), 000/030 VUs, 1437 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  73% ] 000/020 VUs  21.8s/30s  20.00 iters/s
+
+running (0m42.8s), 000/030 VUs, 1457 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  76% ] 000/020 VUs  22.8s/30s  20.00 iters/s
+
+running (0m43.8s), 000/030 VUs, 1477 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  79% ] 000/020 VUs  23.8s/30s  20.00 iters/s
+
+running (0m44.8s), 000/030 VUs, 1497 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  83% ] 000/020 VUs  24.8s/30s  20.00 iters/s
+
+running (0m45.8s), 000/030 VUs, 1517 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  86% ] 000/020 VUs  25.8s/30s  20.00 iters/s
+
+running (0m46.8s), 000/030 VUs, 1537 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  89% ] 000/020 VUs  26.8s/30s  20.00 iters/s
+
+running (0m47.8s), 000/030 VUs, 1557 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  93% ] 000/020 VUs  27.8s/30s  20.00 iters/s
+
+running (0m48.8s), 000/030 VUs, 1577 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  96% ] 000/020 VUs  28.8s/30s  20.00 iters/s
+
+running (0m49.8s), 000/030 VUs, 1597 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle    [  99% ] 000/020 VUs  29.8s/30s  20.00 iters/s
+warmup complete: 1000 SKUs preloaded, settled 30s at 20/s
+
+running (0m50.0s), 000/030 VUs, 1601 complete and 0 interrupted iterations
+preload ✓ [ 100% ] 10 VUs       02.9s/20s  1000/1000 shared iters
+settle  ✓ [ 100% ] 000/020 VUs  30s        20.00 iters/s

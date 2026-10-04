@@ -1,0 +1,829 @@
+{
+  "runId": "20260913T113806Z",
+  "experiment": "cache-load-comparison",
+  "status": "failed",
+  "startedAtUtc": "2026-09-13T11:38:06.5918330Z",
+  "completedAtUtc": "2026-09-13T11:58:55.9194431Z",
+  "database": "DataPerformanceLab",
+  "git": {
+    "commitSha": "1268385f904e9e6f600bd3180e592ec3c1276421",
+    "isDirty": true
+  },
+  "environment": {
+    "operatingSystem": "Microsoft Windows 10.0.26200",
+    "architecture": "X64",
+    "processorCount": 32,
+    "totalMemoryBytes": 33342455808,
+    "powerShell": "7.6.6",
+    "dotnetSdk": "10.0.400",
+    "dotnetRuntime": ".NET 10.0.12",
+    "k6": "k6.exe v2.2.0 (commit/00a9a1b7f5, go1.26.5, windows/amd64)",
+    "docker": "Docker version 29.6.1, build 8900f1d",
+    "packageVersions": {
+      "Microsoft.EntityFrameworkCore": "10.0.12",
+      "Microsoft.EntityFrameworkCore.SqlServer": "10.0.12",
+      "Microsoft.Data.SqlClient": "7.0.2+8c70cec98444338ddb0b97be94c34fde93970241",
+      "StackExchange.Redis": "3.2.0+611e478ffd",
+      "CsvHelper": "33.1.0+5dad8b8b1d8b074f8353cfd482e939db788a8927"
+    },
+    "containers": [
+      {
+        "service": "sql",
+        "image": "mcr.microsoft.com/mssql/server:2022-latest@sha256:97b448857967be55e005424a660056fe6d51814435804dc07e8f79f028bab5fb",
+        "imageDigest": "sha256:97b448857967be55e005424a660056fe6d51814435804dc07e8f79f028bab5fb",
+        "cpuLimit": "unlimited (all host CPUs)",
+        "memoryLimit": "unlimited (all host memory)"
+      },
+      {
+        "service": "redis",
+        "image": "redis:7.4@sha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7",
+        "imageDigest": "sha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7",
+        "cpuLimit": "unlimited (all host CPUs)",
+        "memoryLimit": "unlimited (all host memory)"
+      }
+    ]
+  },
+  "parameters": {
+    "baseUrl": "http://127.0.0.1:8080",
+    "cacheInstance": "compare-20260913T113806Z-<rep>-<order>-<arm>",
+    "differingFactor": "Cache:Enabled",
+    "duration": "60s",
+    "fixtureCount": "1000",
+    "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+    "profile": "default",
+    "rate": "20",
+    "repetitions": "5",
+    "roundOrder": "AB/BA/AB/BA/AB",
+    "warmupDuration": "30s"
+  },
+  "resultFiles": [
+    "fixture.json",
+    "runs/1-AB-cache-off.warmup.log",
+    "runs/1-AB-cache-off.k6.log",
+    "runs/1-AB-cache-off.summary.json",
+    "runs/1-AB-cache-off.cache-metrics-start.json",
+    "runs/1-AB-cache-off.cache-metrics-end.json",
+    "runs/1-AB-cache-off.cache-metrics-delta.json",
+    "runs/1-AB-cache-on.warmup.log",
+    "runs/1-AB-cache-on.k6.log",
+    "runs/1-AB-cache-on.summary.json",
+    "runs/1-AB-cache-on.cache-metrics-start.json",
+    "runs/1-AB-cache-on.cache-metrics-end.json",
+    "runs/1-AB-cache-on.cache-metrics-delta.json",
+    "runs/2-BA-cache-on.warmup.log",
+    "runs/2-BA-cache-on.k6.log",
+    "runs/2-BA-cache-on.summary.json",
+    "runs/2-BA-cache-on.cache-metrics-start.json",
+    "runs/2-BA-cache-on.cache-metrics-end.json",
+    "runs/2-BA-cache-on.cache-metrics-delta.json",
+    "runs/2-BA-cache-off.warmup.log",
+    "runs/2-BA-cache-off.k6.log",
+    "runs/2-BA-cache-off.summary.json",
+    "runs/2-BA-cache-off.cache-metrics-start.json",
+    "runs/2-BA-cache-off.cache-metrics-end.json",
+    "runs/2-BA-cache-off.cache-metrics-delta.json",
+    "runs/3-AB-cache-off.warmup.log",
+    "runs/3-AB-cache-off.k6.log",
+    "runs/3-AB-cache-off.summary.json",
+    "runs/3-AB-cache-off.cache-metrics-start.json",
+    "runs/3-AB-cache-off.cache-metrics-end.json",
+    "runs/3-AB-cache-off.cache-metrics-delta.json",
+    "runs/3-AB-cache-on.warmup.log",
+    "runs/3-AB-cache-on.k6.log",
+    "runs/3-AB-cache-on.summary.json",
+    "runs/3-AB-cache-on.cache-metrics-start.json",
+    "runs/3-AB-cache-on.cache-metrics-end.json",
+    "runs/3-AB-cache-on.cache-metrics-delta.json",
+    "runs/4-BA-cache-on.warmup.log",
+    "runs/4-BA-cache-on.k6.log",
+    "runs/4-BA-cache-on.summary.json",
+    "runs/4-BA-cache-on.cache-metrics-start.json",
+    "runs/4-BA-cache-on.cache-metrics-end.json",
+    "runs/4-BA-cache-on.cache-metrics-delta.json",
+    "runs/4-BA-cache-off.warmup.log",
+    "runs/4-BA-cache-off.k6.log",
+    "runs/4-BA-cache-off.summary.json",
+    "runs/4-BA-cache-off.cache-metrics-start.json",
+    "runs/4-BA-cache-off.cache-metrics-end.json",
+    "runs/4-BA-cache-off.cache-metrics-delta.json",
+    "runs/5-AB-cache-off.warmup.log",
+    "runs/5-AB-cache-off.k6.log",
+    "runs/5-AB-cache-off.summary.json",
+    "runs/5-AB-cache-off.cache-metrics-start.json",
+    "runs/5-AB-cache-off.cache-metrics-end.json",
+    "runs/5-AB-cache-off.cache-metrics-delta.json",
+    "runs/5-AB-cache-on.warmup.log",
+    "runs/5-AB-cache-on.k6.log",
+    "runs/5-AB-cache-on.summary.json",
+    "runs/5-AB-cache-on.cache-metrics-start.json",
+    "runs/5-AB-cache-on.cache-metrics-end.json",
+    "runs/5-AB-cache-on.cache-metrics-delta.json",
+    "runs.json",
+    "comparison.json",
+    "comparison.md"
+  ],
+  "command": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild",
+  "cache": {
+    "enabled": true,
+    "ttlSeconds": 60,
+    "instanceId": "compare-20260913T113806Z-5-AB-cache-on",
+    "connectTimeoutMilliseconds": 1000,
+    "operationTimeoutMilliseconds": 1000,
+    "note": "Reported by the measured API process via /internal/cache-metrics. cache-off runs still record these settings; they simply went unused."
+  },
+  "dataset": {
+    "seed": 20260910,
+    "generatorVersion": 1,
+    "profile": "default",
+    "productCount": 100000,
+    "dataHash": "DC7DE2FF4977DE5FD927CFA575794FED422B7D96A6F0103D16C5ACE8AED632C3",
+    "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+    "fixtureSkuCount": 1000,
+    "fixtureStride": 100,
+    "activeCount": 85022,
+    "inactiveCount": 14978,
+    "categoryCounts": {
+      "1": 59842,
+      "2": 2117,
+      "3": 2167,
+      "4": 2039,
+      "5": 2067,
+      "6": 2108,
+      "7": 2081,
+      "8": 1970,
+      "9": 2108,
+      "10": 2159,
+      "11": 2067,
+      "12": 2112,
+      "13": 2114,
+      "14": 2186,
+      "15": 2188,
+      "16": 2103,
+      "17": 2125,
+      "18": 2177,
+      "19": 2138,
+      "20": 2132
+    }
+  },
+  "storedFiles": [
+    {
+      "path": "fixture.json",
+      "storage": "published",
+      "sizeBytes": 191666,
+      "sha256": "4beaef02618720ebfe03dc5de837decf72dede9925b3c6fcc7b49ce5277e5c2f",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10684,
+      "sha256": "7f29c46df9ef4ba86bc76fd9232455d89aa83cc4daf4306642f54b6579aece76",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.k6.log",
+      "storage": "published",
+      "sizeBytes": 9113,
+      "sha256": "db9b41a685741b27eed4ea8acaf8df289627cdaeb028828e70155a3bf7094718",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.summary.json",
+      "storage": "published",
+      "sizeBytes": 650,
+      "sha256": "8e2a6a57911ad1735f6f4d95cc26330e97d2e5d1cdaecdae22e5786b07d85d3b",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 478,
+      "sha256": "8ff9c9cf395eb1d0ca714b9cd89008d5edff6ad4d9808fbdce4d2d5bd85281cd",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 484,
+      "sha256": "45903b49ca9ba04512739014daa7bc44f08949cd766c7ba9ca479f75ccbdd9be",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1668,
+      "sha256": "250ce6e825f03e3b96dca3219442847f4bb4cafc7bb79747884007c5ee41eaa5",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10680,
+      "sha256": "d24ef0e1f6d05b8a3eb54fab53bb77d33d55187202174272e7acfed73942451c",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.k6.log",
+      "storage": "published",
+      "sizeBytes": 9111,
+      "sha256": "e582c731e351932528823abbf0354150e60f64576f67eb9e251bb36b64dcdb92",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.summary.json",
+      "storage": "published",
+      "sizeBytes": 649,
+      "sha256": "69ce5bd84a5b9f8349f419514c10b2b6e1c06b9c205dcb78fbf91fc047751f18",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 480,
+      "sha256": "a20057b4fcb073765bf66626d529b1870723e061fe2acdfe7158db1114ae3e33",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 486,
+      "sha256": "d938eed00b8e3432f3d355cdbdfe03d951351ed23562c1b5d2bd5233aaff845d",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1689,
+      "sha256": "893a2d69e08a1bcb54fb06341f35a82e18e8454ef0cdb1a9a95c03ba673a6401",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10688,
+      "sha256": "4d197ba7cb624b1ec608425c4f7b4e40f3a5ba31622e0c99e62631f8351fb13c",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.k6.log",
+      "storage": "published",
+      "sizeBytes": 7678,
+      "sha256": "013269a188586d0d3488b90548bdc931cd56750ea679a80100cda0dff9857af8",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.summary.json",
+      "storage": "published",
+      "sizeBytes": 662,
+      "sha256": "86b8e817ef88ec872f7ccefc5fb40998ff54db47c7c9e782d00e3ec6bc7a7c4a",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 480,
+      "sha256": "52ea302a8a63dcc6e192e378931ef41c4bfa3a29cea3ea422b854e349b0a385a",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 487,
+      "sha256": "b89eeecc3b598d81723e74e9da9f395cb505cdff81052d9d1d12beeefc463c87",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1689,
+      "sha256": "8c8d27e8084eb10ccb39aaa1bfd758719532611a2b714d2c8edd3ac59f8917d1",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10673,
+      "sha256": "c8e46cff8d5f7a914f5dd8268cf805b427aefbc469ca550d84262ce698c5b859",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.k6.log",
+      "storage": "published",
+      "sizeBytes": 9112,
+      "sha256": "b42cc4833cf4542f1ae0b85e723b1a95258e97a4130fdda62a17af343c518f41",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.summary.json",
+      "storage": "published",
+      "sizeBytes": 654,
+      "sha256": "3b3cbf9d289c1073520cecf0265a54e14e9560dc91393134189d87508f99fa0c",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 478,
+      "sha256": "64d86a797110adcddfa89e1c3008477d9eb8b52dfe3b5c72c829af1fa14dff14",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 484,
+      "sha256": "7312e36a70609d32911e8a6ab05a88466496727dd84aa4a7c816b09839bd0722",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1668,
+      "sha256": "9f1ba3c3baa2b6c30f38086486540e850fdee55714744e199906b28bacb8564a",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10680,
+      "sha256": "858956d042f6fa615500660990ddec2409924cbc04003f138e22158b52c704c2",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.k6.log",
+      "storage": "published",
+      "sizeBytes": 9112,
+      "sha256": "f6e9969216329a501234bcc3584f240a4b1bf3b6355be101fbb119fd33b9a353",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.summary.json",
+      "storage": "published",
+      "sizeBytes": 650,
+      "sha256": "e2ebac279c7c25281c545458d40a666fc6b8ced576f6f4a9e20425cac1db9491",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 478,
+      "sha256": "0434528f93c5e7ec87adcadd06a19dac2e4a2ce5ac791196aa6547081f4a8584",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 484,
+      "sha256": "fe49c07db57e33d81724fb8c01478fff3700030606004b362004169a0407077e",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1668,
+      "sha256": "421189ba15974563f8c57c6e2b7e6e1c1c360b80228515e5058d5af950c78025",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10691,
+      "sha256": "cb319f25b66bf01d5aaa712dde29a89bd0be53e8e938f89b55ea971d01671952",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.k6.log",
+      "storage": "published",
+      "sizeBytes": 9111,
+      "sha256": "efaac75aeb0ad99ac2c5fd6289f8872dd794fb0ea375991bade72dd288ead8d0",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.summary.json",
+      "storage": "published",
+      "sizeBytes": 649,
+      "sha256": "f0ca419eb27546c58ff3b85d7588f51a942a79503caf7db3dbc1d6fd83de88f7",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 480,
+      "sha256": "ce1fd31752f9569255547bab240dc214bf2dbca2d8023d56f80d0bc448db346c",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 486,
+      "sha256": "00cc0b989088d30ce3d153ee63ae5d96246c5bdfa79a6f4e12dca33db5b90079",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1691,
+      "sha256": "8a0a1a738dd9fa3b29d732a909732048fa2927cf81185bf1dee3da3561a08077",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10684,
+      "sha256": "ed5b1526827fb0ee9404186e650e8e6f56b84d7403865f6388a8b1edace38fb6",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.k6.log",
+      "storage": "published",
+      "sizeBytes": 9111,
+      "sha256": "e1042f2ddf6f81f62ba89dba0b48e1e067618fc516d560625f9ac23a8fe12400",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.summary.json",
+      "storage": "published",
+      "sizeBytes": 649,
+      "sha256": "c25cf61b7f332792a788ea440c94b42882e5bc1e7bea283ae2e9da3b5fd4ec1e",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 480,
+      "sha256": "e8c4c0694237d1b5278282c82fcd633837050f1b5b8678a182e26c1b54b13b08",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 486,
+      "sha256": "4cda3fe714a028a60252e5bdbfc72ac1993d4d642bde9da915bf3c124b1109fc",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1689,
+      "sha256": "00246de0aca38294ba40f6621d45522eb83a9b1bf4238c8f5e1823252283ed24",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10685,
+      "sha256": "6fad120fbe488eb930966a0e6736ae7abee69f68ed1767a908ae203c13428e81",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.k6.log",
+      "storage": "published",
+      "sizeBytes": 9112,
+      "sha256": "1f9dbb2c82e7347a3054f0a2b40421ab4fe4e3969105b0207469632922f58fad",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.summary.json",
+      "storage": "published",
+      "sizeBytes": 650,
+      "sha256": "25c0a3540994e98732a844ac4efbc75f55ab457fb883d99f3896d674ce4b0e8f",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 478,
+      "sha256": "ebeb37c5a2c855242ac2129006397408bc7cc94242985a6d901b40ced0c075ce",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 484,
+      "sha256": "77d84b1f50d20ba8a262e449063c90368ca47be07d37d19d94cadcf2276bba19",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1668,
+      "sha256": "6a43097713f380dce991adadfb5ecc111d97edc673dd4e2b3b41c52ef3ba3db9",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10686,
+      "sha256": "c2541802c2ea71c8ea98be6e5aa890cc53e2cfd5897b61b2c94e54aeed4d5b29",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.k6.log",
+      "storage": "published",
+      "sizeBytes": 9112,
+      "sha256": "1dc55f2e52d1b09b5542075a5f18c1c7789f8c939df096235d78696092d8466c",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.summary.json",
+      "storage": "published",
+      "sizeBytes": 644,
+      "sha256": "97efe5a223803b7b0024fbcd9ce54720bd0ab728ff1c62cb7d55b4c0082fb9ba",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 478,
+      "sha256": "8332ed514686de1e221107dc582ef08df47c93d56c8a2e060a38aaa341668eb5",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 484,
+      "sha256": "2b6071cbaf3a986765c5f6815bb4b4154bc16e423edf9848f5a321b370abb522",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1668,
+      "sha256": "d7f87890f34b4d6aa3da4517a03cd858e2e7d5ca25c1dc4cc3325b70ec9cbc9a",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.warmup.log",
+      "storage": "published",
+      "sizeBytes": 10685,
+      "sha256": "7eca2cb2940fe7c4a1225372226aeb367cbf62ece794e8dd9c41fe1b1dd4c9cb",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.k6.log",
+      "storage": "published",
+      "sizeBytes": 9111,
+      "sha256": "c1c483a071bed8f5c97172973d332906fb6e5b401df510f234433759eea3f894",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.summary.json",
+      "storage": "published",
+      "sizeBytes": 650,
+      "sha256": "64c17df67dfc284a08192d03c03e7ca0da84b716a9ef76eba0fd0bc4c1c415f5",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.cache-metrics-start.json",
+      "storage": "published",
+      "sizeBytes": 480,
+      "sha256": "3253bee15e5db74318bd0382cea3aa3c70ee0c846517f36f1fbd94de4fc8facb",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.cache-metrics-end.json",
+      "storage": "published",
+      "sizeBytes": 486,
+      "sha256": "4e74d2cc03e9e3d6f6116309eaa8d05cd1de4f6f01c09271d3cda7d540aa84ca",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.cache-metrics-delta.json",
+      "storage": "published",
+      "sizeBytes": 1689,
+      "sha256": "620a71d20a969342ba6be854b12592f0f7ab7317f5e660662d2340a0783b51cd",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs.json",
+      "storage": "published",
+      "sizeBytes": 4553,
+      "sha256": "691d2abb01a06b6e1af1ae1ae60cce0a2e6a00662830d24d413fbbe63a13782e",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "comparison.json",
+      "storage": "published",
+      "sizeBytes": 11196,
+      "sha256": "a51d099d33c55c5ba95171bd983b34797da75f6466b23909f2e44d5821c4230a",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "comparison.md",
+      "storage": "published",
+      "sizeBytes": 1538,
+      "sha256": "b1b65ee2e188ab0bc2087655d28123994525c9ed8553dc30fa3bab5e3ea1f6ea",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5738368,
+      "sha256": "55e0751888459449613f5e59691981108995259f3b71a7e3c75e8fe6f14d280a",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3400125,
+      "sha256": "bac9f0084600237e96a8382c5651be8d7640f42ecf239f64d6f895968b84a45e",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-off.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5737390,
+      "sha256": "74a0fe1c25a28dd7a46c919cd2a67394e49f32b708265da879ac48947c968be3",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3037739,
+      "sha256": "f2d88d0f2964a997c893fdd5441cb2e37ef72bfe98dae7591158c1df4ec175a3",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/1-AB-cache-on.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 4621740,
+      "sha256": "0c2e471cac16c3a822966181004988f0ec83eb970237bcd6d82c66c982a1dcb4",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.api.log",
+      "storage": "local-only",
+      "sizeBytes": 2795071,
+      "sha256": "865057864093815ae6251908031cc9f1e0f59bc0d357ec55bcdcc7bb8028953a",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-on.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5733127,
+      "sha256": "ca52716fef91b5a43430f7e77d49d933bb1dad5c52b8dc9e34b426d0dd5dffc5",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3397844,
+      "sha256": "adc907da014ca1380e74ff4a739ec3bc5a48d0008a915dd44cc9c2818fde1685",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/2-BA-cache-off.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5736955,
+      "sha256": "8899b79b2cfd5de1fafb9df533d512ef0b4ffce64aabc177291101f9a485ea01",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3400166,
+      "sha256": "63e2747b41a6b8955e2d47c49d3c153fafc99e2a6a0dbadf639165c692d2cf50",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-off.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5736827,
+      "sha256": "77707fdc0f417b1ba69270581e429ad0d54d20df4a01097132cbd5b252403224",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3043745,
+      "sha256": "2493246642cf1bbf42fecaaa243024ce9e2392f3e161194a58f9ed3582ffe3d2",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/3-AB-cache-on.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5739298,
+      "sha256": "fe4e96200aa56c8c20ee3fa21e3d32d73c79ebafb43461c10e92187224100cdc",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3043347,
+      "sha256": "a3572e04dbbc17820cf1c4e63c9755e625607ab90ccd066b7da3d8b9f7d03fe8",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-on.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5736769,
+      "sha256": "320ca9de0baf23ba800fb7d965730fbdad6e4cc8a371dc4adf435c4ef9b7c3c4",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3398128,
+      "sha256": "a3724958c692ef48d95935184dc0e143fcbb9d3abbcc80572b2e4521e3c64c67",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/4-BA-cache-off.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5737458,
+      "sha256": "7e18a2c14b9133811e92347b8bedaf2b606e122138abe2e4b7f80df0c2614363",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3398747,
+      "sha256": "226f49acea524b77d403a23bab56465defce315e4180829ad6adc34ec920c13a",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-off.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.raw.json",
+      "storage": "local-only",
+      "sizeBytes": 5737466,
+      "sha256": "107e64e2e5ba6d6e4dc46b0563f0a1abfa40649bf0982d559faf1c6f22b970b8",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.api.log",
+      "storage": "local-only",
+      "sizeBytes": 3042916,
+      "sha256": "52c2b8c1761277bc08c8cdf48381d5d08d31b305ac75d54242d8c2f499b19117",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    },
+    {
+      "path": "runs/5-AB-cache-on.api.err",
+      "storage": "local-only",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reproduceCommand": "./scripts/compare-cache.ps1 -Profile default -Output results/local/q3-publish -Repetitions 5 -Rate 20 -Duration 60s -WarmupDuration 30s -FixtureCount 1000 -Port 8080 -SkipBuild"
+    }
+  ],
+  "failureReason": "2-BA-cache-on : k6 exited 99 (thresholds not met)."
+}

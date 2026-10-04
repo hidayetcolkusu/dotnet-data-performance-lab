@@ -1,0 +1,60 @@
+{
+  "schema": "dpl.cache-metrics-delta.v1",
+  "window": {
+    "description": "measured run only; warmup lookups are excluded by construction",
+    "startedAtUtc": "2026-09-13T11:42:51.1652794Z",
+    "endedAtUtc": "2026-09-13T11:45:29.7466991Z"
+  },
+  "cacheEnabled": true,
+  "delta": {
+    "hits": 199,
+    "misses": 777,
+    "bypasses": 0,
+    "totalLookups": 976,
+    "readFailures": 23,
+    "writeFailures": 0,
+    "invalidationFailures": 0,
+    "sqlFallbacks": 777
+  },
+  "hitRate": 0.2038934426229508,
+  "cumulative": {
+    "start": {
+      "label": "after-warmup",
+      "capturedAtUtc": "2026-09-13T11:42:51.1652794Z",
+      "cacheEnabled": true,
+      "configuration": {
+        "enabled": true,
+        "ttlSeconds": 60,
+        "instanceId": "compare-20260913T113806Z-2-BA-cache-on",
+        "connectTimeoutMilliseconds": 1000,
+        "operationTimeoutMilliseconds": 1000
+      },
+      "hits": 600,
+      "misses": 1000,
+      "bypasses": 0,
+      "readFailures": 0,
+      "writeFailures": 0,
+      "invalidationFailures": 0,
+      "sqlFallbacks": 1000
+    },
+    "end": {
+      "label": "after-measured-run",
+      "capturedAtUtc": "2026-09-13T11:45:29.7466991Z",
+      "cacheEnabled": true,
+      "configuration": {
+        "enabled": true,
+        "ttlSeconds": 60,
+        "instanceId": "compare-20260913T113806Z-2-BA-cache-on",
+        "connectTimeoutMilliseconds": 1000,
+        "operationTimeoutMilliseconds": 1000
+      },
+      "hits": 799,
+      "misses": 1777,
+      "bypasses": 0,
+      "readFailures": 23,
+      "writeFailures": 0,
+      "invalidationFailures": 0,
+      "sqlFallbacks": 1777
+    }
+  }
+}

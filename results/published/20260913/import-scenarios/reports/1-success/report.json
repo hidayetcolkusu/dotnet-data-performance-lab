@@ -1,0 +1,15 @@
+{
+  "jobId": "35dec81d-299f-4d56-a3f2-935018de7a2a",
+  "fileHash": "de8a9699c5be90fc9ec8f3e6c48ff6678a071f5da41800a66d7a39473babac5e",
+  "parserVersion": 1,
+  "status": "Completed",
+  "totalRecords": 6,
+  "inserted": 6,
+  "skipped": 0,
+  "rejected": 0,
+  "lastProcessedRecord": 6,
+  "lastErrorCode": null,
+  "createdAtUtc": "2026-09-13T11:09:26.7991528",
+  "completedAtUtc": "2026-09-13T11:09:27.2388424",
+  "rejectedRows": []
+}

@@ -1,0 +1,3 @@
+fault injection is armed for this run; the import is expected to abort and leave a resumable job.
+error: Import job 6b79f85a-80d5-4912-9718-4d35c37b6053 was interrupted (InjectedImportFaultException: Injected failure inside batch 2 before it committed.). The committed batches are intact; resume with --job-id 6b79f85a-80d5-4912-9718-4d35c37b6053.
+Job 6b79f85a-80d5-4912-9718-4d35c37b6053 is resumable.

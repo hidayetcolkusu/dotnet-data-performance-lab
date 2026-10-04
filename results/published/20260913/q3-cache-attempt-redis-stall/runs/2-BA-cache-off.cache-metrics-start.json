@@ -1,0 +1,19 @@
+{
+  "label": "after-warmup",
+  "capturedAtUtc": "2026-09-13T11:46:28.6708326Z",
+  "cacheEnabled": false,
+  "configuration": {
+    "enabled": false,
+    "ttlSeconds": 60,
+    "instanceId": "compare-20260913T113806Z-2-BA-cache-off",
+    "connectTimeoutMilliseconds": 1000,
+    "operationTimeoutMilliseconds": 1000
+  },
+  "hits": 0,
+  "misses": 0,
+  "bypasses": 1600,
+  "readFailures": 0,
+  "writeFailures": 0,
+  "invalidationFailures": 0,
+  "sqlFallbacks": 0
+}

@@ -1,0 +1,10 @@
+sku,name,categoryId,unitPrice,isActive,description
+IMP-0000000101,Valid Row One,1,10.00,true,Accepted.
+imp lower space,Bad Sku,1,10.00,true,SKU has characters outside A-Z 0-9 and dash.
+IMP-0000000103,,1,10.00,true,Name is empty.
+IMP-0000000104,Bad Category,21,10.00,true,Category 21 is outside 1-20.
+IMP-0000000105,Bad Price Scale,1,1.005,true,Three decimals must not be rounded into acceptance.
+IMP-0000000106,Negative Price,1,-5.00,true,Negative prices are rejected.
+IMP-0000000107,Bad Boolean,1,10.00,yes,Only the exact tokens true and false are accepted.
+IMP-0000000108,Valid Row Two,20,99.99,false,Accepted after several rejected rows.
+IMP-0000000101,Duplicate Of Row One,1,11.00,true,The first valid record for a SKU wins.

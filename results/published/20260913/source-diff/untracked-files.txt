@@ -1,0 +1,1184 @@
+=== new file: scripts/import-experiment.ps1 ===
+<#
+.SYNOPSIS
+Runs every import scenario the plan asks for evidence of, against real SQL Server, and writes the
+CLI exit codes and SQL-derived reports as publishable artifacts.
+
+.DESCRIPTION
+Seven scenarios, each a real `dpl` invocation whose exit code is recorded rather than asserted in a
+test harness:
+
+  1 success            a clean file imports, exit 0
+  2 file-rejected      a bad header is a file-level failure, exit 1, no job created
+  3 row-rejected       a mixed file completes with rejections, exit 2
+  4 interrupted        a crash before a batch commits leaves a resumable job
+  5 resumed            that job is resumed from its checkpoint and completes
+  6 re-import          the same bytes return the stored result without redoing work
+  7 busy               a second importer is refused while the lock is held, exit 3
+
+The integration tests already prove these behaviours; this script produces the *evidence package*
+the plan asks for separately, because a test source file is not a recorded command and exit code.
+
+This runs against a dedicated test-prefixed database, not the API's, so the catalog a published
+load measurement was taken against is never mutated. It needs DOTNET_ENVIRONMENT=Testing: the
+fault injection used by scenarios 4 and 5 is refused in any other environment.
+
+The scenario database is dropped at the end, and only after it has proven — by its LabMetadata
+marker — that it belongs to the lab. Pass -KeepDatabase to inspect its rows instead.
+
+.EXAMPLE
+./scripts/import-experiment.ps1 -Output results/local/import-20260912
+#>
+[CmdletBinding()]
+param(
+    [string]$Output,
+    [ValidateRange(1, 2000)][int]$BatchSize = 100,
+    [switch]$SkipBuild,
+    # Keeps the scenario database so its rows can be inspected. Off by default: a run that leaves
+    # a database behind every time turns into a pile of them within an afternoon.
+    [switch]$KeepDatabase
+)
+
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
+
+$repoRoot = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot 'collect-manifest.ps1')
+
+$runId = [datetime]::UtcNow.ToString("yyyyMMdd'T'HHmmss'Z'")
+$startedAtUtc = [datetime]::UtcNow
+if (-not $Output) { $Output = Join-Path $repoRoot "results/local/import-$runId" }
+$outputDirectory = (New-Item -ItemType Directory -Path $Output -Force).FullName
+
+$cliDll = Join-Path $repoRoot 'src/Lab.Cli/bin/Release/net10.0/Lab.Cli.dll'
+
+# Paths handed to the CLI are kept repo-relative, and the script runs from the repo root. The CLI
+# echoes the path it was given, so an absolute one would bake this machine's home directory into a
+# published log — which CI's hygiene job rejects, and rightly: it is noise at best and an
+# information leak at worst.
+Set-Location $repoRoot
+$samples = 'data/samples'
+$outputRelative = [System.IO.Path]::GetRelativePath($repoRoot, $outputDirectory).Replace('\', '/')
+
+# --------------------------------------------------------------------------------------
+# Preconditions
+# --------------------------------------------------------------------------------------
+
+if (-not $env:MSSQL_SA_PASSWORD) {
+    throw 'MSSQL_SA_PASSWORD is not set. Run ./scripts/bootstrap.ps1 -StartContainers first.'
+}
+
+# Fault injection — scenarios 4 and 5 — is only armable in Testing. Setting it here rather than
+# asking the reader to remember keeps the documented command a single line that actually works.
+$env:DOTNET_ENVIRONMENT = 'Testing'
+
+if (-not $SkipBuild) {
+    Write-Host '== dotnet build (Release) ==' -ForegroundColor Cyan
+    & dotnet build (Join-Path $repoRoot 'DataPerformanceLab.slnx') -c Release
+    if ($LASTEXITCODE -ne 0) { throw "Build failed with exit code $LASTEXITCODE." }
+}
+
+if (-not (Test-Path $cliDll)) { throw "'$cliDll' is missing. Run without -SkipBuild." }
+
+# A dedicated database per run: the API's catalog, and any load measurement taken against it,
+# stays untouched. The test prefix is what makes this name acceptable to the CLI in Testing.
+$database = "DataPerformanceLab_Test_import$($runId.Substring(9, 6))"
+
+Write-Host "== preparing $database ==" -ForegroundColor Cyan
+& dotnet $cliDll db migrate --database $database
+if ($LASTEXITCODE -ne 0) { throw "Could not migrate '$database' (exit $LASTEXITCODE)." }
+
+# The import's categoryId is a real foreign key, so the 20 categories must exist before any row
+# can land. The ci profile is the cheapest way to create them; its SKU-* products do not collide
+# with the samples' IMP-* SKUs, so the scenarios below still start from an empty import history.
+& dotnet $cliDll seed --profile ci --database $database
+if ($LASTEXITCODE -ne 0) { throw "Could not seed '$database' (exit $LASTEXITCODE)." }
+
+# --------------------------------------------------------------------------------------
+# Scenario driver
+# --------------------------------------------------------------------------------------
+
+$scenarios = [System.Collections.Generic.List[object]]::new()
+$resultFiles = [System.Collections.Generic.List[string]]::new()
+
+function Invoke-Dpl {
+    param(
+        [Parameter(Mandatory)][string]$Name,
+        [Parameter(Mandatory)][string[]]$Arguments,
+        [Parameter(Mandatory)][int]$ExpectedExit,
+        [string]$Expectation)
+
+    $logRelative = "logs/$Name.log"
+    $logPath = Join-Path $outputDirectory $logRelative
+    $null = New-Item -ItemType Directory -Path (Split-Path $logPath) -Force
+
+    Write-Host "== $Name ==" -ForegroundColor Cyan
+    & dotnet $cliDll @Arguments 2>&1 | Tee-Object -FilePath $logPath | Out-Host
+    $exit = $LASTEXITCODE
+
+    $resultFiles.Add($logRelative)
+
+    $record = [ordered]@{
+        scenario     = $Name
+        expectation  = $Expectation
+        # The command as it would be typed, with the password-free arguments only.
+        command      = "dpl " + ($Arguments -join ' ')
+        expectedExit = $ExpectedExit
+        actualExit   = $exit
+        matched      = ($exit -eq $ExpectedExit)
+        log          = $logRelative
+    }
+
+    if (-not $record.matched) {
+        Write-Warning "$Name exited $exit but $ExpectedExit was expected."
+    }
+
+    $scenarios.Add($record)
+    return $record
+}
+
+# Pulls the job id out of the CLI's own output, so the recorded id is the one SQL holds.
+function Get-JobIdFromLog {
+    param([Parameter(Mandatory)][string]$LogRelativePath)
+
+    $text = Get-Content (Join-Path $outputDirectory $LogRelativePath) -Raw
+    $match = [regex]::Match($text, 'Job ([0-9a-fA-F-]{36})')
+    if (-not $match.Success) { return $null }
+    return $match.Groups[1].Value
+}
+
+# Regenerates the report from SQL alone. The original CSV is deliberately not passed: a report
+# that still reproduces without the source file is the contract being demonstrated.
+function Write-JobReport {
+    param([Parameter(Mandatory)][string]$JobId, [Parameter(Mandatory)][string]$Name)
+
+    $reportRelative = "reports/$Name"
+    $reportPath = Join-Path $outputDirectory $reportRelative
+    $null = New-Item -ItemType Directory -Path $reportPath -Force
+
+    & dotnet $cliDll report --job-id $JobId --output "$outputRelative/$reportRelative" --database $database 2>&1 |
+        Tee-Object -FilePath (Join-Path $outputDirectory "logs/$Name-report.log") | Out-Host
+    $reportExit = $LASTEXITCODE
+
+    $resultFiles.Add("logs/$Name-report.log")
+    foreach ($file in @('report.json', 'rejected-rows.csv')) {
+        if (Test-Path (Join-Path $reportPath $file)) { $resultFiles.Add("$reportRelative/$file") }
+    }
+
+    return $reportExit
+}
+
+# --------------------------------------------------------------------------------------
+# The scenarios
+# --------------------------------------------------------------------------------------
+
+$failures = [System.Collections.Generic.List[string]]::new()
+
+# 1 — a clean file imports completely.
+$success = Invoke-Dpl -Name '1-success' -ExpectedExit 0 `
+    -Expectation 'every row accepted; exit 0' `
+    -Arguments @('import', '--file', "$samples/catalog-valid.csv",
+                 '--batch-size', $BatchSize, '--database', $database)
+
+$successJobId = Get-JobIdFromLog -LogRelativePath $success.log
+if ($successJobId) { $null = Write-JobReport -JobId $successJobId -Name '1-success' }
+
+# 2 — a bad header is a file-level failure: no job exists to resume.
+$null = Invoke-Dpl -Name '2-file-rejected' -ExpectedExit 1 `
+    -Expectation 'bad header rejects the whole file; exit 1 and no job created' `
+    -Arguments @('import', '--file', "$samples/catalog-bad-header.csv",
+                 '--batch-size', $BatchSize, '--database', $database)
+
+# 3 — a mixed file completes, with the invalid rows rejected rather than failing the file.
+$rowRejected = Invoke-Dpl -Name '3-row-rejected' -ExpectedExit 2 `
+    -Expectation 'invalid rows are rejected, valid rows land; exit 2' `
+    -Arguments @('import', '--file', "$samples/catalog-mixed.csv",
+                 '--batch-size', $BatchSize, '--database', $database)
+
+$mixedJobId = Get-JobIdFromLog -LogRelativePath $rowRejected.log
+if ($mixedJobId) { $null = Write-JobReport -JobId $mixedJobId -Name '3-row-rejected' }
+
+# 4 — a crash before a batch commits. The CLI exits 1 and leaves a resumable job; the rows of the
+#     aborted batch must not be present, because the batch transaction never committed.
+$interrupted = Invoke-Dpl -Name '4-interrupted-before-commit' -ExpectedExit 1 `
+    -Expectation 'aborts before batch 2 commits; exit 1, job left resumable' `
+    -Arguments @('import', '--file', "$samples/catalog-duplicate-sku.csv",
+                 '--batch-size', '1', '--fail-before-commit-on-batch', '2',
+                 '--database', $database)
+
+$interruptedJobId = Get-JobIdFromLog -LogRelativePath $interrupted.log
+
+# 5 — resuming that job from its stored checkpoint, without the original file.
+if ($interruptedJobId) {
+    $null = Invoke-Dpl -Name '5-resumed' -ExpectedExit 2 `
+        -Expectation 'resumes from the SQL checkpoint without the CSV; completes with rejections' `
+        -Arguments @('resume', '--job-id', $interruptedJobId, '--batch-size', '1',
+                     '--database', $database)
+
+    $null = Write-JobReport -JobId $interruptedJobId -Name '5-resumed'
+}
+else {
+    $failures.Add('4-interrupted-before-commit did not report a job id, so 5-resumed was skipped.')
+    Write-Warning 'No job id was found for the interrupted run; the resume scenario was skipped.'
+}
+
+# 6 — the same bytes again. The finished job is returned unchanged: same id, same counts, same
+#     exit code. Exit 2 is correct here and is not a new failure — it is the stored result.
+$reimport = Invoke-Dpl -Name '6-reimport-same-bytes' -ExpectedExit 2 `
+    -Expectation 'identical bytes return the stored result: same job id, same exit 2' `
+    -Arguments @('import', '--file', "$samples/catalog-mixed.csv",
+                 '--batch-size', $BatchSize, '--database', $database)
+
+$reimportJobId = Get-JobIdFromLog -LogRelativePath $reimport.log
+$jobIdReused = ($mixedJobId -and $reimportJobId -and $mixedJobId -eq $reimportJobId)
+if (-not $jobIdReused) {
+    $failures.Add("6-reimport-same-bytes produced job '$reimportJobId' but '$mixedJobId' was expected.")
+}
+
+# 7 — a second importer while the lock is held. The lock is taken from inside the SQL container
+#     by a session that then sleeps, which makes this deterministic rather than a race against a
+#     concurrently running import. The password is read from the container's own environment, so
+#     it never appears on a host command line or in a log.
+$lockHeld = $false
+if (Get-Command docker -ErrorAction SilentlyContinue) {
+    $lockSql = "EXEC sp_getapplock @Resource='DataPerformanceLab:import', " +
+               "@LockMode='Exclusive', @LockOwner='Session', @LockTimeout=0; " +
+               "WAITFOR DELAY '00:00:30';"
+    $lockCommand = '/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P "$MSSQL_SA_PASSWORD" ' +
+                   "-d $database -Q `"$lockSql`""
+
+    & docker exec -d dpl-sql bash -c $lockCommand 2>&1 | Out-Null
+    if ($LASTEXITCODE -eq 0) {
+        # Give the holder a moment to actually acquire it before the importer asks.
+        Start-Sleep -Seconds 3
+        $lockHeld = $true
+    }
+    else {
+        Write-Warning 'Could not take the import lock inside dpl-sql; the busy scenario was skipped.'
+    }
+}
+else {
+    Write-Warning 'docker is not on PATH; the busy scenario was skipped.'
+}
+
+if ($lockHeld) {
+    $null = Invoke-Dpl -Name '7-busy' -ExpectedExit 3 `
+        -Expectation 'another session holds the import lock; exit 3 and nothing is changed' `
+        -Arguments @('import', '--file', "$samples/catalog-valid.csv",
+                     '--batch-size', $BatchSize, '--database', $database)
+}
+else {
+    $failures.Add('7-busy could not run: the import lock could not be held.')
+}
+
+# --------------------------------------------------------------------------------------
+# Summary, manifest and teardown
+# --------------------------------------------------------------------------------------
+
+foreach ($scenario in $scenarios) {
+    if (-not $scenario.matched) {
+        $failures.Add("$($scenario.scenario): exit $($scenario.actualExit), expected $($scenario.expectedExit).")
+    }
+}
+
+$summary = [ordered]@{
+    schema    = 'dpl.import-experiment.v1'
+    runId     = $runId
+    database  = $database
+    batchSize = $BatchSize
+    notes     = @(
+        'Every exit code here is the real CLI exit code of the command shown, not an assertion.'
+        'Scenario 6 exits 2 because it returns the stored result of a job that had rejections.'
+        'A different byte sequence carrying the same products would create its own job and skip them.'
+        'Reports are regenerated from SQL with the original CSV absent.'
+        'Scenario 7 holds the applock from a separate SQL session so the refusal is deterministic.'
+    )
+    scenarios = @($scenarios)
+    jobIds    = [ordered]@{
+        success     = $successJobId
+        mixed       = $mixedJobId
+        interrupted = $interruptedJobId
+        reimport    = $reimportJobId
+    }
+    reimportReusedTheJob = $jobIdReused
+    status    = if ($failures.Count -eq 0) { 'completed' } else { 'failed' }
+}
+
+$summary | ConvertTo-Json -Depth 6 |
+    Set-Content -Path (Join-Path $outputDirectory 'import-experiment.json') -Encoding utf8
+$resultFiles.Add('import-experiment.json')
+
+$manifestPath = Write-LoadRunManifest -RepoRoot $repoRoot -OutputDirectory $outputDirectory `
+    -RunId $runId -Status $summary.status -StartedAtUtc $startedAtUtc `
+    -Parameters @{
+        experiment = 'import-scenarios'
+        database   = $database
+        batchSize  = $BatchSize
+        samples    = 'data/samples/catalog-valid.csv, catalog-bad-header.csv, catalog-mixed.csv, catalog-duplicate-sku.csv'
+        environment = 'Testing (required to arm import fault injection)'
+    } `
+    -ResultFiles $resultFiles `
+    -Command "./scripts/import-experiment.ps1 -Output $Output -BatchSize $BatchSize" `
+    -FailureReason $(if ($failures.Count -gt 0) { $failures -join ' | ' } else { $null })
+
+Write-Host "Manifest: $manifestPath"
+Write-Host "Artifacts: $outputDirectory"
+Write-Host ''
+
+# --------------------------------------------------------------------------------------
+# Teardown
+# --------------------------------------------------------------------------------------
+
+# The drop applies the same rule the CLI does: a database is only dropped once it has proven it
+# belongs to the lab. The name prefix is a filter, never the authority — so this checks the
+# LabMetadata marker in SQL and silently does nothing if it is absent or wrong. Belt and braces
+# for a statement that is, after all, a DROP DATABASE built from a variable.
+function Remove-ScenarioDatabase {
+    param([Parameter(Mandatory)][string]$Name)
+
+    if ($Name -notlike 'DataPerformanceLab_Test_*') {
+        Write-Warning "Refusing to drop '$Name': not a test-prefixed scenario database."
+        return $false
+    }
+
+    $dropSql = @"
+SET NOCOUNT ON;
+IF DB_ID(N'$Name') IS NULL BEGIN PRINT 'absent'; RETURN; END
+DECLARE @marker nvarchar(256);
+DECLARE @probe nvarchar(max) = N'SELECT @v = MetadataValue FROM [$Name].dbo.LabMetadata WHERE MetadataKey = N''LabIdentity''';
+BEGIN TRY EXEC sp_executesql @probe, N'@v nvarchar(256) OUTPUT', @v = @marker OUTPUT; END TRY
+BEGIN CATCH SET @marker = NULL; END CATCH
+IF @marker <> N'dotnet-data-performance-lab' OR @marker IS NULL
+BEGIN PRINT 'not-a-lab-database'; RETURN; END
+ALTER DATABASE [$Name] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+DROP DATABASE [$Name];
+PRINT 'dropped';
+"@
+
+    $command = '/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P "$MSSQL_SA_PASSWORD" ' +
+               "-h -1 -W -Q `"$($dropSql -replace '"', '\"')`""
+
+    $output = & docker exec dpl-sql bash -c $command 2>&1
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warning "Could not drop '$Name'. Output: $($output -join ' ')"
+        return $false
+    }
+
+    if ($output -match 'dropped') { return $true }
+
+    Write-Warning "'$Name' was not dropped: $($output -join ' ')"
+    return $false
+}
+
+if ($KeepDatabase) {
+    Write-Host "The scenario database '$database' was kept (-KeepDatabase)." -ForegroundColor DarkGray
+}
+elseif (Get-Command docker -ErrorAction SilentlyContinue) {
+    if (Remove-ScenarioDatabase -Name $database) {
+        Write-Host "Dropped the scenario database '$database'." -ForegroundColor DarkGray
+    }
+}
+else {
+    Write-Host "docker is not on PATH; '$database' was left in place." -ForegroundColor DarkGray
+}
+
+if ($failures.Count -eq 0) {
+    Write-Host 'Every import scenario produced the expected exit code.' -ForegroundColor Green
+    exit 0
+}
+
+Write-Warning "Some scenarios did not match: $($failures -join ' | ')"
+exit 1
+
+=== new file: src/Lab.Cli/Commands/ColdCacheCommand.cs ===
+using System.Globalization;
+using System.Net.Http.Json;
+using System.Text.Json;
+using DataPerformanceLab.Caching;
+using DataPerformanceLab.Cli.Experiments;
+using DataPerformanceLab.Configuration;
+using Microsoft.Extensions.Options;
+
+namespace DataPerformanceLab.Cli.Commands;
+
+/// <summary>
+/// The cold-cache read experiment (plan step 10): one SKU's entry is evicted, then the same SKU is
+/// read twice against a running API. The first read must miss and fall through to SQL; the second
+/// must hit.
+///
+/// Deliberately separate from the warm load comparison. Mixing a cold first read into a
+/// sixty-second warm run would dilute it into invisibility, and the warm run's numbers would then
+/// describe neither state.
+///
+/// Only the lab's own key for the requested SKU is deleted. There is no FLUSHALL and no pattern
+/// sweep: the cache may be shared with something else on the machine, and a measurement is not a
+/// licence to clear somebody else's data.
+/// </summary>
+public sealed class ColdCacheCommand(
+    IProductCache cache,
+    IOptions<CacheOptions> cacheOptions) : ICliCommand
+{
+    private const string HelpText = """
+        cold-cache --sku <sku> --output <directory> [--base-url http://127.0.0.1:8080] [--reads 3]
+
+        Evicts the lab's cache entry for one SKU, then reads that SKU from a running API and
+        records the cache counter delta of each read.
+
+        Requires Cache:Enabled=true and a running API on --base-url (start it with the same
+        Cache:InstanceId this CLI is configured with, or the key namespaces will not match).
+
+        Exit codes:
+          0  the first read missed and every later read hit
+          1  configuration, connectivity or argument error
+          2  the reads did not show the cold-then-warm pattern
+        """;
+
+    public string Name => "cold-cache";
+
+    private sealed record CacheCounters(
+        long Hits,
+        long Misses,
+        long Bypasses,
+        long SqlFallbacks,
+        long ReadFailures)
+    {
+        public CacheCounters Minus(CacheCounters earlier) => new(
+            Hits - earlier.Hits,
+            Misses - earlier.Misses,
+            Bypasses - earlier.Bypasses,
+            SqlFallbacks - earlier.SqlFallbacks,
+            ReadFailures - earlier.ReadFailures);
+    }
+
+    private sealed record ReadObservation(
+        int ReadNumber,
+        string Expectation,
+        int StatusCode,
+        double ElapsedMs,
+        CacheCounters Delta)
+    {
+        /// <summary>
+        /// A read is as expected when the counters say so. Latency is recorded but never used as
+        /// the test: a single request's timing on a developer machine proves nothing.
+        /// </summary>
+        public bool MatchedExpectation =>
+            StatusCode == 200
+            && Expectation switch
+            {
+                "miss" => Delta is { Misses: 1, Hits: 0 },
+                _ => Delta is { Hits: 1, Misses: 0 }
+            };
+    }
+
+    public async Task<int> ExecuteAsync(string[] args, CancellationToken ct)
+    {
+        if (args.Length is 0 || args[0] is "--help" or "-h")
+        {
+            Console.WriteLine(HelpText);
+            return 0;
+        }
+
+        var parsed = new CliArguments(args, ["help"]);
+        var sku = parsed.GetOption("sku")?.Trim().ToUpperInvariant()
+            ?? throw new ArgumentException("--sku <sku> is required.");
+        var outputDirectory = parsed.GetOption("output")
+            ?? throw new ArgumentException("--output <directory> is required.");
+        var baseUrl = (parsed.GetOption("base-url") ?? "http://127.0.0.1:8080").TrimEnd('/');
+        var reads = ParseReads(parsed.GetOption("reads"));
+
+        if (!cache.Enabled)
+        {
+            Console.Error.WriteLine(
+                "Cache:Enabled is false for this CLI process, so there is no cache entry to evict. "
+                + "This experiment only has meaning with the cache on.");
+            return 1;
+        }
+
+        Directory.CreateDirectory(outputDirectory);
+
+        var startedAtUtc = DateTime.UtcNow;
+        var runId = ExperimentManifest.NewRunId();
+        using var http = new HttpClient { BaseAddress = new Uri(baseUrl), Timeout = TimeSpan.FromSeconds(30) };
+
+        var observations = new List<ReadObservation>();
+        string? failureReason = null;
+
+        try
+        {
+            await AssertApiIsReadyAsync(http, baseUrl, ct);
+
+            // The only mutation this command performs, and it is scoped to one key.
+            await cache.InvalidateAsync(sku, ct);
+            Console.WriteLine($"Evicted the lab cache entry for '{sku}'.");
+
+            var before = await ReadCountersAsync(http, ct);
+
+            for (var read = 1; read <= reads; read++)
+            {
+                var expectation = read == 1 ? "miss" : "hit";
+                var (status, elapsedMs) = await TimeProductReadAsync(http, sku, ct);
+                var after = await ReadCountersAsync(http, ct);
+
+                var observation = new ReadObservation(
+                    read, expectation, status, elapsedMs, after.Minus(before));
+                observations.Add(observation);
+                before = after;
+
+                Console.WriteLine(string.Create(
+                    CultureInfo.InvariantCulture,
+                    $"""
+                      read {read} ({expectation}): HTTP {status}, {elapsedMs:0.00} ms, hits+{observation.Delta.Hits} misses+{observation.Delta.Misses} sqlFallbacks+{observation.Delta.SqlFallbacks} -> {(observation.MatchedExpectation ? "as expected" : "NOT as expected")}
+                      """));
+            }
+
+            if (observations.Any(o => !o.MatchedExpectation))
+            {
+                failureReason = "At least one read did not show the expected cold-then-warm pattern.";
+            }
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            failureReason = ex.Message;
+            Console.Error.WriteLine($"cold-cache experiment failed: {ex.Message}");
+        }
+
+        var reportPath = Path.Combine(outputDirectory, "cold-cache.json");
+        await WriteReportAsync(reportPath, runId, sku, baseUrl, observations, failureReason, ct);
+
+        var command = $"dpl cold-cache --sku {sku} --output {outputDirectory} "
+            + $"--base-url {baseUrl} --reads {reads}";
+
+        var manifest = new ExperimentManifest(
+            runId,
+            "cache-cold-read",
+            failureReason is null ? ExperimentManifest.StatusCompleted : ExperimentManifest.StatusFailed,
+            startedAtUtc,
+            DateTime.UtcNow,
+            LabDataOptions.ApiDatabaseName,
+            ExperimentManifest.CaptureGit(Directory.GetCurrentDirectory()),
+            ExperimentManifest.CaptureEnvironment(),
+            null,
+            new Dictionary<string, string>(StringComparer.Ordinal)
+            {
+                ["sku"] = sku,
+                ["baseUrl"] = baseUrl,
+                ["reads"] = reads.ToString(CultureInfo.InvariantCulture),
+                ["cacheTtlSeconds"] = cacheOptions.Value.TtlSeconds.ToString(CultureInfo.InvariantCulture),
+                ["cacheInstanceId"] = cacheOptions.Value.InstanceId,
+                ["evictionScope"] = "one key: the requested SKU in this lab's namespace",
+                // Said plainly in the evidence, because the opposite reading is the easy one.
+                ["coldnessScope"] =
+                    "Redis only. SQL Server's buffer pool, its plan cache and the .NET JIT are all "
+                    + "still warm, so this is not a cold-database measurement."
+            },
+            [Path.GetFileName(reportPath)],
+            command,
+            failureReason,
+            [ExperimentManifest.DescribeResultFile(
+                reportPath, Path.GetFileName(reportPath), StoredResultFile.StoragePublished, command)]);
+
+        await manifest.WriteAsync(Path.Combine(outputDirectory, "manifest.json"), CancellationToken.None);
+
+        Console.WriteLine($"Wrote {reportPath} and manifest.json.");
+        Console.WriteLine(
+            "Note: only Redis was cold. SQL's buffer pool and plan cache stayed warm, so the first "
+            + "read is not a cold-database read.");
+
+        if (failureReason is null)
+        {
+            return 0;
+        }
+
+        // A connectivity or configuration problem is a 1; reads that ran but disagreed are a 2.
+        return observations.Count == 0 ? 1 : 2;
+    }
+
+    private static async Task AssertApiIsReadyAsync(HttpClient http, string baseUrl, CancellationToken ct)
+    {
+        using var response = await http.GetAsync("/health/ready", ct);
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new InvalidOperationException(
+                $"{baseUrl}/health/ready returned {(int)response.StatusCode}; start the API first.");
+        }
+
+        var body = await response.Content.ReadFromJsonAsync<JsonElement>(ct);
+        if (body.TryGetProperty("cache", out var cacheStatus)
+            && cacheStatus.GetString() is { } status and not "reachable")
+        {
+            throw new InvalidOperationException(
+                $"The API reports its cache as '{status}'. A cold-read experiment needs a reachable, "
+                + "enabled cache on the API side too.");
+        }
+    }
+
+    private static async Task<(int StatusCode, double ElapsedMs)> TimeProductReadAsync(
+        HttpClient http, string sku, CancellationToken ct)
+    {
+        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+        using var response = await http.GetAsync($"/api/products/{Uri.EscapeDataString(sku)}", ct);
+        // Drain the body before stopping the clock: a measurement that ignores the response
+        // content is timing the headers.
+        _ = await response.Content.ReadAsByteArrayAsync(ct);
+        stopwatch.Stop();
+
+        return ((int)response.StatusCode, stopwatch.Elapsed.TotalMilliseconds);
+    }
+
+    private static async Task<CacheCounters> ReadCountersAsync(HttpClient http, CancellationToken ct)
+    {
+        var body = await http.GetFromJsonAsync<JsonElement>("/internal/cache-metrics", ct);
+
+        return new CacheCounters(
+            body.GetProperty("hits").GetInt64(),
+            body.GetProperty("misses").GetInt64(),
+            body.GetProperty("bypasses").GetInt64(),
+            body.GetProperty("sqlFallbacks").GetInt64(),
+            body.GetProperty("readFailures").GetInt64());
+    }
+
+    private async Task WriteReportAsync(
+        string path,
+        string runId,
+        string sku,
+        string baseUrl,
+        IReadOnlyList<ReadObservation> observations,
+        string? failureReason,
+        CancellationToken ct)
+    {
+        await using var stream = File.Create(path);
+        await JsonSerializer.SerializeAsync(
+            stream,
+            new
+            {
+                schema = "dpl.cold-cache.v1",
+                runId,
+                sku,
+                baseUrl,
+                cache = new
+                {
+                    ttlSeconds = cacheOptions.Value.TtlSeconds,
+                    instanceId = cacheOptions.Value.InstanceId
+                },
+                evictionScope = "one key: the requested SKU in this lab's namespace. No FLUSHALL.",
+                coldnessScope =
+                    "Redis only. SQL Server's buffer pool and plan cache, and the .NET JIT, were "
+                    + "warm throughout; a cold Redis read is not a cold-database read.",
+                reads = observations,
+                status = failureReason is null ? "completed" : "failed",
+                failureReason
+            },
+            ExperimentManifest.JsonOptions,
+            ct);
+    }
+
+    private static int ParseReads(string? value)
+    {
+        if (value is null)
+        {
+            return 3;
+        }
+
+        if (!int.TryParse(value, NumberStyles.None, CultureInfo.InvariantCulture, out var reads)
+            || reads is < 2 or > 50)
+        {
+            throw new ArgumentException("--reads must be an integer between 2 and 50.");
+        }
+
+        return reads;
+    }
+}
+
+=== new file: tests/Lab.IntegrationTests/DatabaseSafetyTests.cs ===
+using DataPerformanceLab.Catalog;
+using DataPerformanceLab.Configuration;
+using DataPerformanceLab.Data;
+using Microsoft.Data.SqlClient;
+using Xunit;
+
+namespace DataPerformanceLab.IntegrationTests;
+
+/// <summary>
+/// Proves that the allowed-name list is a filter and never the authority: a database the lab does
+/// not own survives a reset attempt untouched, marker and all. Every database here is created with
+/// the test prefix and a fresh GUID, so nothing outside this test's own scope is ever a candidate
+/// for the drop being exercised.
+/// </summary>
+[Collection("sql")]
+public sealed class DatabaseSafetyTests(SqlServerFixture sql)
+{
+    private const string SentinelTable = "PleaseDoNotDropMe";
+
+    private static string NewDatabaseName() =>
+        LabDataOptions.TestDatabasePrefix + Guid.NewGuid().ToString("N")[..12];
+
+    [Fact]
+    public async Task ResettingAnUnmarkedDatabaseLeavesItCompletelyIntact()
+    {
+        var database = NewDatabaseName();
+        await CreateForeignDatabaseAsync(database, withFakeLabMetadata: false);
+
+        var ex = await Assert.ThrowsAsync<NotALabDatabaseException>(
+            () => LabDbMigrator.ResetLabDatabaseAsync(
+                sql.MasterConnectionString, database, CancellationToken.None));
+
+        Assert.Contains("no lab metadata", ex.Message);
+        await AssertSentinelSurvivedAsync(database);
+    }
+
+    [Fact]
+    public async Task ResettingADatabaseWithTheWrongLabIdentityLeavesItCompletelyIntact()
+    {
+        var database = NewDatabaseName();
+        await CreateForeignDatabaseAsync(database, withFakeLabMetadata: true);
+
+        var ex = await Assert.ThrowsAsync<NotALabDatabaseException>(
+            () => LabDbMigrator.ResetLabDatabaseAsync(
+                sql.MasterConnectionString, database, CancellationToken.None));
+
+        Assert.Contains("LabIdentity", ex.Message);
+        await AssertSentinelSurvivedAsync(database);
+    }
+
+    [Fact]
+    public async Task MigratingAnUnmarkedDatabaseIsAlsoRefused()
+    {
+        var database = NewDatabaseName();
+        await CreateForeignDatabaseAsync(database, withFakeLabMetadata: false);
+
+        await Assert.ThrowsAsync<NotALabDatabaseException>(
+            () => LabDbMigrator.EnsureLabDatabaseAsync(
+                sql.MasterConnectionString, database, CancellationToken.None));
+
+        await AssertSentinelSurvivedAsync(database);
+    }
+
+    [Fact]
+    public async Task ResettingAProperlyMarkedLabDatabaseRebuildsIt()
+    {
+        var database = await sql.CreateAndMigrateTestDatabaseAsync();
+
+        await using (var seeded = sql.CreateContext(database))
+        {
+            seeded.Categories.Add(new Category { Id = 4242, Name = "Doomed" });
+            await seeded.SaveChangesAsync();
+        }
+
+        await LabDbMigrator.ResetLabDatabaseAsync(
+            sql.MasterConnectionString, database, CancellationToken.None);
+
+        await using var db = sql.CreateContext(database);
+        Assert.Empty(db.Categories);
+        // The rebuilt database is migrated and marked, so it is usable immediately.
+        Assert.Contains(
+            LabDbMigrator.LabIdentityValue,
+            db.LabMetadata.Select(m => m.MetadataValue).ToList());
+    }
+
+    [Fact]
+    public async Task AnEmptyDatabaseIsAdoptableBecauseThereIsNothingToLose()
+    {
+        // This is the half-finished state a create-then-migration-failure leaves behind; refusing
+        // it would strand the lab with no way forward but a manual drop.
+        var database = NewDatabaseName();
+        await ExecuteOnMasterAsync($"CREATE DATABASE [{database}]");
+
+        await LabDbMigrator.ResetLabDatabaseAsync(
+            sql.MasterConnectionString, database, CancellationToken.None);
+
+        await using var db = sql.CreateContext(database);
+        Assert.Contains(
+            LabDbMigrator.LabIdentityValue,
+            db.LabMetadata.Select(m => m.MetadataValue).ToList());
+    }
+
+    [Fact]
+    public async Task ADatabaseNameOutsideThePatternIsRefusedBeforeAnyConnection()
+    {
+        await Assert.ThrowsAsync<InvalidOperationException>(
+            () => LabDbMigrator.ResetLabDatabaseAsync(
+                sql.MasterConnectionString, "master];DROP DATABASE [x", CancellationToken.None));
+    }
+
+    /// <summary>
+    /// Builds a database that is not the lab's: a sentinel table with a row, optionally plus a
+    /// LabMetadata table carrying somebody else's identity value.
+    /// </summary>
+    private async Task CreateForeignDatabaseAsync(string database, bool withFakeLabMetadata)
+    {
+        await ExecuteOnMasterAsync($"CREATE DATABASE [{database}]");
+
+        await ExecuteAsync(
+            database,
+            $"CREATE TABLE dbo.{SentinelTable} (Id int NOT NULL PRIMARY KEY, Payload nvarchar(64) NOT NULL)");
+        await ExecuteAsync(database, $"INSERT INTO dbo.{SentinelTable} (Id, Payload) VALUES (1, N'precious')");
+
+        if (withFakeLabMetadata)
+        {
+            await ExecuteAsync(
+                database,
+                """
+                CREATE TABLE dbo.LabMetadata (
+                    MetadataKey nvarchar(64) NOT NULL PRIMARY KEY,
+                    MetadataValue nvarchar(256) NOT NULL,
+                    UpdatedAtUtc datetime2 NOT NULL)
+                """);
+            await ExecuteAsync(
+                database,
+                $"INSERT INTO dbo.LabMetadata (MetadataKey, MetadataValue, UpdatedAtUtc) "
+                + $"VALUES (N'{LabDbMigrator.LabIdentityKey}', N'someone-elses-app', SYSUTCDATETIME())");
+        }
+    }
+
+    private async Task AssertSentinelSurvivedAsync(string database)
+    {
+        await using var connection = new SqlConnection(sql.ConnectionStringFor(database));
+        await connection.OpenAsync();
+        await using var command = connection.CreateCommand();
+        command.CommandText = $"SELECT Payload FROM dbo.{SentinelTable} WHERE Id = 1";
+
+        Assert.Equal("precious", await command.ExecuteScalarAsync());
+    }
+
+    private Task ExecuteOnMasterAsync(string sqlText) => ExecuteAsync(null, sqlText);
+
+    private async Task ExecuteAsync(string? database, string sqlText)
+    {
+        var connectionString = database is null
+            ? sql.MasterConnectionString
+            : sql.ConnectionStringFor(database);
+
+        await using var connection = new SqlConnection(connectionString);
+        await connection.OpenAsync();
+        await using var command = connection.CreateCommand();
+        command.CommandText = sqlText;
+        await command.ExecuteNonQueryAsync();
+    }
+}
+
+=== new file: tests/Lab.UnitTests/ManifestSchemaTests.cs ===
+using System.Security.Cryptography;
+using System.Text.Json;
+using DataPerformanceLab.Cli.Experiments;
+using DataPerformanceLab.Data;
+using Xunit;
+
+namespace DataPerformanceLab.UnitTests;
+
+/// <summary>
+/// Guards the spec §10 manifest contract: the fields a reader needs in order to reproduce a
+/// measurement are present, a file's recorded bytes are its real bytes, and nothing resembling a
+/// credential can reach a published artifact.
+/// </summary>
+public sealed class ManifestSchemaTests
+{
+    private static ExperimentManifest Sample(
+        DatasetInfo? dataset = null,
+        IReadOnlyDictionary<string, string>? parameters = null,
+        IReadOnlyList<StoredResultFile>? storedFiles = null) =>
+        new(
+            "20260912T120000Z",
+            "query-index",
+            ExperimentManifest.StatusCompleted,
+            new DateTime(2026, 9, 12, 12, 0, 0, DateTimeKind.Utc),
+            new DateTime(2026, 9, 12, 12, 5, 0, DateTimeKind.Utc),
+            "DataPerformanceLab_Experiment",
+            new GitInfo("1268385f904e9e6f600bd3180e592ec3c1276421", false),
+            ExperimentManifest.CaptureEnvironment(containers: []),
+            dataset,
+            parameters ?? new Dictionary<string, string>(StringComparer.Ordinal) { ["experiment"] = "Index" },
+            ["query-samples.json"],
+            "dpl query --experiment index --category 1 --output results/local/x",
+            null,
+            storedFiles);
+
+    private static JsonElement Serialize(ExperimentManifest manifest) =>
+        JsonSerializer.SerializeToElement(manifest, ExperimentManifest.JsonOptions);
+
+    // ---- required fields --------------------------------------------------------------------
+
+    [Theory]
+    [InlineData("runId")]
+    [InlineData("experiment")]
+    [InlineData("status")]
+    [InlineData("startedAtUtc")]
+    [InlineData("completedAtUtc")]
+    [InlineData("database")]
+    [InlineData("git")]
+    [InlineData("environment")]
+    [InlineData("parameters")]
+    [InlineData("resultFiles")]
+    [InlineData("command")]
+    public void TheManifestCarriesEveryRequiredTopLevelField(string field)
+    {
+        Assert.True(Serialize(Sample()).TryGetProperty(field, out _), $"'{field}' is missing.");
+    }
+
+    [Theory]
+    [InlineData("operatingSystem")]
+    [InlineData("architecture")]
+    [InlineData("processorCount")]
+    [InlineData("runtimeVersion")]
+    [InlineData("workingSetLimitBytes")]
+    [InlineData("sdkVersion")]
+    [InlineData("packageVersions")]
+    [InlineData("containers")]
+    public void TheEnvironmentBlockDescribesTheToolchainAndTheMachine(string field)
+    {
+        var environment = Serialize(Sample()).GetProperty("environment");
+
+        Assert.True(environment.TryGetProperty(field, out _), $"environment.{field} is missing.");
+    }
+
+    [Fact]
+    public void ThePackageVersionBlockNamesEveryDataPathPackage()
+    {
+        var packages = Serialize(Sample()).GetProperty("environment").GetProperty("packageVersions");
+
+        foreach (var package in new[]
+        {
+            "Microsoft.EntityFrameworkCore",
+            "Microsoft.EntityFrameworkCore.SqlServer",
+            "Microsoft.Data.SqlClient",
+            "StackExchange.Redis",
+            "CsvHelper"
+        })
+        {
+            Assert.True(packages.TryGetProperty(package, out _), $"{package} is not recorded.");
+        }
+    }
+
+    [Fact]
+    public void AnUnreadableContainerListIsEmptyRatherThanInvented()
+    {
+        // Docker may not be reachable at all. The honest record is "nothing described", never a
+        // plausible-looking image name the run never used.
+        var containers = Serialize(Sample()).GetProperty("environment").GetProperty("containers");
+
+        Assert.Equal(JsonValueKind.Array, containers.ValueKind);
+    }
+
+    // ---- dataset distribution ---------------------------------------------------------------
+
+    [Fact]
+    public void TheDatasetCarriesTheRealDistributionNotJustTheProfileName()
+    {
+        var seedManifest = new SeedManifest(
+            20260910, 1, "default", 100_000, "DC7DE2FF",
+            new Dictionary<int, int> { [1] = 50_000, [2] = 25_000, [3] = 25_000 },
+            ActiveCount: 80_000,
+            InactiveCount: 20_000);
+
+        var dataset = Serialize(Sample(DatasetInfo.FromSeedManifest(seedManifest)))
+            .GetProperty("dataset");
+
+        Assert.Equal(80_000, dataset.GetProperty("activeCount").GetInt32());
+        Assert.Equal(20_000, dataset.GetProperty("inactiveCount").GetInt32());
+        Assert.Equal(50_000, dataset.GetProperty("categoryCounts").GetProperty("1").GetInt32());
+    }
+
+    [Fact]
+    public void DatasetInfoFromSeedManifestCopiesEveryFieldWithoutReinterpretingIt()
+    {
+        var seedManifest = new SeedManifest(
+            20260910, 2, "large", 1_000_000, "HASH",
+            new Dictionary<int, int> { [7] = 1_000_000 }, 999_999, 1);
+
+        var dataset = DatasetInfo.FromSeedManifest(seedManifest);
+
+        Assert.Equal(seedManifest.Seed, dataset.Seed);
+        Assert.Equal(seedManifest.GeneratorVersion, dataset.GeneratorVersion);
+        Assert.Equal(seedManifest.Profile, dataset.Profile);
+        Assert.Equal(seedManifest.ProductCount, dataset.ProductCount);
+        Assert.Equal(seedManifest.DataHash, dataset.DataHash);
+        Assert.Equal(seedManifest.CategoryCounts, dataset.CategoryCounts);
+        Assert.Equal(seedManifest.ActiveCount, dataset.ActiveCount);
+        Assert.Equal(seedManifest.InactiveCount, dataset.InactiveCount);
+    }
+
+    // ---- stored files: hash, size, reproduce command -----------------------------------------
+
+    [Fact]
+    public void AStoredFileRecordsTheBytesThatAreActuallyOnDisk()
+    {
+        var path = Path.Combine(Path.GetTempPath(), $"dpl-manifest-{Guid.NewGuid():N}.json");
+        var content = """{"schema":"dpl.load-summary.v1"}"""u8.ToArray();
+        File.WriteAllBytes(path, content);
+
+        try
+        {
+            var stored = ExperimentManifest.DescribeResultFile(
+                path, "runs/1-AB-cache-off.raw.json", StoredResultFile.StorageLocalOnly, "./scripts/compare-cache.ps1");
+
+            Assert.Equal(StoredResultFile.StorageLocalOnly, stored.Storage);
+            Assert.Equal(content.Length, stored.SizeBytes);
+            Assert.Equal(
+                Convert.ToHexString(SHA256.HashData(content)).ToLowerInvariant(),
+                stored.Sha256);
+            Assert.Equal("runs/1-AB-cache-off.raw.json", stored.Path);
+            Assert.Contains("compare-cache.ps1", stored.ReproduceCommand);
+        }
+        finally
+        {
+            File.Delete(path);
+        }
+    }
+
+    [Fact]
+    public void AFileThatIsNotOnDiskIsReportedMissingRatherThanGivenAFabricatedHash()
+    {
+        var stored = ExperimentManifest.DescribeResultFile(
+            Path.Combine(Path.GetTempPath(), $"dpl-absent-{Guid.NewGuid():N}.json"),
+            "runs/9-AB-cache-off.raw.json",
+            StoredResultFile.StorageLocalOnly,
+            "./scripts/compare-cache.ps1");
+
+        Assert.Equal("missing", stored.Storage);
+        Assert.Equal(0, stored.SizeBytes);
+        Assert.Equal(EnvironmentInfo.Unavailable, stored.Sha256);
+    }
+
+    [Fact]
+    public void EveryStoredFileCarriesACommandThatWouldMakeItAgain()
+    {
+        var stored = new[]
+        {
+            new StoredResultFile("runs/1-AB-cache-off.raw.json", StoredResultFile.StorageLocalOnly,
+                12_345, "abc", "./scripts/compare-cache.ps1 -Profile default -Rate 20"),
+        };
+
+        var files = Serialize(Sample(storedFiles: stored)).GetProperty("storedFiles");
+
+        var entry = Assert.Single(files.EnumerateArray());
+        foreach (var field in new[] { "path", "storage", "sizeBytes", "sha256", "reproduceCommand" })
+        {
+            Assert.True(entry.TryGetProperty(field, out _), $"storedFiles[].{field} is missing.");
+        }
+
+        Assert.NotEmpty(entry.GetProperty("reproduceCommand").GetString()!);
+    }
+
+    // ---- the recorded command must reproduce the run -----------------------------------------
+
+    [Fact]
+    public void TheRecordedCommandRoundTripsEveryParameterThatChangesTheMeasurement()
+    {
+        // Spec §10 wants the full command. A parameter recorded in `parameters` but absent from
+        // `command` makes the published text reproduce a different run than the one measured.
+        var parameters = new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["rate"] = "40",
+            ["duration"] = "90s",
+            ["repetitions"] = "3",
+            ["warmupDuration"] = "45s",
+            ["fixtureCount"] = "500"
+        };
+
+        var command = "./scripts/compare-cache.ps1 -Profile default -Output results/local/x "
+            + "-Repetitions 3 -Rate 40 -Duration 90s -WarmupDuration 45s -FixtureCount 500 -Port 8080";
+
+        var manifest = Sample(parameters: parameters) with { Command = command };
+
+        foreach (var value in parameters.Values)
+        {
+            Assert.Contains(value, manifest.Command);
+        }
+    }
+
+    // ---- no secrets -------------------------------------------------------------------------
+
+    [Fact]
+    public void TheManifestNeverCarriesConnectionMaterial()
+    {
+        // Parameters are a free-form dictionary, so the guard is on the serialized document:
+        // whatever a caller puts in, a published manifest must not read as a credential.
+        var manifest = Sample(parameters: new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["baseUrl"] = "http://127.0.0.1:8080",
+            ["differingFactor"] = "Cache:Enabled"
+        });
+
+        var json = JsonSerializer.Serialize(manifest, ExperimentManifest.JsonOptions);
+
+        // The needles are assembled from fragments rather than written out, for the same reason
+        // CI's hygiene job splits its own: a scanner that contains the literals it searches for
+        // matches itself, and this file would then be reported as carrying connection material.
+        foreach (var needle in new[]
+        {
+            "Pass" + "word=", "User" + " ID=", "Account" + "Key=",
+            "MSSQL" + "_SA_PASSWORD", "Data" + " Source=", "Initial" + " Catalog=",
+            "PRIVATE" + " KEY"
+        })
+        {
+            Assert.DoesNotContain(needle, json, StringComparison.OrdinalIgnoreCase);
+        }
+    }
+
+    [Fact]
+    public void NoManifestPropertyIsNamedLikeACredential()
+    {
+        var suspicious = typeof(ExperimentManifest).GetProperties()
+            .Concat(typeof(EnvironmentInfo).GetProperties())
+            .Concat(typeof(ContainerInfo).GetProperties())
+            .Concat(typeof(DatasetInfo).GetProperties())
+            .Select(p => p.Name)
+            .Where(name => name.Contains("Password", StringComparison.OrdinalIgnoreCase)
+                || name.Contains("Secret", StringComparison.OrdinalIgnoreCase)
+                || name.Contains("ConnectionString", StringComparison.OrdinalIgnoreCase)
+                || name.Contains("Credential", StringComparison.OrdinalIgnoreCase)
+                || name.Contains("Token", StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        Assert.Empty(suspicious);
+    }
+
+    [Fact]
+    public void UnavailableIsRecordedRatherThanASubstituteValue()
+    {
+        // A value that could not be read must say so. Borrowing today's machine's reading to
+        // describe a measurement taken elsewhere would be a fabricated manifest.
+        Assert.Equal("unavailable", EnvironmentInfo.Unavailable);
+
+        var container = new ContainerInfo(
+            "sql", "unknown", "unknown", EnvironmentInfo.Unavailable, EnvironmentInfo.Unavailable);
+
+        Assert.Equal(EnvironmentInfo.Unavailable, container.CpuLimit);
+        Assert.Equal(EnvironmentInfo.Unavailable, container.MemoryLimit);
+    }
+
+    [Fact]
+    public void TheManifestSerializesWithoutThrowingAndStaysReadable()
+    {
+        var json = JsonSerializer.Serialize(Sample(), ExperimentManifest.JsonOptions);
+
+        Assert.Contains("\"runId\"", json);
+        // WriteIndented: a manifest is read by people, not only parsed.
+        Assert.Contains(Environment.NewLine.Contains('\n') ? "\n" : "\r", json);
+        Assert.Equal(
+            "20260912T120000Z",
+            JsonSerializer.Deserialize<JsonElement>(json).GetProperty("runId").GetString());
+    }
+
+    [Fact]
+    public void AFailedRunKeepsItsReasonAndASuccessfulOneOmitsTheField()
+    {
+        var failed = Sample() with
+        {
+            Status = ExperimentManifest.StatusFailed,
+            FailureReason = "Variants returned different ordered results."
+        };
+
+        Assert.Contains("failureReason", JsonSerializer.Serialize(failed, ExperimentManifest.JsonOptions));
+        Assert.DoesNotContain("failureReason", JsonSerializer.Serialize(Sample(), ExperimentManifest.JsonOptions));
+    }
+
+    [Fact]
+    public void ADirtyTreeIsRecordedRatherThanHidden()
+    {
+        var dirty = Sample() with { Git = new GitInfo("abc123", true) };
+        var json = Serialize(dirty).GetProperty("git");
+
+        Assert.True(json.GetProperty("isDirty").GetBoolean());
+    }
+}
+

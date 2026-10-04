@@ -1,0 +1,19 @@
+{
+  "label": "after-measured-run",
+  "capturedAtUtc": "2026-10-04T13:44:23.5270115Z",
+  "cacheEnabled": true,
+  "configuration": {
+    "enabled": true,
+    "ttlSeconds": 60,
+    "instanceId": "compare-20261004T132535Z-5-AB-cache-on",
+    "connectTimeoutMilliseconds": 1000,
+    "operationTimeoutMilliseconds": 1000
+  },
+  "hits": 802,
+  "misses": 2000,
+  "bypasses": 0,
+  "readFailures": 0,
+  "writeFailures": 0,
+  "invalidationFailures": 0,
+  "sqlFallbacks": 2000
+}

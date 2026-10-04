@@ -1,0 +1,4 @@
+sku,name,categoryId,unitPrice,isActive,description
+IMP-0000000201,First Wins,1,10.00,true,This record claims the SKU.
+IMP-0000000202,Other Sku,2,20.00,true,Unrelated record.
+IMP-0000000201,Second Loses,3,30.00,false,Rejected as DuplicateSkuInFile.

@@ -1,0 +1,8 @@
+sku,name,categoryId,unitPrice,isActive,description
+IMP-0000000001,Ergonomic Widget,1,19.99,true,A plain synthetic row.
+IMP-0000000002,"Gadget, Compact",2,5.00,true,"A description with an embedded comma, kept intact by CSV quoting."
+IMP-0000000003,Modular Assembly,3,1249.50,false,"A description that spans
+two physical lines but is one logical record."
+IMP-0000000004,Precision Bracket,20,0.01,true,Cheapest allowed non-zero price.
+IMP-0000000005,Free Sample Unit,1,0,true,Zero is a valid price.
+IMP-0000000006,"Quoted ""Inner"" Name Unit",4,42.42,false,"Embedded ""double quotes"" survive the round trip."

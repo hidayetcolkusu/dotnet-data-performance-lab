@@ -1,0 +1,58 @@
+{
+  "jobId": "5a3ddd40-50ca-4953-8988-3b0c5978db5b",
+  "fileHash": "8cff190f579f2226c1ead4e495235adf528e9d5f29c0f40d668a05c0090d1544",
+  "parserVersion": 1,
+  "status": "CompletedWithErrors",
+  "totalRecords": 9,
+  "inserted": 2,
+  "skipped": 0,
+  "rejected": 7,
+  "lastProcessedRecord": 9,
+  "lastErrorCode": null,
+  "createdAtUtc": "2026-09-13T11:09:31.3642285",
+  "completedAtUtc": "2026-09-13T11:09:32.2421648",
+  "rejectedRows": [
+    {
+      "recordNumber": 2,
+      "sku": "IMP LOWER SPACE",
+      "errorCode": "InvalidSku",
+      "outcome": "Rejected"
+    },
+    {
+      "recordNumber": 3,
+      "sku": "IMP-0000000103",
+      "errorCode": "MissingName",
+      "outcome": "Rejected"
+    },
+    {
+      "recordNumber": 4,
+      "sku": "IMP-0000000104",
+      "errorCode": "InvalidCategoryId",
+      "outcome": "Rejected"
+    },
+    {
+      "recordNumber": 5,
+      "sku": "IMP-0000000105",
+      "errorCode": "InvalidUnitPrice",
+      "outcome": "Rejected"
+    },
+    {
+      "recordNumber": 6,
+      "sku": "IMP-0000000106",
+      "errorCode": "InvalidUnitPrice",
+      "outcome": "Rejected"
+    },
+    {
+      "recordNumber": 7,
+      "sku": "IMP-0000000107",
+      "errorCode": "InvalidIsActive",
+      "outcome": "Rejected"
+    },
+    {
+      "recordNumber": 9,
+      "sku": "IMP-0000000101",
+      "errorCode": "DuplicateSkuInFile",
+      "outcome": "Rejected"
+    }
+  ]
+}

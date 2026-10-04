@@ -1,0 +1,8016 @@
+{
+  "schema": "dpl.load-fixture.v1",
+  "database": "DataPerformanceLab",
+  "dataset": {
+    "seed": 20260910,
+    "generatorVersion": 1,
+    "profile": "default",
+    "productCount": 100000,
+    "dataHash": "DC7DE2FF4977DE5FD927CFA575794FED422B7D96A6F0103D16C5ACE8AED632C3"
+  },
+  "fixtureHash": "45D7164B5AE5611427E206DECA0138F7B5CBB133E7AA2F619A6670697EFEBDF0",
+  "count": 1000,
+  "stride": 100,
+  "products": [
+    {
+      "id": 1,
+      "sku": "SKU-0000000001",
+      "name": "Classic System 0000000001",
+      "categoryId": 9,
+      "unitPrice": 48040.40,
+      "isActive": true
+    },
+    {
+      "id": 101,
+      "sku": "SKU-0000000101",
+      "name": "Modular Widget 0000000101",
+      "categoryId": 8,
+      "unitPrice": 50434.98,
+      "isActive": true
+    },
+    {
+      "id": 201,
+      "sku": "SKU-0000000201",
+      "name": "Practical Toolkit 0000000201",
+      "categoryId": 8,
+      "unitPrice": 68916.21,
+      "isActive": true
+    },
+    {
+      "id": 301,
+      "sku": "SKU-0000000301",
+      "name": "Precision System 0000000301",
+      "categoryId": 1,
+      "unitPrice": 91614.44,
+      "isActive": true
+    },
+    {
+      "id": 401,
+      "sku": "SKU-0000000401",
+      "name": "Aerodynamic Gadget 0000000401",
+      "categoryId": 1,
+      "unitPrice": 47940.81,
+      "isActive": true
+    },
+    {
+      "id": 501,
+      "sku": "SKU-0000000501",
+      "name": "Sleek Unit 0000000501",
+      "categoryId": 17,
+      "unitPrice": 73446.54,
+      "isActive": true
+    },
+    {
+      "id": 601,
+      "sku": "SKU-0000000601",
+      "name": "Robust Gadget 0000000601",
+      "categoryId": 1,
+      "unitPrice": 89269.44,
+      "isActive": true
+    },
+    {
+      "id": 701,
+      "sku": "SKU-0000000701",
+      "name": "Durable Harness 0000000701",
+      "categoryId": 19,
+      "unitPrice": 74783.89,
+      "isActive": true
+    },
+    {
+      "id": 801,
+      "sku": "SKU-0000000801",
+      "name": "Precision Adapter 0000000801",
+      "categoryId": 10,
+      "unitPrice": 92245.62,
+      "isActive": false
+    },
+    {
+      "id": 901,
+      "sku": "SKU-0000000901",
+      "name": "Precision Widget 0000000901",
+      "categoryId": 1,
+      "unitPrice": 54657.26,
+      "isActive": true
+    },
+    {
+      "id": 1001,
+      "sku": "SKU-0000001001",
+      "name": "Precision Toolkit 0000001001",
+      "categoryId": 1,
+      "unitPrice": 22042.78,
+      "isActive": true
+    },
+    {
+      "id": 1101,
+      "sku": "SKU-0000001101",
+      "name": "Precision Adapter 0000001101",
+      "categoryId": 1,
+      "unitPrice": 59946.69,
+      "isActive": true
+    },
+    {
+      "id": 1201,
+      "sku": "SKU-0000001201",
+      "name": "Compact Harness 0000001201",
+      "categoryId": 18,
+      "unitPrice": 97928.01,
+      "isActive": false
+    },
+    {
+      "id": 1301,
+      "sku": "SKU-0000001301",
+      "name": "Durable Unit 0000001301",
+      "categoryId": 17,
+      "unitPrice": 43641.77,
+      "isActive": false
+    },
+    {
+      "id": 1401,
+      "sku": "SKU-0000001401",
+      "name": "Aerodynamic Device 0000001401",
+      "categoryId": 9,
+      "unitPrice": 86149.20,
+      "isActive": true
+    },
+    {
+      "id": 1501,
+      "sku": "SKU-0000001501",
+      "name": "Durable System 0000001501",
+      "categoryId": 1,
+      "unitPrice": 35743.34,
+      "isActive": true
+    },
+    {
+      "id": 1601,
+      "sku": "SKU-0000001601",
+      "name": "Versatile Toolkit 0000001601",
+      "categoryId": 1,
+      "unitPrice": 94077.13,
+      "isActive": true
+    },
+    {
+      "id": 1701,
+      "sku": "SKU-0000001701",
+      "name": "Durable Module 0000001701",
+      "categoryId": 1,
+      "unitPrice": 41315.20,
+      "isActive": false
+    },
+    {
+      "id": 1801,
+      "sku": "SKU-0000001801",
+      "name": "Ergonomic Device 0000001801",
+      "categoryId": 12,
+      "unitPrice": 95889.22,
+      "isActive": false
+    },
+    {
+      "id": 1901,
+      "sku": "SKU-0000001901",
+      "name": "Durable Assembly 0000001901",
+      "categoryId": 1,
+      "unitPrice": 27156.10,
+      "isActive": true
+    },
+    {
+      "id": 2001,
+      "sku": "SKU-0000002001",
+      "name": "Lightweight Toolkit 0000002001",
+      "categoryId": 11,
+      "unitPrice": 65368.29,
+      "isActive": true
+    },
+    {
+      "id": 2101,
+      "sku": "SKU-0000002101",
+      "name": "Precision Module 0000002101",
+      "categoryId": 15,
+      "unitPrice": 44033.66,
+      "isActive": false
+    },
+    {
+      "id": 2201,
+      "sku": "SKU-0000002201",
+      "name": "Lightweight Toolkit 0000002201",
+      "categoryId": 1,
+      "unitPrice": 31034.16,
+      "isActive": true
+    },
+    {
+      "id": 2301,
+      "sku": "SKU-0000002301",
+      "name": "Practical Unit 0000002301",
+      "categoryId": 1,
+      "unitPrice": 70586.25,
+      "isActive": true
+    },
+    {
+      "id": 2401,
+      "sku": "SKU-0000002401",
+      "name": "Compact Unit 0000002401",
+      "categoryId": 2,
+      "unitPrice": 90966.69,
+      "isActive": true
+    },
+    {
+      "id": 2501,
+      "sku": "SKU-0000002501",
+      "name": "Compact Module 0000002501",
+      "categoryId": 12,
+      "unitPrice": 97542.42,
+      "isActive": true
+    },
+    {
+      "id": 2601,
+      "sku": "SKU-0000002601",
+      "name": "Ergonomic Component 0000002601",
+      "categoryId": 1,
+      "unitPrice": 45348.76,
+      "isActive": true
+    },
+    {
+      "id": 2701,
+      "sku": "SKU-0000002701",
+      "name": "Rugged Adapter 0000002701",
+      "categoryId": 5,
+      "unitPrice": 85477.02,
+      "isActive": true
+    },
+    {
+      "id": 2801,
+      "sku": "SKU-0000002801",
+      "name": "Lightweight Assembly 0000002801",
+      "categoryId": 1,
+      "unitPrice": 76288.93,
+      "isActive": true
+    },
+    {
+      "id": 2901,
+      "sku": "SKU-0000002901",
+      "name": "Modern Component 0000002901",
+      "categoryId": 1,
+      "unitPrice": 56273.70,
+      "isActive": true
+    },
+    {
+      "id": 3001,
+      "sku": "SKU-0000003001",
+      "name": "Classic System 0000003001",
+      "categoryId": 7,
+      "unitPrice": 76995.41,
+      "isActive": true
+    },
+    {
+      "id": 3101,
+      "sku": "SKU-0000003101",
+      "name": "Robust Widget 0000003101",
+      "categoryId": 3,
+      "unitPrice": 7757.09,
+      "isActive": true
+    },
+    {
+      "id": 3201,
+      "sku": "SKU-0000003201",
+      "name": "Refined Console 0000003201",
+      "categoryId": 1,
+      "unitPrice": 80792.27,
+      "isActive": true
+    },
+    {
+      "id": 3301,
+      "sku": "SKU-0000003301",
+      "name": "Versatile Toolkit 0000003301",
+      "categoryId": 1,
+      "unitPrice": 36666.63,
+      "isActive": true
+    },
+    {
+      "id": 3401,
+      "sku": "SKU-0000003401",
+      "name": "Lightweight Module 0000003401",
+      "categoryId": 5,
+      "unitPrice": 11935.30,
+      "isActive": true
+    },
+    {
+      "id": 3501,
+      "sku": "SKU-0000003501",
+      "name": "Rugged Device 0000003501",
+      "categoryId": 16,
+      "unitPrice": 54263.24,
+      "isActive": false
+    },
+    {
+      "id": 3601,
+      "sku": "SKU-0000003601",
+      "name": "Rugged Assembly 0000003601",
+      "categoryId": 1,
+      "unitPrice": 12959.91,
+      "isActive": false
+    },
+    {
+      "id": 3701,
+      "sku": "SKU-0000003701",
+      "name": "Refined Gadget 0000003701",
+      "categoryId": 1,
+      "unitPrice": 66084.35,
+      "isActive": true
+    },
+    {
+      "id": 3801,
+      "sku": "SKU-0000003801",
+      "name": "Lightweight Adapter 0000003801",
+      "categoryId": 8,
+      "unitPrice": 49617.62,
+      "isActive": false
+    },
+    {
+      "id": 3901,
+      "sku": "SKU-0000003901",
+      "name": "Robust Gadget 0000003901",
+      "categoryId": 1,
+      "unitPrice": 52772.98,
+      "isActive": true
+    },
+    {
+      "id": 4001,
+      "sku": "SKU-0000004001",
+      "name": "Rugged System 0000004001",
+      "categoryId": 1,
+      "unitPrice": 29560.32,
+      "isActive": true
+    },
+    {
+      "id": 4101,
+      "sku": "SKU-0000004101",
+      "name": "Modern Console 0000004101",
+      "categoryId": 10,
+      "unitPrice": 59027.42,
+      "isActive": true
+    },
+    {
+      "id": 4201,
+      "sku": "SKU-0000004201",
+      "name": "Sleek Toolkit 0000004201",
+      "categoryId": 15,
+      "unitPrice": 8756.09,
+      "isActive": true
+    },
+    {
+      "id": 4301,
+      "sku": "SKU-0000004301",
+      "name": "Practical Component 0000004301",
+      "categoryId": 1,
+      "unitPrice": 61576.09,
+      "isActive": true
+    },
+    {
+      "id": 4401,
+      "sku": "SKU-0000004401",
+      "name": "Robust Toolkit 0000004401",
+      "categoryId": 1,
+      "unitPrice": 36156.05,
+      "isActive": true
+    },
+    {
+      "id": 4501,
+      "sku": "SKU-0000004501",
+      "name": "Robust Bracket 0000004501",
+      "categoryId": 1,
+      "unitPrice": 32832.99,
+      "isActive": true
+    },
+    {
+      "id": 4601,
+      "sku": "SKU-0000004601",
+      "name": "Durable Toolkit 0000004601",
+      "categoryId": 9,
+      "unitPrice": 32951.28,
+      "isActive": true
+    },
+    {
+      "id": 4701,
+      "sku": "SKU-0000004701",
+      "name": "Modular Controller 0000004701",
+      "categoryId": 9,
+      "unitPrice": 14591.23,
+      "isActive": true
+    },
+    {
+      "id": 4801,
+      "sku": "SKU-0000004801",
+      "name": "Classic Widget 0000004801",
+      "categoryId": 1,
+      "unitPrice": 58562.42,
+      "isActive": true
+    },
+    {
+      "id": 4901,
+      "sku": "SKU-0000004901",
+      "name": "Industrial Component 0000004901",
+      "categoryId": 15,
+      "unitPrice": 78597.51,
+      "isActive": true
+    },
+    {
+      "id": 5001,
+      "sku": "SKU-0000005001",
+      "name": "Rugged System 0000005001",
+      "categoryId": 1,
+      "unitPrice": 10267.27,
+      "isActive": true
+    },
+    {
+      "id": 5101,
+      "sku": "SKU-0000005101",
+      "name": "Durable Module 0000005101",
+      "categoryId": 1,
+      "unitPrice": 16244.67,
+      "isActive": true
+    },
+    {
+      "id": 5201,
+      "sku": "SKU-0000005201",
+      "name": "Lightweight Toolkit 0000005201",
+      "categoryId": 1,
+      "unitPrice": 39075.63,
+      "isActive": true
+    },
+    {
+      "id": 5301,
+      "sku": "SKU-0000005301",
+      "name": "Modern Toolkit 0000005301",
+      "categoryId": 1,
+      "unitPrice": 1147.53,
+      "isActive": true
+    },
+    {
+      "id": 5401,
+      "sku": "SKU-0000005401",
+      "name": "Rugged Adapter 0000005401",
+      "categoryId": 16,
+      "unitPrice": 66983.03,
+      "isActive": true
+    },
+    {
+      "id": 5501,
+      "sku": "SKU-0000005501",
+      "name": "Robust Unit 0000005501",
+      "categoryId": 18,
+      "unitPrice": 47130.32,
+      "isActive": true
+    },
+    {
+      "id": 5601,
+      "sku": "SKU-0000005601",
+      "name": "Durable Widget 0000005601",
+      "categoryId": 1,
+      "unitPrice": 49769.24,
+      "isActive": true
+    },
+    {
+      "id": 5701,
+      "sku": "SKU-0000005701",
+      "name": "Versatile Panel 0000005701",
+      "categoryId": 11,
+      "unitPrice": 55547.04,
+      "isActive": true
+    },
+    {
+      "id": 5801,
+      "sku": "SKU-0000005801",
+      "name": "Refined Module 0000005801",
+      "categoryId": 1,
+      "unitPrice": 40005.40,
+      "isActive": true
+    },
+    {
+      "id": 5901,
+      "sku": "SKU-0000005901",
+      "name": "Modern Harness 0000005901",
+      "categoryId": 13,
+      "unitPrice": 59233.69,
+      "isActive": false
+    },
+    {
+      "id": 6001,
+      "sku": "SKU-0000006001",
+      "name": "Ergonomic Component 0000006001",
+      "categoryId": 1,
+      "unitPrice": 1706.84,
+      "isActive": false
+    },
+    {
+      "id": 6101,
+      "sku": "SKU-0000006101",
+      "name": "Refined Module 0000006101",
+      "categoryId": 19,
+      "unitPrice": 25858.83,
+      "isActive": true
+    },
+    {
+      "id": 6201,
+      "sku": "SKU-0000006201",
+      "name": "Industrial Adapter 0000006201",
+      "categoryId": 6,
+      "unitPrice": 68409.86,
+      "isActive": true
+    },
+    {
+      "id": 6301,
+      "sku": "SKU-0000006301",
+      "name": "Modern Adapter 0000006301",
+      "categoryId": 1,
+      "unitPrice": 12332.22,
+      "isActive": true
+    },
+    {
+      "id": 6401,
+      "sku": "SKU-0000006401",
+      "name": "Ergonomic Console 0000006401",
+      "categoryId": 1,
+      "unitPrice": 69420.36,
+      "isActive": true
+    },
+    {
+      "id": 6501,
+      "sku": "SKU-0000006501",
+      "name": "Classic Fixture 0000006501",
+      "categoryId": 10,
+      "unitPrice": 94740.94,
+      "isActive": true
+    },
+    {
+      "id": 6601,
+      "sku": "SKU-0000006601",
+      "name": "Compact Gadget 0000006601",
+      "categoryId": 1,
+      "unitPrice": 55890.67,
+      "isActive": true
+    },
+    {
+      "id": 6701,
+      "sku": "SKU-0000006701",
+      "name": "Versatile Gadget 0000006701",
+      "categoryId": 1,
+      "unitPrice": 24428.90,
+      "isActive": false
+    },
+    {
+      "id": 6801,
+      "sku": "SKU-0000006801",
+      "name": "Industrial Bracket 0000006801",
+      "categoryId": 1,
+      "unitPrice": 81791.30,
+      "isActive": true
+    },
+    {
+      "id": 6901,
+      "sku": "SKU-0000006901",
+      "name": "Precision System 0000006901",
+      "categoryId": 1,
+      "unitPrice": 92883.02,
+      "isActive": true
+    },
+    {
+      "id": 7001,
+      "sku": "SKU-0000007001",
+      "name": "Durable System 0000007001",
+      "categoryId": 1,
+      "unitPrice": 44248.35,
+      "isActive": true
+    },
+    {
+      "id": 7101,
+      "sku": "SKU-0000007101",
+      "name": "Sleek Controller 0000007101",
+      "categoryId": 1,
+      "unitPrice": 2459.88,
+      "isActive": true
+    },
+    {
+      "id": 7201,
+      "sku": "SKU-0000007201",
+      "name": "Versatile Unit 0000007201",
+      "categoryId": 1,
+      "unitPrice": 69467.84,
+      "isActive": false
+    },
+    {
+      "id": 7301,
+      "sku": "SKU-0000007301",
+      "name": "Compact Fixture 0000007301",
+      "categoryId": 5,
+      "unitPrice": 37215.39,
+      "isActive": true
+    },
+    {
+      "id": 7401,
+      "sku": "SKU-0000007401",
+      "name": "Compact Harness 0000007401",
+      "categoryId": 19,
+      "unitPrice": 76187.69,
+      "isActive": true
+    },
+    {
+      "id": 7501,
+      "sku": "SKU-0000007501",
+      "name": "Compact Adapter 0000007501",
+      "categoryId": 10,
+      "unitPrice": 87293.59,
+      "isActive": true
+    },
+    {
+      "id": 7601,
+      "sku": "SKU-0000007601",
+      "name": "Practical Assembly 0000007601",
+      "categoryId": 1,
+      "unitPrice": 54128.87,
+      "isActive": true
+    },
+    {
+      "id": 7701,
+      "sku": "SKU-0000007701",
+      "name": "Sleek Fixture 0000007701",
+      "categoryId": 11,
+      "unitPrice": 59341.10,
+      "isActive": true
+    },
+    {
+      "id": 7801,
+      "sku": "SKU-0000007801",
+      "name": "Robust Harness 0000007801",
+      "categoryId": 1,
+      "unitPrice": 34170.41,
+      "isActive": true
+    },
+    {
+      "id": 7901,
+      "sku": "SKU-0000007901",
+      "name": "Modern Component 0000007901",
+      "categoryId": 1,
+      "unitPrice": 84665.74,
+      "isActive": true
+    },
+    {
+      "id": 8001,
+      "sku": "SKU-0000008001",
+      "name": "Aerodynamic Toolkit 0000008001",
+      "categoryId": 12,
+      "unitPrice": 64812.42,
+      "isActive": true
+    },
+    {
+      "id": 8101,
+      "sku": "SKU-0000008101",
+      "name": "Compact Adapter 0000008101",
+      "categoryId": 1,
+      "unitPrice": 73603.82,
+      "isActive": true
+    },
+    {
+      "id": 8201,
+      "sku": "SKU-0000008201",
+      "name": "Compact Console 0000008201",
+      "categoryId": 1,
+      "unitPrice": 13590.11,
+      "isActive": true
+    },
+    {
+      "id": 8301,
+      "sku": "SKU-0000008301",
+      "name": "Modern Toolkit 0000008301",
+      "categoryId": 1,
+      "unitPrice": 64497.38,
+      "isActive": false
+    },
+    {
+      "id": 8401,
+      "sku": "SKU-0000008401",
+      "name": "Versatile Widget 0000008401",
+      "categoryId": 1,
+      "unitPrice": 88666.53,
+      "isActive": true
+    },
+    {
+      "id": 8501,
+      "sku": "SKU-0000008501",
+      "name": "Ergonomic Component 0000008501",
+      "categoryId": 1,
+      "unitPrice": 47270.40,
+      "isActive": false
+    },
+    {
+      "id": 8601,
+      "sku": "SKU-0000008601",
+      "name": "Modern Controller 0000008601",
+      "categoryId": 1,
+      "unitPrice": 8028.39,
+      "isActive": true
+    },
+    {
+      "id": 8701,
+      "sku": "SKU-0000008701",
+      "name": "Refined Widget 0000008701",
+      "categoryId": 12,
+      "unitPrice": 57853.26,
+      "isActive": true
+    },
+    {
+      "id": 8801,
+      "sku": "SKU-0000008801",
+      "name": "Aerodynamic Harness 0000008801",
+      "categoryId": 15,
+      "unitPrice": 38277.97,
+      "isActive": true
+    },
+    {
+      "id": 8901,
+      "sku": "SKU-0000008901",
+      "name": "Modular Adapter 0000008901",
+      "categoryId": 1,
+      "unitPrice": 40884.62,
+      "isActive": true
+    },
+    {
+      "id": 9001,
+      "sku": "SKU-0000009001",
+      "name": "Ergonomic Widget 0000009001",
+      "categoryId": 1,
+      "unitPrice": 80627.48,
+      "isActive": true
+    },
+    {
+      "id": 9101,
+      "sku": "SKU-0000009101",
+      "name": "Durable Assembly 0000009101",
+      "categoryId": 17,
+      "unitPrice": 66794.20,
+      "isActive": true
+    },
+    {
+      "id": 9201,
+      "sku": "SKU-0000009201",
+      "name": "Compact Harness 0000009201",
+      "categoryId": 1,
+      "unitPrice": 49115.64,
+      "isActive": true
+    },
+    {
+      "id": 9301,
+      "sku": "SKU-0000009301",
+      "name": "Lightweight Unit 0000009301",
+      "categoryId": 1,
+      "unitPrice": 52753.26,
+      "isActive": false
+    },
+    {
+      "id": 9401,
+      "sku": "SKU-0000009401",
+      "name": "Lightweight Component 0000009401",
+      "categoryId": 4,
+      "unitPrice": 68619.00,
+      "isActive": false
+    },
+    {
+      "id": 9501,
+      "sku": "SKU-0000009501",
+      "name": "Modern Toolkit 0000009501",
+      "categoryId": 3,
+      "unitPrice": 51973.12,
+      "isActive": true
+    },
+    {
+      "id": 9601,
+      "sku": "SKU-0000009601",
+      "name": "Refined Widget 0000009601",
+      "categoryId": 1,
+      "unitPrice": 62591.85,
+      "isActive": true
+    },
+    {
+      "id": 9701,
+      "sku": "SKU-0000009701",
+      "name": "Practical Fixture 0000009701",
+      "categoryId": 1,
+      "unitPrice": 84084.42,
+      "isActive": true
+    },
+    {
+      "id": 9801,
+      "sku": "SKU-0000009801",
+      "name": "Rugged Fixture 0000009801",
+      "categoryId": 1,
+      "unitPrice": 1694.37,
+      "isActive": true
+    },
+    {
+      "id": 9901,
+      "sku": "SKU-0000009901",
+      "name": "Precision Gadget 0000009901",
+      "categoryId": 3,
+      "unitPrice": 52354.43,
+      "isActive": true
+    },
+    {
+      "id": 10001,
+      "sku": "SKU-0000010001",
+      "name": "Lightweight Adapter 0000010001",
+      "categoryId": 13,
+      "unitPrice": 45226.18,
+      "isActive": false
+    },
+    {
+      "id": 10101,
+      "sku": "SKU-0000010101",
+      "name": "Modular Unit 0000010101",
+      "categoryId": 1,
+      "unitPrice": 43991.84,
+      "isActive": false
+    },
+    {
+      "id": 10201,
+      "sku": "SKU-0000010201",
+      "name": "Aerodynamic Bracket 0000010201",
+      "categoryId": 1,
+      "unitPrice": 17372.51,
+      "isActive": true
+    },
+    {
+      "id": 10301,
+      "sku": "SKU-0000010301",
+      "name": "Lightweight Bracket 0000010301",
+      "categoryId": 18,
+      "unitPrice": 35870.41,
+      "isActive": true
+    },
+    {
+      "id": 10401,
+      "sku": "SKU-0000010401",
+      "name": "Modern Harness 0000010401",
+      "categoryId": 1,
+      "unitPrice": 77442.13,
+      "isActive": true
+    },
+    {
+      "id": 10501,
+      "sku": "SKU-0000010501",
+      "name": "Modular Harness 0000010501",
+      "categoryId": 14,
+      "unitPrice": 63649.10,
+      "isActive": false
+    },
+    {
+      "id": 10601,
+      "sku": "SKU-0000010601",
+      "name": "Aerodynamic Module 0000010601",
+      "categoryId": 1,
+      "unitPrice": 85720.98,
+      "isActive": true
+    },
+    {
+      "id": 10701,
+      "sku": "SKU-0000010701",
+      "name": "Refined Bracket 0000010701",
+      "categoryId": 1,
+      "unitPrice": 49623.80,
+      "isActive": false
+    },
+    {
+      "id": 10801,
+      "sku": "SKU-0000010801",
+      "name": "Refined Widget 0000010801",
+      "categoryId": 1,
+      "unitPrice": 43941.73,
+      "isActive": true
+    },
+    {
+      "id": 10901,
+      "sku": "SKU-0000010901",
+      "name": "Modular Widget 0000010901",
+      "categoryId": 5,
+      "unitPrice": 76957.77,
+      "isActive": true
+    },
+    {
+      "id": 11001,
+      "sku": "SKU-0000011001",
+      "name": "Versatile Assembly 0000011001",
+      "categoryId": 19,
+      "unitPrice": 3064.64,
+      "isActive": true
+    },
+    {
+      "id": 11101,
+      "sku": "SKU-0000011101",
+      "name": "Versatile Module 0000011101",
+      "categoryId": 15,
+      "unitPrice": 55130.06,
+      "isActive": true
+    },
+    {
+      "id": 11201,
+      "sku": "SKU-0000011201",
+      "name": "Robust System 0000011201",
+      "categoryId": 1,
+      "unitPrice": 83812.84,
+      "isActive": false
+    },
+    {
+      "id": 11301,
+      "sku": "SKU-0000011301",
+      "name": "Versatile Device 0000011301",
+      "categoryId": 1,
+      "unitPrice": 39386.55,
+      "isActive": true
+    },
+    {
+      "id": 11401,
+      "sku": "SKU-0000011401",
+      "name": "Robust Harness 0000011401",
+      "categoryId": 1,
+      "unitPrice": 94592.18,
+      "isActive": true
+    },
+    {
+      "id": 11501,
+      "sku": "SKU-0000011501",
+      "name": "Classic Device 0000011501",
+      "categoryId": 1,
+      "unitPrice": 65001.54,
+      "isActive": true
+    },
+    {
+      "id": 11601,
+      "sku": "SKU-0000011601",
+      "name": "Robust Panel 0000011601",
+      "categoryId": 1,
+      "unitPrice": 81901.00,
+      "isActive": true
+    },
+    {
+      "id": 11701,
+      "sku": "SKU-0000011701",
+      "name": "Refined Harness 0000011701",
+      "categoryId": 15,
+      "unitPrice": 17980.63,
+      "isActive": true
+    },
+    {
+      "id": 11801,
+      "sku": "SKU-0000011801",
+      "name": "Ergonomic Toolkit 0000011801",
+      "categoryId": 1,
+      "unitPrice": 5301.14,
+      "isActive": true
+    },
+    {
+      "id": 11901,
+      "sku": "SKU-0000011901",
+      "name": "Industrial Bracket 0000011901",
+      "categoryId": 1,
+      "unitPrice": 96653.64,
+      "isActive": true
+    },
+    {
+      "id": 12001,
+      "sku": "SKU-0000012001",
+      "name": "Classic System 0000012001",
+      "categoryId": 1,
+      "unitPrice": 66266.65,
+      "isActive": true
+    },
+    {
+      "id": 12101,
+      "sku": "SKU-0000012101",
+      "name": "Versatile Harness 0000012101",
+      "categoryId": 12,
+      "unitPrice": 80895.02,
+      "isActive": true
+    },
+    {
+      "id": 12201,
+      "sku": "SKU-0000012201",
+      "name": "Sleek Harness 0000012201",
+      "categoryId": 1,
+      "unitPrice": 50584.41,
+      "isActive": true
+    },
+    {
+      "id": 12301,
+      "sku": "SKU-0000012301",
+      "name": "Robust Bracket 0000012301",
+      "categoryId": 1,
+      "unitPrice": 87690.43,
+      "isActive": true
+    },
+    {
+      "id": 12401,
+      "sku": "SKU-0000012401",
+      "name": "Modular Component 0000012401",
+      "categoryId": 1,
+      "unitPrice": 55341.52,
+      "isActive": true
+    },
+    {
+      "id": 12501,
+      "sku": "SKU-0000012501",
+      "name": "Precision System 0000012501",
+      "categoryId": 10,
+      "unitPrice": 60037.86,
+      "isActive": true
+    },
+    {
+      "id": 12601,
+      "sku": "SKU-0000012601",
+      "name": "Refined Toolkit 0000012601",
+      "categoryId": 18,
+      "unitPrice": 48951.45,
+      "isActive": true
+    },
+    {
+      "id": 12701,
+      "sku": "SKU-0000012701",
+      "name": "Robust Bracket 0000012701",
+      "categoryId": 1,
+      "unitPrice": 82575.50,
+      "isActive": true
+    },
+    {
+      "id": 12801,
+      "sku": "SKU-0000012801",
+      "name": "Durable System 0000012801",
+      "categoryId": 1,
+      "unitPrice": 51449.62,
+      "isActive": true
+    },
+    {
+      "id": 12901,
+      "sku": "SKU-0000012901",
+      "name": "Versatile Unit 0000012901",
+      "categoryId": 1,
+      "unitPrice": 66003.34,
+      "isActive": true
+    },
+    {
+      "id": 13001,
+      "sku": "SKU-0000013001",
+      "name": "Durable Adapter 0000013001",
+      "categoryId": 1,
+      "unitPrice": 81656.32,
+      "isActive": true
+    },
+    {
+      "id": 13101,
+      "sku": "SKU-0000013101",
+      "name": "Robust Panel 0000013101",
+      "categoryId": 7,
+      "unitPrice": 30999.72,
+      "isActive": true
+    },
+    {
+      "id": 13201,
+      "sku": "SKU-0000013201",
+      "name": "Precision System 0000013201",
+      "categoryId": 1,
+      "unitPrice": 89860.43,
+      "isActive": false
+    },
+    {
+      "id": 13301,
+      "sku": "SKU-0000013301",
+      "name": "Durable Bracket 0000013301",
+      "categoryId": 1,
+      "unitPrice": 91680.60,
+      "isActive": true
+    },
+    {
+      "id": 13401,
+      "sku": "SKU-0000013401",
+      "name": "Compact Toolkit 0000013401",
+      "categoryId": 1,
+      "unitPrice": 19314.44,
+      "isActive": true
+    },
+    {
+      "id": 13501,
+      "sku": "SKU-0000013501",
+      "name": "Classic Panel 0000013501",
+      "categoryId": 1,
+      "unitPrice": 32159.31,
+      "isActive": true
+    },
+    {
+      "id": 13601,
+      "sku": "SKU-0000013601",
+      "name": "Modern Controller 0000013601",
+      "categoryId": 1,
+      "unitPrice": 55773.29,
+      "isActive": true
+    },
+    {
+      "id": 13701,
+      "sku": "SKU-0000013701",
+      "name": "Lightweight Assembly 0000013701",
+      "categoryId": 3,
+      "unitPrice": 75735.50,
+      "isActive": true
+    },
+    {
+      "id": 13801,
+      "sku": "SKU-0000013801",
+      "name": "Versatile Adapter 0000013801",
+      "categoryId": 1,
+      "unitPrice": 61884.38,
+      "isActive": true
+    },
+    {
+      "id": 13901,
+      "sku": "SKU-0000013901",
+      "name": "Aerodynamic Harness 0000013901",
+      "categoryId": 1,
+      "unitPrice": 73083.45,
+      "isActive": true
+    },
+    {
+      "id": 14001,
+      "sku": "SKU-0000014001",
+      "name": "Ergonomic System 0000014001",
+      "categoryId": 1,
+      "unitPrice": 70687.07,
+      "isActive": false
+    },
+    {
+      "id": 14101,
+      "sku": "SKU-0000014101",
+      "name": "Classic Widget 0000014101",
+      "categoryId": 1,
+      "unitPrice": 2415.88,
+      "isActive": true
+    },
+    {
+      "id": 14201,
+      "sku": "SKU-0000014201",
+      "name": "Ergonomic Fixture 0000014201",
+      "categoryId": 19,
+      "unitPrice": 21577.95,
+      "isActive": true
+    },
+    {
+      "id": 14301,
+      "sku": "SKU-0000014301",
+      "name": "Aerodynamic Assembly 0000014301",
+      "categoryId": 6,
+      "unitPrice": 50982.31,
+      "isActive": true
+    },
+    {
+      "id": 14401,
+      "sku": "SKU-0000014401",
+      "name": "Robust Component 0000014401",
+      "categoryId": 5,
+      "unitPrice": 66593.64,
+      "isActive": true
+    },
+    {
+      "id": 14501,
+      "sku": "SKU-0000014501",
+      "name": "Rugged Panel 0000014501",
+      "categoryId": 13,
+      "unitPrice": 98368.06,
+      "isActive": true
+    },
+    {
+      "id": 14601,
+      "sku": "SKU-0000014601",
+      "name": "Practical Gadget 0000014601",
+      "categoryId": 11,
+      "unitPrice": 40576.09,
+      "isActive": true
+    },
+    {
+      "id": 14701,
+      "sku": "SKU-0000014701",
+      "name": "Rugged Console 0000014701",
+      "categoryId": 1,
+      "unitPrice": 6588.70,
+      "isActive": true
+    },
+    {
+      "id": 14801,
+      "sku": "SKU-0000014801",
+      "name": "Robust Toolkit 0000014801",
+      "categoryId": 17,
+      "unitPrice": 42650.10,
+      "isActive": true
+    },
+    {
+      "id": 14901,
+      "sku": "SKU-0000014901",
+      "name": "Robust Adapter 0000014901",
+      "categoryId": 4,
+      "unitPrice": 2056.10,
+      "isActive": true
+    },
+    {
+      "id": 15001,
+      "sku": "SKU-0000015001",
+      "name": "Compact Harness 0000015001",
+      "categoryId": 1,
+      "unitPrice": 30014.06,
+      "isActive": true
+    },
+    {
+      "id": 15101,
+      "sku": "SKU-0000015101",
+      "name": "Modular Adapter 0000015101",
+      "categoryId": 18,
+      "unitPrice": 88925.34,
+      "isActive": false
+    },
+    {
+      "id": 15201,
+      "sku": "SKU-0000015201",
+      "name": "Ergonomic Adapter 0000015201",
+      "categoryId": 1,
+      "unitPrice": 69099.90,
+      "isActive": false
+    },
+    {
+      "id": 15301,
+      "sku": "SKU-0000015301",
+      "name": "Precision Component 0000015301",
+      "categoryId": 1,
+      "unitPrice": 2484.66,
+      "isActive": false
+    },
+    {
+      "id": 15401,
+      "sku": "SKU-0000015401",
+      "name": "Modular Bracket 0000015401",
+      "categoryId": 17,
+      "unitPrice": 36665.26,
+      "isActive": true
+    },
+    {
+      "id": 15501,
+      "sku": "SKU-0000015501",
+      "name": "Refined Fixture 0000015501",
+      "categoryId": 1,
+      "unitPrice": 43965.79,
+      "isActive": true
+    },
+    {
+      "id": 15601,
+      "sku": "SKU-0000015601",
+      "name": "Precision Bracket 0000015601",
+      "categoryId": 1,
+      "unitPrice": 73898.28,
+      "isActive": true
+    },
+    {
+      "id": 15701,
+      "sku": "SKU-0000015701",
+      "name": "Lightweight Controller 0000015701",
+      "categoryId": 18,
+      "unitPrice": 28218.83,
+      "isActive": false
+    },
+    {
+      "id": 15801,
+      "sku": "SKU-0000015801",
+      "name": "Modern Console 0000015801",
+      "categoryId": 4,
+      "unitPrice": 31963.96,
+      "isActive": true
+    },
+    {
+      "id": 15901,
+      "sku": "SKU-0000015901",
+      "name": "Precision Gadget 0000015901",
+      "categoryId": 1,
+      "unitPrice": 54288.62,
+      "isActive": true
+    },
+    {
+      "id": 16001,
+      "sku": "SKU-0000016001",
+      "name": "Aerodynamic Unit 0000016001",
+      "categoryId": 6,
+      "unitPrice": 3165.52,
+      "isActive": true
+    },
+    {
+      "id": 16101,
+      "sku": "SKU-0000016101",
+      "name": "Practical System 0000016101",
+      "categoryId": 7,
+      "unitPrice": 51200.08,
+      "isActive": true
+    },
+    {
+      "id": 16201,
+      "sku": "SKU-0000016201",
+      "name": "Precision Fixture 0000016201",
+      "categoryId": 7,
+      "unitPrice": 12179.20,
+      "isActive": true
+    },
+    {
+      "id": 16301,
+      "sku": "SKU-0000016301",
+      "name": "Precision Widget 0000016301",
+      "categoryId": 17,
+      "unitPrice": 8190.16,
+      "isActive": true
+    },
+    {
+      "id": 16401,
+      "sku": "SKU-0000016401",
+      "name": "Aerodynamic Device 0000016401",
+      "categoryId": 1,
+      "unitPrice": 46518.34,
+      "isActive": true
+    },
+    {
+      "id": 16501,
+      "sku": "SKU-0000016501",
+      "name": "Lightweight Adapter 0000016501",
+      "categoryId": 10,
+      "unitPrice": 53800.26,
+      "isActive": true
+    },
+    {
+      "id": 16601,
+      "sku": "SKU-0000016601",
+      "name": "Lightweight Module 0000016601",
+      "categoryId": 1,
+      "unitPrice": 20804.56,
+      "isActive": true
+    },
+    {
+      "id": 16701,
+      "sku": "SKU-0000016701",
+      "name": "Versatile Toolkit 0000016701",
+      "categoryId": 1,
+      "unitPrice": 37033.10,
+      "isActive": true
+    },
+    {
+      "id": 16801,
+      "sku": "SKU-0000016801",
+      "name": "Classic Unit 0000016801",
+      "categoryId": 14,
+      "unitPrice": 57064.46,
+      "isActive": false
+    },
+    {
+      "id": 16901,
+      "sku": "SKU-0000016901",
+      "name": "Sleek Console 0000016901",
+      "categoryId": 1,
+      "unitPrice": 92739.40,
+      "isActive": true
+    },
+    {
+      "id": 17001,
+      "sku": "SKU-0000017001",
+      "name": "Classic Bracket 0000017001",
+      "categoryId": 1,
+      "unitPrice": 71270.26,
+      "isActive": true
+    },
+    {
+      "id": 17101,
+      "sku": "SKU-0000017101",
+      "name": "Lightweight Gadget 0000017101",
+      "categoryId": 1,
+      "unitPrice": 13843.72,
+      "isActive": true
+    },
+    {
+      "id": 17201,
+      "sku": "SKU-0000017201",
+      "name": "Classic Unit 0000017201",
+      "categoryId": 1,
+      "unitPrice": 39458.77,
+      "isActive": true
+    },
+    {
+      "id": 17301,
+      "sku": "SKU-0000017301",
+      "name": "Lightweight Unit 0000017301",
+      "categoryId": 1,
+      "unitPrice": 66231.57,
+      "isActive": false
+    },
+    {
+      "id": 17401,
+      "sku": "SKU-0000017401",
+      "name": "Versatile Controller 0000017401",
+      "categoryId": 1,
+      "unitPrice": 81698.57,
+      "isActive": true
+    },
+    {
+      "id": 17501,
+      "sku": "SKU-0000017501",
+      "name": "Sleek Unit 0000017501",
+      "categoryId": 8,
+      "unitPrice": 79985.63,
+      "isActive": true
+    },
+    {
+      "id": 17601,
+      "sku": "SKU-0000017601",
+      "name": "Rugged System 0000017601",
+      "categoryId": 1,
+      "unitPrice": 94616.83,
+      "isActive": true
+    },
+    {
+      "id": 17701,
+      "sku": "SKU-0000017701",
+      "name": "Durable Widget 0000017701",
+      "categoryId": 16,
+      "unitPrice": 43494.45,
+      "isActive": true
+    },
+    {
+      "id": 17801,
+      "sku": "SKU-0000017801",
+      "name": "Robust Module 0000017801",
+      "categoryId": 1,
+      "unitPrice": 64317.04,
+      "isActive": true
+    },
+    {
+      "id": 17901,
+      "sku": "SKU-0000017901",
+      "name": "Sleek Fixture 0000017901",
+      "categoryId": 1,
+      "unitPrice": 46193.27,
+      "isActive": true
+    },
+    {
+      "id": 18001,
+      "sku": "SKU-0000018001",
+      "name": "Classic Unit 0000018001",
+      "categoryId": 1,
+      "unitPrice": 22726.80,
+      "isActive": true
+    },
+    {
+      "id": 18101,
+      "sku": "SKU-0000018101",
+      "name": "Modular Panel 0000018101",
+      "categoryId": 1,
+      "unitPrice": 37176.31,
+      "isActive": true
+    },
+    {
+      "id": 18201,
+      "sku": "SKU-0000018201",
+      "name": "Precision Module 0000018201",
+      "categoryId": 1,
+      "unitPrice": 88151.84,
+      "isActive": true
+    },
+    {
+      "id": 18301,
+      "sku": "SKU-0000018301",
+      "name": "Rugged Adapter 0000018301",
+      "categoryId": 1,
+      "unitPrice": 89247.85,
+      "isActive": true
+    },
+    {
+      "id": 18401,
+      "sku": "SKU-0000018401",
+      "name": "Modular Device 0000018401",
+      "categoryId": 20,
+      "unitPrice": 85969.45,
+      "isActive": true
+    },
+    {
+      "id": 18501,
+      "sku": "SKU-0000018501",
+      "name": "Precision Component 0000018501",
+      "categoryId": 1,
+      "unitPrice": 48553.53,
+      "isActive": true
+    },
+    {
+      "id": 18601,
+      "sku": "SKU-0000018601",
+      "name": "Compact Module 0000018601",
+      "categoryId": 1,
+      "unitPrice": 26029.46,
+      "isActive": true
+    },
+    {
+      "id": 18701,
+      "sku": "SKU-0000018701",
+      "name": "Durable Adapter 0000018701",
+      "categoryId": 1,
+      "unitPrice": 72931.71,
+      "isActive": true
+    },
+    {
+      "id": 18801,
+      "sku": "SKU-0000018801",
+      "name": "Lightweight Toolkit 0000018801",
+      "categoryId": 1,
+      "unitPrice": 45090.07,
+      "isActive": true
+    },
+    {
+      "id": 18901,
+      "sku": "SKU-0000018901",
+      "name": "Modern Device 0000018901",
+      "categoryId": 1,
+      "unitPrice": 51076.89,
+      "isActive": false
+    },
+    {
+      "id": 19001,
+      "sku": "SKU-0000019001",
+      "name": "Ergonomic Controller 0000019001",
+      "categoryId": 1,
+      "unitPrice": 72949.96,
+      "isActive": true
+    },
+    {
+      "id": 19101,
+      "sku": "SKU-0000019101",
+      "name": "Aerodynamic Assembly 0000019101",
+      "categoryId": 11,
+      "unitPrice": 60544.84,
+      "isActive": false
+    },
+    {
+      "id": 19201,
+      "sku": "SKU-0000019201",
+      "name": "Refined Device 0000019201",
+      "categoryId": 12,
+      "unitPrice": 79446.10,
+      "isActive": true
+    },
+    {
+      "id": 19301,
+      "sku": "SKU-0000019301",
+      "name": "Classic Unit 0000019301",
+      "categoryId": 4,
+      "unitPrice": 71948.54,
+      "isActive": true
+    },
+    {
+      "id": 19401,
+      "sku": "SKU-0000019401",
+      "name": "Sleek Controller 0000019401",
+      "categoryId": 7,
+      "unitPrice": 52883.07,
+      "isActive": true
+    },
+    {
+      "id": 19501,
+      "sku": "SKU-0000019501",
+      "name": "Versatile Widget 0000019501",
+      "categoryId": 1,
+      "unitPrice": 47745.27,
+      "isActive": true
+    },
+    {
+      "id": 19601,
+      "sku": "SKU-0000019601",
+      "name": "Modern Unit 0000019601",
+      "categoryId": 1,
+      "unitPrice": 31471.98,
+      "isActive": true
+    },
+    {
+      "id": 19701,
+      "sku": "SKU-0000019701",
+      "name": "Practical Harness 0000019701",
+      "categoryId": 1,
+      "unitPrice": 24371.06,
+      "isActive": true
+    },
+    {
+      "id": 19801,
+      "sku": "SKU-0000019801",
+      "name": "Precision Toolkit 0000019801",
+      "categoryId": 1,
+      "unitPrice": 21766.32,
+      "isActive": true
+    },
+    {
+      "id": 19901,
+      "sku": "SKU-0000019901",
+      "name": "Ergonomic Assembly 0000019901",
+      "categoryId": 16,
+      "unitPrice": 63214.00,
+      "isActive": true
+    },
+    {
+      "id": 20001,
+      "sku": "SKU-0000020001",
+      "name": "Aerodynamic Fixture 0000020001",
+      "categoryId": 13,
+      "unitPrice": 66345.92,
+      "isActive": true
+    },
+    {
+      "id": 20101,
+      "sku": "SKU-0000020101",
+      "name": "Versatile Panel 0000020101",
+      "categoryId": 4,
+      "unitPrice": 70447.21,
+      "isActive": true
+    },
+    {
+      "id": 20201,
+      "sku": "SKU-0000020201",
+      "name": "Versatile Toolkit 0000020201",
+      "categoryId": 12,
+      "unitPrice": 72434.12,
+      "isActive": true
+    },
+    {
+      "id": 20301,
+      "sku": "SKU-0000020301",
+      "name": "Compact Assembly 0000020301",
+      "categoryId": 13,
+      "unitPrice": 22398.91,
+      "isActive": true
+    },
+    {
+      "id": 20401,
+      "sku": "SKU-0000020401",
+      "name": "Refined Device 0000020401",
+      "categoryId": 1,
+      "unitPrice": 22203.24,
+      "isActive": true
+    },
+    {
+      "id": 20501,
+      "sku": "SKU-0000020501",
+      "name": "Modern Panel 0000020501",
+      "categoryId": 1,
+      "unitPrice": 29687.85,
+      "isActive": false
+    },
+    {
+      "id": 20601,
+      "sku": "SKU-0000020601",
+      "name": "Industrial Harness 0000020601",
+      "categoryId": 1,
+      "unitPrice": 50972.13,
+      "isActive": true
+    },
+    {
+      "id": 20701,
+      "sku": "SKU-0000020701",
+      "name": "Modern Unit 0000020701",
+      "categoryId": 1,
+      "unitPrice": 81634.13,
+      "isActive": true
+    },
+    {
+      "id": 20801,
+      "sku": "SKU-0000020801",
+      "name": "Lightweight Unit 0000020801",
+      "categoryId": 1,
+      "unitPrice": 55714.46,
+      "isActive": false
+    },
+    {
+      "id": 20901,
+      "sku": "SKU-0000020901",
+      "name": "Lightweight Fixture 0000020901",
+      "categoryId": 12,
+      "unitPrice": 37706.18,
+      "isActive": false
+    },
+    {
+      "id": 21001,
+      "sku": "SKU-0000021001",
+      "name": "Modern Module 0000021001",
+      "categoryId": 15,
+      "unitPrice": 16652.03,
+      "isActive": true
+    },
+    {
+      "id": 21101,
+      "sku": "SKU-0000021101",
+      "name": "Rugged Widget 0000021101",
+      "categoryId": 15,
+      "unitPrice": 14781.84,
+      "isActive": true
+    },
+    {
+      "id": 21201,
+      "sku": "SKU-0000021201",
+      "name": "Precision Fixture 0000021201",
+      "categoryId": 6,
+      "unitPrice": 38011.88,
+      "isActive": true
+    },
+    {
+      "id": 21301,
+      "sku": "SKU-0000021301",
+      "name": "Modern Assembly 0000021301",
+      "categoryId": 11,
+      "unitPrice": 70316.53,
+      "isActive": true
+    },
+    {
+      "id": 21401,
+      "sku": "SKU-0000021401",
+      "name": "Sleek Fixture 0000021401",
+      "categoryId": 15,
+      "unitPrice": 96094.12,
+      "isActive": true
+    },
+    {
+      "id": 21501,
+      "sku": "SKU-0000021501",
+      "name": "Classic Unit 0000021501",
+      "categoryId": 10,
+      "unitPrice": 93154.52,
+      "isActive": true
+    },
+    {
+      "id": 21601,
+      "sku": "SKU-0000021601",
+      "name": "Aerodynamic Adapter 0000021601",
+      "categoryId": 15,
+      "unitPrice": 20018.58,
+      "isActive": true
+    },
+    {
+      "id": 21701,
+      "sku": "SKU-0000021701",
+      "name": "Modern Bracket 0000021701",
+      "categoryId": 13,
+      "unitPrice": 58628.22,
+      "isActive": false
+    },
+    {
+      "id": 21801,
+      "sku": "SKU-0000021801",
+      "name": "Durable System 0000021801",
+      "categoryId": 5,
+      "unitPrice": 83331.60,
+      "isActive": true
+    },
+    {
+      "id": 21901,
+      "sku": "SKU-0000021901",
+      "name": "Versatile Toolkit 0000021901",
+      "categoryId": 3,
+      "unitPrice": 48839.93,
+      "isActive": true
+    },
+    {
+      "id": 22001,
+      "sku": "SKU-0000022001",
+      "name": "Modern Fixture 0000022001",
+      "categoryId": 10,
+      "unitPrice": 19707.95,
+      "isActive": true
+    },
+    {
+      "id": 22101,
+      "sku": "SKU-0000022101",
+      "name": "Versatile Adapter 0000022101",
+      "categoryId": 1,
+      "unitPrice": 84965.75,
+      "isActive": true
+    },
+    {
+      "id": 22201,
+      "sku": "SKU-0000022201",
+      "name": "Practical Adapter 0000022201",
+      "categoryId": 10,
+      "unitPrice": 30349.84,
+      "isActive": true
+    },
+    {
+      "id": 22301,
+      "sku": "SKU-0000022301",
+      "name": "Ergonomic Gadget 0000022301",
+      "categoryId": 14,
+      "unitPrice": 79455.57,
+      "isActive": true
+    },
+    {
+      "id": 22401,
+      "sku": "SKU-0000022401",
+      "name": "Modern Bracket 0000022401",
+      "categoryId": 1,
+      "unitPrice": 86767.06,
+      "isActive": true
+    },
+    {
+      "id": 22501,
+      "sku": "SKU-0000022501",
+      "name": "Versatile Device 0000022501",
+      "categoryId": 1,
+      "unitPrice": 80850.64,
+      "isActive": true
+    },
+    {
+      "id": 22601,
+      "sku": "SKU-0000022601",
+      "name": "Ergonomic Assembly 0000022601",
+      "categoryId": 1,
+      "unitPrice": 77440.22,
+      "isActive": true
+    },
+    {
+      "id": 22701,
+      "sku": "SKU-0000022701",
+      "name": "Modern Fixture 0000022701",
+      "categoryId": 1,
+      "unitPrice": 96537.33,
+      "isActive": true
+    },
+    {
+      "id": 22801,
+      "sku": "SKU-0000022801",
+      "name": "Ergonomic Bracket 0000022801",
+      "categoryId": 6,
+      "unitPrice": 75368.75,
+      "isActive": true
+    },
+    {
+      "id": 22901,
+      "sku": "SKU-0000022901",
+      "name": "Aerodynamic Console 0000022901",
+      "categoryId": 1,
+      "unitPrice": 62445.31,
+      "isActive": true
+    },
+    {
+      "id": 23001,
+      "sku": "SKU-0000023001",
+      "name": "Lightweight Console 0000023001",
+      "categoryId": 1,
+      "unitPrice": 71282.58,
+      "isActive": true
+    },
+    {
+      "id": 23101,
+      "sku": "SKU-0000023101",
+      "name": "Classic Console 0000023101",
+      "categoryId": 1,
+      "unitPrice": 20592.84,
+      "isActive": true
+    },
+    {
+      "id": 23201,
+      "sku": "SKU-0000023201",
+      "name": "Rugged Assembly 0000023201",
+      "categoryId": 15,
+      "unitPrice": 79441.08,
+      "isActive": false
+    },
+    {
+      "id": 23301,
+      "sku": "SKU-0000023301",
+      "name": "Modular Gadget 0000023301",
+      "categoryId": 9,
+      "unitPrice": 75686.27,
+      "isActive": true
+    },
+    {
+      "id": 23401,
+      "sku": "SKU-0000023401",
+      "name": "Versatile Assembly 0000023401",
+      "categoryId": 19,
+      "unitPrice": 84516.76,
+      "isActive": true
+    },
+    {
+      "id": 23501,
+      "sku": "SKU-0000023501",
+      "name": "Modern Module 0000023501",
+      "categoryId": 1,
+      "unitPrice": 38201.61,
+      "isActive": true
+    },
+    {
+      "id": 23601,
+      "sku": "SKU-0000023601",
+      "name": "Classic Module 0000023601",
+      "categoryId": 1,
+      "unitPrice": 55546.21,
+      "isActive": false
+    },
+    {
+      "id": 23701,
+      "sku": "SKU-0000023701",
+      "name": "Aerodynamic Widget 0000023701",
+      "categoryId": 1,
+      "unitPrice": 5398.65,
+      "isActive": true
+    },
+    {
+      "id": 23801,
+      "sku": "SKU-0000023801",
+      "name": "Compact Gadget 0000023801",
+      "categoryId": 15,
+      "unitPrice": 3165.47,
+      "isActive": true
+    },
+    {
+      "id": 23901,
+      "sku": "SKU-0000023901",
+      "name": "Classic Harness 0000023901",
+      "categoryId": 1,
+      "unitPrice": 50301.43,
+      "isActive": true
+    },
+    {
+      "id": 24001,
+      "sku": "SKU-0000024001",
+      "name": "Lightweight Console 0000024001",
+      "categoryId": 1,
+      "unitPrice": 78948.49,
+      "isActive": false
+    },
+    {
+      "id": 24101,
+      "sku": "SKU-0000024101",
+      "name": "Practical Device 0000024101",
+      "categoryId": 1,
+      "unitPrice": 80964.40,
+      "isActive": false
+    },
+    {
+      "id": 24201,
+      "sku": "SKU-0000024201",
+      "name": "Robust Unit 0000024201",
+      "categoryId": 7,
+      "unitPrice": 35484.73,
+      "isActive": true
+    },
+    {
+      "id": 24301,
+      "sku": "SKU-0000024301",
+      "name": "Industrial Fixture 0000024301",
+      "categoryId": 1,
+      "unitPrice": 23334.53,
+      "isActive": true
+    },
+    {
+      "id": 24401,
+      "sku": "SKU-0000024401",
+      "name": "Sleek System 0000024401",
+      "categoryId": 1,
+      "unitPrice": 93783.35,
+      "isActive": true
+    },
+    {
+      "id": 24501,
+      "sku": "SKU-0000024501",
+      "name": "Precision Component 0000024501",
+      "categoryId": 6,
+      "unitPrice": 36543.81,
+      "isActive": false
+    },
+    {
+      "id": 24601,
+      "sku": "SKU-0000024601",
+      "name": "Industrial Device 0000024601",
+      "categoryId": 1,
+      "unitPrice": 57082.35,
+      "isActive": true
+    },
+    {
+      "id": 24701,
+      "sku": "SKU-0000024701",
+      "name": "Practical Device 0000024701",
+      "categoryId": 7,
+      "unitPrice": 44636.11,
+      "isActive": true
+    },
+    {
+      "id": 24801,
+      "sku": "SKU-0000024801",
+      "name": "Practical Bracket 0000024801",
+      "categoryId": 9,
+      "unitPrice": 82005.92,
+      "isActive": true
+    },
+    {
+      "id": 24901,
+      "sku": "SKU-0000024901",
+      "name": "Robust Panel 0000024901",
+      "categoryId": 1,
+      "unitPrice": 6243.47,
+      "isActive": true
+    },
+    {
+      "id": 25001,
+      "sku": "SKU-0000025001",
+      "name": "Modular Widget 0000025001",
+      "categoryId": 1,
+      "unitPrice": 17369.86,
+      "isActive": true
+    },
+    {
+      "id": 25101,
+      "sku": "SKU-0000025101",
+      "name": "Modern Device 0000025101",
+      "categoryId": 1,
+      "unitPrice": 34935.94,
+      "isActive": false
+    },
+    {
+      "id": 25201,
+      "sku": "SKU-0000025201",
+      "name": "Ergonomic Module 0000025201",
+      "categoryId": 7,
+      "unitPrice": 86667.84,
+      "isActive": false
+    },
+    {
+      "id": 25301,
+      "sku": "SKU-0000025301",
+      "name": "Industrial System 0000025301",
+      "categoryId": 1,
+      "unitPrice": 89022.09,
+      "isActive": true
+    },
+    {
+      "id": 25401,
+      "sku": "SKU-0000025401",
+      "name": "Refined Assembly 0000025401",
+      "categoryId": 1,
+      "unitPrice": 32101.52,
+      "isActive": true
+    },
+    {
+      "id": 25501,
+      "sku": "SKU-0000025501",
+      "name": "Compact Toolkit 0000025501",
+      "categoryId": 1,
+      "unitPrice": 9174.50,
+      "isActive": true
+    },
+    {
+      "id": 25601,
+      "sku": "SKU-0000025601",
+      "name": "Lightweight Fixture 0000025601",
+      "categoryId": 18,
+      "unitPrice": 99153.42,
+      "isActive": true
+    },
+    {
+      "id": 25701,
+      "sku": "SKU-0000025701",
+      "name": "Aerodynamic Adapter 0000025701",
+      "categoryId": 1,
+      "unitPrice": 73450.75,
+      "isActive": true
+    },
+    {
+      "id": 25801,
+      "sku": "SKU-0000025801",
+      "name": "Sleek Assembly 0000025801",
+      "categoryId": 1,
+      "unitPrice": 20857.81,
+      "isActive": true
+    },
+    {
+      "id": 25901,
+      "sku": "SKU-0000025901",
+      "name": "Robust Controller 0000025901",
+      "categoryId": 1,
+      "unitPrice": 2108.31,
+      "isActive": false
+    },
+    {
+      "id": 26001,
+      "sku": "SKU-0000026001",
+      "name": "Classic Device 0000026001",
+      "categoryId": 8,
+      "unitPrice": 23670.17,
+      "isActive": false
+    },
+    {
+      "id": 26101,
+      "sku": "SKU-0000026101",
+      "name": "Versatile Panel 0000026101",
+      "categoryId": 1,
+      "unitPrice": 87307.57,
+      "isActive": true
+    },
+    {
+      "id": 26201,
+      "sku": "SKU-0000026201",
+      "name": "Versatile Fixture 0000026201",
+      "categoryId": 1,
+      "unitPrice": 65937.53,
+      "isActive": true
+    },
+    {
+      "id": 26301,
+      "sku": "SKU-0000026301",
+      "name": "Classic Unit 0000026301",
+      "categoryId": 1,
+      "unitPrice": 24299.81,
+      "isActive": true
+    },
+    {
+      "id": 26401,
+      "sku": "SKU-0000026401",
+      "name": "Compact Bracket 0000026401",
+      "categoryId": 16,
+      "unitPrice": 42701.39,
+      "isActive": true
+    },
+    {
+      "id": 26501,
+      "sku": "SKU-0000026501",
+      "name": "Industrial Console 0000026501",
+      "categoryId": 17,
+      "unitPrice": 93543.65,
+      "isActive": true
+    },
+    {
+      "id": 26601,
+      "sku": "SKU-0000026601",
+      "name": "Precision Adapter 0000026601",
+      "categoryId": 13,
+      "unitPrice": 14957.37,
+      "isActive": true
+    },
+    {
+      "id": 26701,
+      "sku": "SKU-0000026701",
+      "name": "Refined Bracket 0000026701",
+      "categoryId": 1,
+      "unitPrice": 59121.87,
+      "isActive": true
+    },
+    {
+      "id": 26801,
+      "sku": "SKU-0000026801",
+      "name": "Aerodynamic Toolkit 0000026801",
+      "categoryId": 1,
+      "unitPrice": 84134.02,
+      "isActive": true
+    },
+    {
+      "id": 26901,
+      "sku": "SKU-0000026901",
+      "name": "Ergonomic Widget 0000026901",
+      "categoryId": 1,
+      "unitPrice": 32127.14,
+      "isActive": true
+    },
+    {
+      "id": 27001,
+      "sku": "SKU-0000027001",
+      "name": "Precision Gadget 0000027001",
+      "categoryId": 13,
+      "unitPrice": 73133.08,
+      "isActive": true
+    },
+    {
+      "id": 27101,
+      "sku": "SKU-0000027101",
+      "name": "Modular Device 0000027101",
+      "categoryId": 13,
+      "unitPrice": 15662.96,
+      "isActive": false
+    },
+    {
+      "id": 27201,
+      "sku": "SKU-0000027201",
+      "name": "Classic Adapter 0000027201",
+      "categoryId": 1,
+      "unitPrice": 37470.35,
+      "isActive": false
+    },
+    {
+      "id": 27301,
+      "sku": "SKU-0000027301",
+      "name": "Classic Panel 0000027301",
+      "categoryId": 12,
+      "unitPrice": 24060.50,
+      "isActive": true
+    },
+    {
+      "id": 27401,
+      "sku": "SKU-0000027401",
+      "name": "Refined Bracket 0000027401",
+      "categoryId": 1,
+      "unitPrice": 32434.92,
+      "isActive": true
+    },
+    {
+      "id": 27501,
+      "sku": "SKU-0000027501",
+      "name": "Versatile Unit 0000027501",
+      "categoryId": 1,
+      "unitPrice": 64860.57,
+      "isActive": true
+    },
+    {
+      "id": 27601,
+      "sku": "SKU-0000027601",
+      "name": "Sleek Assembly 0000027601",
+      "categoryId": 1,
+      "unitPrice": 82096.03,
+      "isActive": true
+    },
+    {
+      "id": 27701,
+      "sku": "SKU-0000027701",
+      "name": "Rugged Toolkit 0000027701",
+      "categoryId": 1,
+      "unitPrice": 66451.11,
+      "isActive": true
+    },
+    {
+      "id": 27801,
+      "sku": "SKU-0000027801",
+      "name": "Refined Console 0000027801",
+      "categoryId": 1,
+      "unitPrice": 40371.03,
+      "isActive": true
+    },
+    {
+      "id": 27901,
+      "sku": "SKU-0000027901",
+      "name": "Modular Widget 0000027901",
+      "categoryId": 1,
+      "unitPrice": 7015.70,
+      "isActive": false
+    },
+    {
+      "id": 28001,
+      "sku": "SKU-0000028001",
+      "name": "Aerodynamic System 0000028001",
+      "categoryId": 13,
+      "unitPrice": 83772.35,
+      "isActive": true
+    },
+    {
+      "id": 28101,
+      "sku": "SKU-0000028101",
+      "name": "Precision Module 0000028101",
+      "categoryId": 1,
+      "unitPrice": 24534.30,
+      "isActive": true
+    },
+    {
+      "id": 28201,
+      "sku": "SKU-0000028201",
+      "name": "Robust Widget 0000028201",
+      "categoryId": 3,
+      "unitPrice": 79514.37,
+      "isActive": true
+    },
+    {
+      "id": 28301,
+      "sku": "SKU-0000028301",
+      "name": "Classic System 0000028301",
+      "categoryId": 11,
+      "unitPrice": 29728.10,
+      "isActive": true
+    },
+    {
+      "id": 28401,
+      "sku": "SKU-0000028401",
+      "name": "Robust Controller 0000028401",
+      "categoryId": 1,
+      "unitPrice": 12328.62,
+      "isActive": true
+    },
+    {
+      "id": 28501,
+      "sku": "SKU-0000028501",
+      "name": "Compact Controller 0000028501",
+      "categoryId": 1,
+      "unitPrice": 66003.98,
+      "isActive": true
+    },
+    {
+      "id": 28601,
+      "sku": "SKU-0000028601",
+      "name": "Sleek Toolkit 0000028601",
+      "categoryId": 20,
+      "unitPrice": 39180.31,
+      "isActive": true
+    },
+    {
+      "id": 28701,
+      "sku": "SKU-0000028701",
+      "name": "Robust Module 0000028701",
+      "categoryId": 1,
+      "unitPrice": 79451.67,
+      "isActive": true
+    },
+    {
+      "id": 28801,
+      "sku": "SKU-0000028801",
+      "name": "Rugged Console 0000028801",
+      "categoryId": 1,
+      "unitPrice": 64574.88,
+      "isActive": true
+    },
+    {
+      "id": 28901,
+      "sku": "SKU-0000028901",
+      "name": "Durable Console 0000028901",
+      "categoryId": 20,
+      "unitPrice": 80091.22,
+      "isActive": true
+    },
+    {
+      "id": 29001,
+      "sku": "SKU-0000029001",
+      "name": "Industrial Unit 0000029001",
+      "categoryId": 1,
+      "unitPrice": 46376.23,
+      "isActive": true
+    },
+    {
+      "id": 29101,
+      "sku": "SKU-0000029101",
+      "name": "Lightweight Harness 0000029101",
+      "categoryId": 9,
+      "unitPrice": 15717.74,
+      "isActive": false
+    },
+    {
+      "id": 29201,
+      "sku": "SKU-0000029201",
+      "name": "Refined Harness 0000029201",
+      "categoryId": 1,
+      "unitPrice": 39124.76,
+      "isActive": false
+    },
+    {
+      "id": 29301,
+      "sku": "SKU-0000029301",
+      "name": "Rugged Adapter 0000029301",
+      "categoryId": 1,
+      "unitPrice": 54556.78,
+      "isActive": true
+    },
+    {
+      "id": 29401,
+      "sku": "SKU-0000029401",
+      "name": "Compact Gadget 0000029401",
+      "categoryId": 1,
+      "unitPrice": 87793.57,
+      "isActive": true
+    },
+    {
+      "id": 29501,
+      "sku": "SKU-0000029501",
+      "name": "Practical Fixture 0000029501",
+      "categoryId": 1,
+      "unitPrice": 91100.46,
+      "isActive": true
+    },
+    {
+      "id": 29601,
+      "sku": "SKU-0000029601",
+      "name": "Versatile Console 0000029601",
+      "categoryId": 1,
+      "unitPrice": 44936.46,
+      "isActive": true
+    },
+    {
+      "id": 29701,
+      "sku": "SKU-0000029701",
+      "name": "Robust Fixture 0000029701",
+      "categoryId": 1,
+      "unitPrice": 74061.26,
+      "isActive": true
+    },
+    {
+      "id": 29801,
+      "sku": "SKU-0000029801",
+      "name": "Versatile Fixture 0000029801",
+      "categoryId": 1,
+      "unitPrice": 1542.88,
+      "isActive": true
+    },
+    {
+      "id": 29901,
+      "sku": "SKU-0000029901",
+      "name": "Modern Module 0000029901",
+      "categoryId": 1,
+      "unitPrice": 72405.29,
+      "isActive": true
+    },
+    {
+      "id": 30001,
+      "sku": "SKU-0000030001",
+      "name": "Classic Adapter 0000030001",
+      "categoryId": 1,
+      "unitPrice": 11049.19,
+      "isActive": true
+    },
+    {
+      "id": 30101,
+      "sku": "SKU-0000030101",
+      "name": "Industrial Device 0000030101",
+      "categoryId": 18,
+      "unitPrice": 8451.02,
+      "isActive": true
+    },
+    {
+      "id": 30201,
+      "sku": "SKU-0000030201",
+      "name": "Sleek Unit 0000030201",
+      "categoryId": 1,
+      "unitPrice": 55048.47,
+      "isActive": true
+    },
+    {
+      "id": 30301,
+      "sku": "SKU-0000030301",
+      "name": "Aerodynamic Bracket 0000030301",
+      "categoryId": 14,
+      "unitPrice": 65622.44,
+      "isActive": true
+    },
+    {
+      "id": 30401,
+      "sku": "SKU-0000030401",
+      "name": "Compact System 0000030401",
+      "categoryId": 1,
+      "unitPrice": 96310.55,
+      "isActive": false
+    },
+    {
+      "id": 30501,
+      "sku": "SKU-0000030501",
+      "name": "Compact Bracket 0000030501",
+      "categoryId": 1,
+      "unitPrice": 90503.22,
+      "isActive": true
+    },
+    {
+      "id": 30601,
+      "sku": "SKU-0000030601",
+      "name": "Robust Adapter 0000030601",
+      "categoryId": 1,
+      "unitPrice": 67528.73,
+      "isActive": true
+    },
+    {
+      "id": 30701,
+      "sku": "SKU-0000030701",
+      "name": "Modular Device 0000030701",
+      "categoryId": 7,
+      "unitPrice": 46871.39,
+      "isActive": true
+    },
+    {
+      "id": 30801,
+      "sku": "SKU-0000030801",
+      "name": "Practical Adapter 0000030801",
+      "categoryId": 1,
+      "unitPrice": 33010.81,
+      "isActive": true
+    },
+    {
+      "id": 30901,
+      "sku": "SKU-0000030901",
+      "name": "Modern Component 0000030901",
+      "categoryId": 1,
+      "unitPrice": 31918.85,
+      "isActive": true
+    },
+    {
+      "id": 31001,
+      "sku": "SKU-0000031001",
+      "name": "Rugged Gadget 0000031001",
+      "categoryId": 1,
+      "unitPrice": 22907.43,
+      "isActive": true
+    },
+    {
+      "id": 31101,
+      "sku": "SKU-0000031101",
+      "name": "Versatile Device 0000031101",
+      "categoryId": 1,
+      "unitPrice": 11215.79,
+      "isActive": true
+    },
+    {
+      "id": 31201,
+      "sku": "SKU-0000031201",
+      "name": "Compact Gadget 0000031201",
+      "categoryId": 3,
+      "unitPrice": 94874.27,
+      "isActive": true
+    },
+    {
+      "id": 31301,
+      "sku": "SKU-0000031301",
+      "name": "Classic Bracket 0000031301",
+      "categoryId": 1,
+      "unitPrice": 30013.14,
+      "isActive": true
+    },
+    {
+      "id": 31401,
+      "sku": "SKU-0000031401",
+      "name": "Aerodynamic Bracket 0000031401",
+      "categoryId": 17,
+      "unitPrice": 35981.55,
+      "isActive": true
+    },
+    {
+      "id": 31501,
+      "sku": "SKU-0000031501",
+      "name": "Compact Console 0000031501",
+      "categoryId": 4,
+      "unitPrice": 42733.17,
+      "isActive": true
+    },
+    {
+      "id": 31601,
+      "sku": "SKU-0000031601",
+      "name": "Rugged Toolkit 0000031601",
+      "categoryId": 1,
+      "unitPrice": 53075.20,
+      "isActive": true
+    },
+    {
+      "id": 31701,
+      "sku": "SKU-0000031701",
+      "name": "Ergonomic Fixture 0000031701",
+      "categoryId": 12,
+      "unitPrice": 78763.68,
+      "isActive": true
+    },
+    {
+      "id": 31801,
+      "sku": "SKU-0000031801",
+      "name": "Modular Widget 0000031801",
+      "categoryId": 1,
+      "unitPrice": 11923.99,
+      "isActive": true
+    },
+    {
+      "id": 31901,
+      "sku": "SKU-0000031901",
+      "name": "Modern Unit 0000031901",
+      "categoryId": 1,
+      "unitPrice": 56729.93,
+      "isActive": true
+    },
+    {
+      "id": 32001,
+      "sku": "SKU-0000032001",
+      "name": "Sleek Component 0000032001",
+      "categoryId": 1,
+      "unitPrice": 57899.35,
+      "isActive": true
+    },
+    {
+      "id": 32101,
+      "sku": "SKU-0000032101",
+      "name": "Practical Toolkit 0000032101",
+      "categoryId": 10,
+      "unitPrice": 62530.97,
+      "isActive": false
+    },
+    {
+      "id": 32201,
+      "sku": "SKU-0000032201",
+      "name": "Rugged Adapter 0000032201",
+      "categoryId": 4,
+      "unitPrice": 91412.81,
+      "isActive": true
+    },
+    {
+      "id": 32301,
+      "sku": "SKU-0000032301",
+      "name": "Classic Panel 0000032301",
+      "categoryId": 1,
+      "unitPrice": 44171.65,
+      "isActive": true
+    },
+    {
+      "id": 32401,
+      "sku": "SKU-0000032401",
+      "name": "Classic Controller 0000032401",
+      "categoryId": 1,
+      "unitPrice": 8946.20,
+      "isActive": true
+    },
+    {
+      "id": 32501,
+      "sku": "SKU-0000032501",
+      "name": "Rugged Controller 0000032501",
+      "categoryId": 3,
+      "unitPrice": 78960.73,
+      "isActive": true
+    },
+    {
+      "id": 32601,
+      "sku": "SKU-0000032601",
+      "name": "Robust Panel 0000032601",
+      "categoryId": 19,
+      "unitPrice": 40975.86,
+      "isActive": false
+    },
+    {
+      "id": 32701,
+      "sku": "SKU-0000032701",
+      "name": "Modular Unit 0000032701",
+      "categoryId": 1,
+      "unitPrice": 95200.63,
+      "isActive": true
+    },
+    {
+      "id": 32801,
+      "sku": "SKU-0000032801",
+      "name": "Refined Console 0000032801",
+      "categoryId": 1,
+      "unitPrice": 97994.17,
+      "isActive": false
+    },
+    {
+      "id": 32901,
+      "sku": "SKU-0000032901",
+      "name": "Industrial Device 0000032901",
+      "categoryId": 1,
+      "unitPrice": 74246.56,
+      "isActive": true
+    },
+    {
+      "id": 33001,
+      "sku": "SKU-0000033001",
+      "name": "Aerodynamic Assembly 0000033001",
+      "categoryId": 1,
+      "unitPrice": 77333.00,
+      "isActive": true
+    },
+    {
+      "id": 33101,
+      "sku": "SKU-0000033101",
+      "name": "Compact Toolkit 0000033101",
+      "categoryId": 1,
+      "unitPrice": 57434.36,
+      "isActive": true
+    },
+    {
+      "id": 33201,
+      "sku": "SKU-0000033201",
+      "name": "Durable Fixture 0000033201",
+      "categoryId": 13,
+      "unitPrice": 44245.62,
+      "isActive": true
+    },
+    {
+      "id": 33301,
+      "sku": "SKU-0000033301",
+      "name": "Robust Adapter 0000033301",
+      "categoryId": 1,
+      "unitPrice": 99191.67,
+      "isActive": true
+    },
+    {
+      "id": 33401,
+      "sku": "SKU-0000033401",
+      "name": "Refined Panel 0000033401",
+      "categoryId": 1,
+      "unitPrice": 63461.76,
+      "isActive": true
+    },
+    {
+      "id": 33501,
+      "sku": "SKU-0000033501",
+      "name": "Ergonomic Bracket 0000033501",
+      "categoryId": 1,
+      "unitPrice": 87869.72,
+      "isActive": true
+    },
+    {
+      "id": 33601,
+      "sku": "SKU-0000033601",
+      "name": "Versatile Panel 0000033601",
+      "categoryId": 1,
+      "unitPrice": 73051.51,
+      "isActive": true
+    },
+    {
+      "id": 33701,
+      "sku": "SKU-0000033701",
+      "name": "Lightweight Toolkit 0000033701",
+      "categoryId": 1,
+      "unitPrice": 53070.46,
+      "isActive": true
+    },
+    {
+      "id": 33801,
+      "sku": "SKU-0000033801",
+      "name": "Compact Adapter 0000033801",
+      "categoryId": 1,
+      "unitPrice": 83871.78,
+      "isActive": true
+    },
+    {
+      "id": 33901,
+      "sku": "SKU-0000033901",
+      "name": "Modular Gadget 0000033901",
+      "categoryId": 4,
+      "unitPrice": 50061.18,
+      "isActive": true
+    },
+    {
+      "id": 34001,
+      "sku": "SKU-0000034001",
+      "name": "Industrial Gadget 0000034001",
+      "categoryId": 18,
+      "unitPrice": 97640.54,
+      "isActive": true
+    },
+    {
+      "id": 34101,
+      "sku": "SKU-0000034101",
+      "name": "Precision Device 0000034101",
+      "categoryId": 1,
+      "unitPrice": 60710.78,
+      "isActive": true
+    },
+    {
+      "id": 34201,
+      "sku": "SKU-0000034201",
+      "name": "Aerodynamic Assembly 0000034201",
+      "categoryId": 1,
+      "unitPrice": 3795.91,
+      "isActive": true
+    },
+    {
+      "id": 34301,
+      "sku": "SKU-0000034301",
+      "name": "Industrial Adapter 0000034301",
+      "categoryId": 1,
+      "unitPrice": 57951.06,
+      "isActive": false
+    },
+    {
+      "id": 34401,
+      "sku": "SKU-0000034401",
+      "name": "Aerodynamic Widget 0000034401",
+      "categoryId": 1,
+      "unitPrice": 34844.29,
+      "isActive": true
+    },
+    {
+      "id": 34501,
+      "sku": "SKU-0000034501",
+      "name": "Modular Harness 0000034501",
+      "categoryId": 10,
+      "unitPrice": 46820.75,
+      "isActive": true
+    },
+    {
+      "id": 34601,
+      "sku": "SKU-0000034601",
+      "name": "Versatile Controller 0000034601",
+      "categoryId": 1,
+      "unitPrice": 33523.94,
+      "isActive": true
+    },
+    {
+      "id": 34701,
+      "sku": "SKU-0000034701",
+      "name": "Compact Component 0000034701",
+      "categoryId": 5,
+      "unitPrice": 25019.22,
+      "isActive": true
+    },
+    {
+      "id": 34801,
+      "sku": "SKU-0000034801",
+      "name": "Robust Harness 0000034801",
+      "categoryId": 1,
+      "unitPrice": 16219.73,
+      "isActive": true
+    },
+    {
+      "id": 34901,
+      "sku": "SKU-0000034901",
+      "name": "Industrial Bracket 0000034901",
+      "categoryId": 11,
+      "unitPrice": 424.22,
+      "isActive": false
+    },
+    {
+      "id": 35001,
+      "sku": "SKU-0000035001",
+      "name": "Durable Adapter 0000035001",
+      "categoryId": 13,
+      "unitPrice": 18983.25,
+      "isActive": true
+    },
+    {
+      "id": 35101,
+      "sku": "SKU-0000035101",
+      "name": "Rugged Device 0000035101",
+      "categoryId": 1,
+      "unitPrice": 48049.30,
+      "isActive": false
+    },
+    {
+      "id": 35201,
+      "sku": "SKU-0000035201",
+      "name": "Ergonomic Controller 0000035201",
+      "categoryId": 12,
+      "unitPrice": 13901.86,
+      "isActive": false
+    },
+    {
+      "id": 35301,
+      "sku": "SKU-0000035301",
+      "name": "Lightweight Module 0000035301",
+      "categoryId": 10,
+      "unitPrice": 20408.09,
+      "isActive": true
+    },
+    {
+      "id": 35401,
+      "sku": "SKU-0000035401",
+      "name": "Durable Component 0000035401",
+      "categoryId": 20,
+      "unitPrice": 67599.92,
+      "isActive": true
+    },
+    {
+      "id": 35501,
+      "sku": "SKU-0000035501",
+      "name": "Sleek Gadget 0000035501",
+      "categoryId": 1,
+      "unitPrice": 31456.89,
+      "isActive": true
+    },
+    {
+      "id": 35601,
+      "sku": "SKU-0000035601",
+      "name": "Industrial Component 0000035601",
+      "categoryId": 1,
+      "unitPrice": 59978.81,
+      "isActive": true
+    },
+    {
+      "id": 35701,
+      "sku": "SKU-0000035701",
+      "name": "Lightweight Fixture 0000035701",
+      "categoryId": 1,
+      "unitPrice": 89138.16,
+      "isActive": true
+    },
+    {
+      "id": 35801,
+      "sku": "SKU-0000035801",
+      "name": "Durable Controller 0000035801",
+      "categoryId": 3,
+      "unitPrice": 37545.40,
+      "isActive": true
+    },
+    {
+      "id": 35901,
+      "sku": "SKU-0000035901",
+      "name": "Ergonomic Device 0000035901",
+      "categoryId": 16,
+      "unitPrice": 19780.97,
+      "isActive": true
+    },
+    {
+      "id": 36001,
+      "sku": "SKU-0000036001",
+      "name": "Versatile Controller 0000036001",
+      "categoryId": 4,
+      "unitPrice": 58322.21,
+      "isActive": true
+    },
+    {
+      "id": 36101,
+      "sku": "SKU-0000036101",
+      "name": "Lightweight Panel 0000036101",
+      "categoryId": 1,
+      "unitPrice": 91953.67,
+      "isActive": true
+    },
+    {
+      "id": 36201,
+      "sku": "SKU-0000036201",
+      "name": "Robust Widget 0000036201",
+      "categoryId": 3,
+      "unitPrice": 39743.68,
+      "isActive": true
+    },
+    {
+      "id": 36301,
+      "sku": "SKU-0000036301",
+      "name": "Durable Adapter 0000036301",
+      "categoryId": 7,
+      "unitPrice": 10529.84,
+      "isActive": true
+    },
+    {
+      "id": 36401,
+      "sku": "SKU-0000036401",
+      "name": "Aerodynamic Fixture 0000036401",
+      "categoryId": 1,
+      "unitPrice": 31709.79,
+      "isActive": true
+    },
+    {
+      "id": 36501,
+      "sku": "SKU-0000036501",
+      "name": "Modular System 0000036501",
+      "categoryId": 1,
+      "unitPrice": 43244.83,
+      "isActive": true
+    },
+    {
+      "id": 36601,
+      "sku": "SKU-0000036601",
+      "name": "Rugged Widget 0000036601",
+      "categoryId": 1,
+      "unitPrice": 40600.98,
+      "isActive": false
+    },
+    {
+      "id": 36701,
+      "sku": "SKU-0000036701",
+      "name": "Practical Component 0000036701",
+      "categoryId": 1,
+      "unitPrice": 3505.51,
+      "isActive": true
+    },
+    {
+      "id": 36801,
+      "sku": "SKU-0000036801",
+      "name": "Modular Unit 0000036801",
+      "categoryId": 15,
+      "unitPrice": 84054.23,
+      "isActive": false
+    },
+    {
+      "id": 36901,
+      "sku": "SKU-0000036901",
+      "name": "Precision Fixture 0000036901",
+      "categoryId": 1,
+      "unitPrice": 6405.85,
+      "isActive": true
+    },
+    {
+      "id": 37001,
+      "sku": "SKU-0000037001",
+      "name": "Practical Toolkit 0000037001",
+      "categoryId": 1,
+      "unitPrice": 54286.99,
+      "isActive": false
+    },
+    {
+      "id": 37101,
+      "sku": "SKU-0000037101",
+      "name": "Aerodynamic Device 0000037101",
+      "categoryId": 1,
+      "unitPrice": 69203.76,
+      "isActive": true
+    },
+    {
+      "id": 37201,
+      "sku": "SKU-0000037201",
+      "name": "Robust Device 0000037201",
+      "categoryId": 1,
+      "unitPrice": 22893.78,
+      "isActive": false
+    },
+    {
+      "id": 37301,
+      "sku": "SKU-0000037301",
+      "name": "Rugged Harness 0000037301",
+      "categoryId": 17,
+      "unitPrice": 40726.43,
+      "isActive": true
+    },
+    {
+      "id": 37401,
+      "sku": "SKU-0000037401",
+      "name": "Rugged Bracket 0000037401",
+      "categoryId": 1,
+      "unitPrice": 60372.57,
+      "isActive": true
+    },
+    {
+      "id": 37501,
+      "sku": "SKU-0000037501",
+      "name": "Modular Harness 0000037501",
+      "categoryId": 1,
+      "unitPrice": 29400.70,
+      "isActive": true
+    },
+    {
+      "id": 37601,
+      "sku": "SKU-0000037601",
+      "name": "Classic Controller 0000037601",
+      "categoryId": 1,
+      "unitPrice": 34764.34,
+      "isActive": true
+    },
+    {
+      "id": 37701,
+      "sku": "SKU-0000037701",
+      "name": "Practical Bracket 0000037701",
+      "categoryId": 9,
+      "unitPrice": 30081.89,
+      "isActive": false
+    },
+    {
+      "id": 37801,
+      "sku": "SKU-0000037801",
+      "name": "Industrial Harness 0000037801",
+      "categoryId": 6,
+      "unitPrice": 53182.56,
+      "isActive": true
+    },
+    {
+      "id": 37901,
+      "sku": "SKU-0000037901",
+      "name": "Precision System 0000037901",
+      "categoryId": 15,
+      "unitPrice": 247.43,
+      "isActive": false
+    },
+    {
+      "id": 38001,
+      "sku": "SKU-0000038001",
+      "name": "Rugged Unit 0000038001",
+      "categoryId": 2,
+      "unitPrice": 65062.92,
+      "isActive": true
+    },
+    {
+      "id": 38101,
+      "sku": "SKU-0000038101",
+      "name": "Practical Device 0000038101",
+      "categoryId": 10,
+      "unitPrice": 99975.89,
+      "isActive": true
+    },
+    {
+      "id": 38201,
+      "sku": "SKU-0000038201",
+      "name": "Ergonomic Unit 0000038201",
+      "categoryId": 1,
+      "unitPrice": 17835.50,
+      "isActive": true
+    },
+    {
+      "id": 38301,
+      "sku": "SKU-0000038301",
+      "name": "Compact Module 0000038301",
+      "categoryId": 2,
+      "unitPrice": 13413.62,
+      "isActive": true
+    },
+    {
+      "id": 38401,
+      "sku": "SKU-0000038401",
+      "name": "Modern Harness 0000038401",
+      "categoryId": 17,
+      "unitPrice": 25855.17,
+      "isActive": false
+    },
+    {
+      "id": 38501,
+      "sku": "SKU-0000038501",
+      "name": "Robust Fixture 0000038501",
+      "categoryId": 1,
+      "unitPrice": 83521.73,
+      "isActive": true
+    },
+    {
+      "id": 38601,
+      "sku": "SKU-0000038601",
+      "name": "Practical Bracket 0000038601",
+      "categoryId": 15,
+      "unitPrice": 16164.23,
+      "isActive": true
+    },
+    {
+      "id": 38701,
+      "sku": "SKU-0000038701",
+      "name": "Modern Console 0000038701",
+      "categoryId": 19,
+      "unitPrice": 18933.29,
+      "isActive": true
+    },
+    {
+      "id": 38801,
+      "sku": "SKU-0000038801",
+      "name": "Compact Harness 0000038801",
+      "categoryId": 14,
+      "unitPrice": 44369.67,
+      "isActive": true
+    },
+    {
+      "id": 38901,
+      "sku": "SKU-0000038901",
+      "name": "Practical Component 0000038901",
+      "categoryId": 5,
+      "unitPrice": 61347.56,
+      "isActive": true
+    },
+    {
+      "id": 39001,
+      "sku": "SKU-0000039001",
+      "name": "Robust Unit 0000039001",
+      "categoryId": 3,
+      "unitPrice": 59560.78,
+      "isActive": true
+    },
+    {
+      "id": 39101,
+      "sku": "SKU-0000039101",
+      "name": "Ergonomic Device 0000039101",
+      "categoryId": 8,
+      "unitPrice": 83205.64,
+      "isActive": false
+    },
+    {
+      "id": 39201,
+      "sku": "SKU-0000039201",
+      "name": "Precision Assembly 0000039201",
+      "categoryId": 1,
+      "unitPrice": 36799.55,
+      "isActive": true
+    },
+    {
+      "id": 39301,
+      "sku": "SKU-0000039301",
+      "name": "Ergonomic Controller 0000039301",
+      "categoryId": 1,
+      "unitPrice": 81337.74,
+      "isActive": true
+    },
+    {
+      "id": 39401,
+      "sku": "SKU-0000039401",
+      "name": "Ergonomic Device 0000039401",
+      "categoryId": 1,
+      "unitPrice": 86808.90,
+      "isActive": true
+    },
+    {
+      "id": 39501,
+      "sku": "SKU-0000039501",
+      "name": "Practical Module 0000039501",
+      "categoryId": 18,
+      "unitPrice": 65567.82,
+      "isActive": true
+    },
+    {
+      "id": 39601,
+      "sku": "SKU-0000039601",
+      "name": "Modular Toolkit 0000039601",
+      "categoryId": 1,
+      "unitPrice": 51313.40,
+      "isActive": true
+    },
+    {
+      "id": 39701,
+      "sku": "SKU-0000039701",
+      "name": "Durable Unit 0000039701",
+      "categoryId": 1,
+      "unitPrice": 38153.57,
+      "isActive": true
+    },
+    {
+      "id": 39801,
+      "sku": "SKU-0000039801",
+      "name": "Classic Component 0000039801",
+      "categoryId": 1,
+      "unitPrice": 7159.95,
+      "isActive": true
+    },
+    {
+      "id": 39901,
+      "sku": "SKU-0000039901",
+      "name": "Classic Fixture 0000039901",
+      "categoryId": 1,
+      "unitPrice": 29200.21,
+      "isActive": true
+    },
+    {
+      "id": 40001,
+      "sku": "SKU-0000040001",
+      "name": "Robust Panel 0000040001",
+      "categoryId": 1,
+      "unitPrice": 46762.94,
+      "isActive": true
+    },
+    {
+      "id": 40101,
+      "sku": "SKU-0000040101",
+      "name": "Refined Component 0000040101",
+      "categoryId": 13,
+      "unitPrice": 6431.25,
+      "isActive": true
+    },
+    {
+      "id": 40201,
+      "sku": "SKU-0000040201",
+      "name": "Modular System 0000040201",
+      "categoryId": 1,
+      "unitPrice": 32518.08,
+      "isActive": false
+    },
+    {
+      "id": 40301,
+      "sku": "SKU-0000040301",
+      "name": "Robust System 0000040301",
+      "categoryId": 1,
+      "unitPrice": 98010.53,
+      "isActive": true
+    },
+    {
+      "id": 40401,
+      "sku": "SKU-0000040401",
+      "name": "Sleek Console 0000040401",
+      "categoryId": 1,
+      "unitPrice": 43240.52,
+      "isActive": false
+    },
+    {
+      "id": 40501,
+      "sku": "SKU-0000040501",
+      "name": "Refined Panel 0000040501",
+      "categoryId": 15,
+      "unitPrice": 6938.19,
+      "isActive": true
+    },
+    {
+      "id": 40601,
+      "sku": "SKU-0000040601",
+      "name": "Industrial Console 0000040601",
+      "categoryId": 5,
+      "unitPrice": 80872.03,
+      "isActive": true
+    },
+    {
+      "id": 40701,
+      "sku": "SKU-0000040701",
+      "name": "Modular Unit 0000040701",
+      "categoryId": 1,
+      "unitPrice": 64600.36,
+      "isActive": true
+    },
+    {
+      "id": 40801,
+      "sku": "SKU-0000040801",
+      "name": "Precision Panel 0000040801",
+      "categoryId": 11,
+      "unitPrice": 55201.72,
+      "isActive": false
+    },
+    {
+      "id": 40901,
+      "sku": "SKU-0000040901",
+      "name": "Robust Fixture 0000040901",
+      "categoryId": 1,
+      "unitPrice": 84417.34,
+      "isActive": true
+    },
+    {
+      "id": 41001,
+      "sku": "SKU-0000041001",
+      "name": "Modular Device 0000041001",
+      "categoryId": 7,
+      "unitPrice": 86056.87,
+      "isActive": false
+    },
+    {
+      "id": 41101,
+      "sku": "SKU-0000041101",
+      "name": "Versatile System 0000041101",
+      "categoryId": 1,
+      "unitPrice": 27610.77,
+      "isActive": true
+    },
+    {
+      "id": 41201,
+      "sku": "SKU-0000041201",
+      "name": "Practical Panel 0000041201",
+      "categoryId": 1,
+      "unitPrice": 799.83,
+      "isActive": true
+    },
+    {
+      "id": 41301,
+      "sku": "SKU-0000041301",
+      "name": "Rugged Toolkit 0000041301",
+      "categoryId": 1,
+      "unitPrice": 52954.45,
+      "isActive": true
+    },
+    {
+      "id": 41401,
+      "sku": "SKU-0000041401",
+      "name": "Lightweight Controller 0000041401",
+      "categoryId": 1,
+      "unitPrice": 48634.39,
+      "isActive": true
+    },
+    {
+      "id": 41501,
+      "sku": "SKU-0000041501",
+      "name": "Versatile Component 0000041501",
+      "categoryId": 7,
+      "unitPrice": 39267.88,
+      "isActive": false
+    },
+    {
+      "id": 41601,
+      "sku": "SKU-0000041601",
+      "name": "Modular Assembly 0000041601",
+      "categoryId": 1,
+      "unitPrice": 14063.92,
+      "isActive": false
+    },
+    {
+      "id": 41701,
+      "sku": "SKU-0000041701",
+      "name": "Durable Fixture 0000041701",
+      "categoryId": 1,
+      "unitPrice": 36889.53,
+      "isActive": false
+    },
+    {
+      "id": 41801,
+      "sku": "SKU-0000041801",
+      "name": "Durable Controller 0000041801",
+      "categoryId": 1,
+      "unitPrice": 77078.18,
+      "isActive": false
+    },
+    {
+      "id": 41901,
+      "sku": "SKU-0000041901",
+      "name": "Rugged Fixture 0000041901",
+      "categoryId": 1,
+      "unitPrice": 34596.18,
+      "isActive": true
+    },
+    {
+      "id": 42001,
+      "sku": "SKU-0000042001",
+      "name": "Robust Console 0000042001",
+      "categoryId": 1,
+      "unitPrice": 3205.79,
+      "isActive": true
+    },
+    {
+      "id": 42101,
+      "sku": "SKU-0000042101",
+      "name": "Durable Console 0000042101",
+      "categoryId": 16,
+      "unitPrice": 59455.94,
+      "isActive": true
+    },
+    {
+      "id": 42201,
+      "sku": "SKU-0000042201",
+      "name": "Modular Component 0000042201",
+      "categoryId": 4,
+      "unitPrice": 95878.41,
+      "isActive": false
+    },
+    {
+      "id": 42301,
+      "sku": "SKU-0000042301",
+      "name": "Durable Device 0000042301",
+      "categoryId": 1,
+      "unitPrice": 55791.59,
+      "isActive": true
+    },
+    {
+      "id": 42401,
+      "sku": "SKU-0000042401",
+      "name": "Refined Widget 0000042401",
+      "categoryId": 1,
+      "unitPrice": 49326.27,
+      "isActive": false
+    },
+    {
+      "id": 42501,
+      "sku": "SKU-0000042501",
+      "name": "Sleek Controller 0000042501",
+      "categoryId": 15,
+      "unitPrice": 52680.28,
+      "isActive": true
+    },
+    {
+      "id": 42601,
+      "sku": "SKU-0000042601",
+      "name": "Industrial Unit 0000042601",
+      "categoryId": 15,
+      "unitPrice": 89186.91,
+      "isActive": true
+    },
+    {
+      "id": 42701,
+      "sku": "SKU-0000042701",
+      "name": "Modular Module 0000042701",
+      "categoryId": 1,
+      "unitPrice": 28562.18,
+      "isActive": false
+    },
+    {
+      "id": 42801,
+      "sku": "SKU-0000042801",
+      "name": "Durable Panel 0000042801",
+      "categoryId": 1,
+      "unitPrice": 10784.78,
+      "isActive": true
+    },
+    {
+      "id": 42901,
+      "sku": "SKU-0000042901",
+      "name": "Ergonomic Controller 0000042901",
+      "categoryId": 1,
+      "unitPrice": 50933.13,
+      "isActive": true
+    },
+    {
+      "id": 43001,
+      "sku": "SKU-0000043001",
+      "name": "Rugged System 0000043001",
+      "categoryId": 1,
+      "unitPrice": 14929.50,
+      "isActive": true
+    },
+    {
+      "id": 43101,
+      "sku": "SKU-0000043101",
+      "name": "Modular Module 0000043101",
+      "categoryId": 1,
+      "unitPrice": 79323.29,
+      "isActive": true
+    },
+    {
+      "id": 43201,
+      "sku": "SKU-0000043201",
+      "name": "Aerodynamic System 0000043201",
+      "categoryId": 3,
+      "unitPrice": 29303.87,
+      "isActive": true
+    },
+    {
+      "id": 43301,
+      "sku": "SKU-0000043301",
+      "name": "Modular Component 0000043301",
+      "categoryId": 18,
+      "unitPrice": 85401.46,
+      "isActive": false
+    },
+    {
+      "id": 43401,
+      "sku": "SKU-0000043401",
+      "name": "Modular Bracket 0000043401",
+      "categoryId": 17,
+      "unitPrice": 73296.03,
+      "isActive": true
+    },
+    {
+      "id": 43501,
+      "sku": "SKU-0000043501",
+      "name": "Lightweight Widget 0000043501",
+      "categoryId": 1,
+      "unitPrice": 78992.11,
+      "isActive": true
+    },
+    {
+      "id": 43601,
+      "sku": "SKU-0000043601",
+      "name": "Modular Module 0000043601",
+      "categoryId": 1,
+      "unitPrice": 43175.47,
+      "isActive": true
+    },
+    {
+      "id": 43701,
+      "sku": "SKU-0000043701",
+      "name": "Lightweight Toolkit 0000043701",
+      "categoryId": 1,
+      "unitPrice": 56821.04,
+      "isActive": true
+    },
+    {
+      "id": 43801,
+      "sku": "SKU-0000043801",
+      "name": "Rugged Fixture 0000043801",
+      "categoryId": 19,
+      "unitPrice": 25783.88,
+      "isActive": false
+    },
+    {
+      "id": 43901,
+      "sku": "SKU-0000043901",
+      "name": "Industrial System 0000043901",
+      "categoryId": 8,
+      "unitPrice": 25898.38,
+      "isActive": true
+    },
+    {
+      "id": 44001,
+      "sku": "SKU-0000044001",
+      "name": "Lightweight Harness 0000044001",
+      "categoryId": 1,
+      "unitPrice": 14347.34,
+      "isActive": true
+    },
+    {
+      "id": 44101,
+      "sku": "SKU-0000044101",
+      "name": "Modern Widget 0000044101",
+      "categoryId": 14,
+      "unitPrice": 59010.59,
+      "isActive": true
+    },
+    {
+      "id": 44201,
+      "sku": "SKU-0000044201",
+      "name": "Compact Adapter 0000044201",
+      "categoryId": 6,
+      "unitPrice": 74341.50,
+      "isActive": true
+    },
+    {
+      "id": 44301,
+      "sku": "SKU-0000044301",
+      "name": "Compact Console 0000044301",
+      "categoryId": 18,
+      "unitPrice": 26794.70,
+      "isActive": true
+    },
+    {
+      "id": 44401,
+      "sku": "SKU-0000044401",
+      "name": "Practical Widget 0000044401",
+      "categoryId": 2,
+      "unitPrice": 61008.74,
+      "isActive": true
+    },
+    {
+      "id": 44501,
+      "sku": "SKU-0000044501",
+      "name": "Compact Module 0000044501",
+      "categoryId": 5,
+      "unitPrice": 59431.99,
+      "isActive": true
+    },
+    {
+      "id": 44601,
+      "sku": "SKU-0000044601",
+      "name": "Lightweight Module 0000044601",
+      "categoryId": 12,
+      "unitPrice": 58147.30,
+      "isActive": true
+    },
+    {
+      "id": 44701,
+      "sku": "SKU-0000044701",
+      "name": "Compact Module 0000044701",
+      "categoryId": 1,
+      "unitPrice": 57701.12,
+      "isActive": true
+    },
+    {
+      "id": 44801,
+      "sku": "SKU-0000044801",
+      "name": "Practical Unit 0000044801",
+      "categoryId": 1,
+      "unitPrice": 46971.83,
+      "isActive": true
+    },
+    {
+      "id": 44901,
+      "sku": "SKU-0000044901",
+      "name": "Durable Controller 0000044901",
+      "categoryId": 2,
+      "unitPrice": 57596.53,
+      "isActive": true
+    },
+    {
+      "id": 45001,
+      "sku": "SKU-0000045001",
+      "name": "Practical Panel 0000045001",
+      "categoryId": 1,
+      "unitPrice": 76863.01,
+      "isActive": false
+    },
+    {
+      "id": 45101,
+      "sku": "SKU-0000045101",
+      "name": "Refined System 0000045101",
+      "categoryId": 1,
+      "unitPrice": 25975.82,
+      "isActive": true
+    },
+    {
+      "id": 45201,
+      "sku": "SKU-0000045201",
+      "name": "Sleek Adapter 0000045201",
+      "categoryId": 12,
+      "unitPrice": 97426.37,
+      "isActive": true
+    },
+    {
+      "id": 45301,
+      "sku": "SKU-0000045301",
+      "name": "Robust Assembly 0000045301",
+      "categoryId": 10,
+      "unitPrice": 59069.11,
+      "isActive": true
+    },
+    {
+      "id": 45401,
+      "sku": "SKU-0000045401",
+      "name": "Industrial Harness 0000045401",
+      "categoryId": 17,
+      "unitPrice": 70629.41,
+      "isActive": true
+    },
+    {
+      "id": 45501,
+      "sku": "SKU-0000045501",
+      "name": "Industrial Unit 0000045501",
+      "categoryId": 1,
+      "unitPrice": 56957.74,
+      "isActive": true
+    },
+    {
+      "id": 45601,
+      "sku": "SKU-0000045601",
+      "name": "Aerodynamic Gadget 0000045601",
+      "categoryId": 1,
+      "unitPrice": 58688.82,
+      "isActive": false
+    },
+    {
+      "id": 45701,
+      "sku": "SKU-0000045701",
+      "name": "Rugged Toolkit 0000045701",
+      "categoryId": 1,
+      "unitPrice": 96990.10,
+      "isActive": true
+    },
+    {
+      "id": 45801,
+      "sku": "SKU-0000045801",
+      "name": "Modular Unit 0000045801",
+      "categoryId": 15,
+      "unitPrice": 60486.09,
+      "isActive": true
+    },
+    {
+      "id": 45901,
+      "sku": "SKU-0000045901",
+      "name": "Modern Toolkit 0000045901",
+      "categoryId": 16,
+      "unitPrice": 19130.68,
+      "isActive": true
+    },
+    {
+      "id": 46001,
+      "sku": "SKU-0000046001",
+      "name": "Versatile Toolkit 0000046001",
+      "categoryId": 11,
+      "unitPrice": 56718.05,
+      "isActive": false
+    },
+    {
+      "id": 46101,
+      "sku": "SKU-0000046101",
+      "name": "Rugged Harness 0000046101",
+      "categoryId": 8,
+      "unitPrice": 94482.80,
+      "isActive": true
+    },
+    {
+      "id": 46201,
+      "sku": "SKU-0000046201",
+      "name": "Compact Console 0000046201",
+      "categoryId": 11,
+      "unitPrice": 62058.35,
+      "isActive": true
+    },
+    {
+      "id": 46301,
+      "sku": "SKU-0000046301",
+      "name": "Refined Controller 0000046301",
+      "categoryId": 18,
+      "unitPrice": 52768.84,
+      "isActive": true
+    },
+    {
+      "id": 46401,
+      "sku": "SKU-0000046401",
+      "name": "Aerodynamic System 0000046401",
+      "categoryId": 9,
+      "unitPrice": 80931.10,
+      "isActive": true
+    },
+    {
+      "id": 46501,
+      "sku": "SKU-0000046501",
+      "name": "Classic Controller 0000046501",
+      "categoryId": 2,
+      "unitPrice": 50407.37,
+      "isActive": true
+    },
+    {
+      "id": 46601,
+      "sku": "SKU-0000046601",
+      "name": "Refined Harness 0000046601",
+      "categoryId": 1,
+      "unitPrice": 54283.53,
+      "isActive": true
+    },
+    {
+      "id": 46701,
+      "sku": "SKU-0000046701",
+      "name": "Practical Component 0000046701",
+      "categoryId": 1,
+      "unitPrice": 58851.76,
+      "isActive": true
+    },
+    {
+      "id": 46801,
+      "sku": "SKU-0000046801",
+      "name": "Robust Component 0000046801",
+      "categoryId": 1,
+      "unitPrice": 38437.88,
+      "isActive": true
+    },
+    {
+      "id": 46901,
+      "sku": "SKU-0000046901",
+      "name": "Durable Component 0000046901",
+      "categoryId": 1,
+      "unitPrice": 9435.55,
+      "isActive": true
+    },
+    {
+      "id": 47001,
+      "sku": "SKU-0000047001",
+      "name": "Aerodynamic Unit 0000047001",
+      "categoryId": 15,
+      "unitPrice": 82204.90,
+      "isActive": true
+    },
+    {
+      "id": 47101,
+      "sku": "SKU-0000047101",
+      "name": "Practical Bracket 0000047101",
+      "categoryId": 1,
+      "unitPrice": 31742.81,
+      "isActive": false
+    },
+    {
+      "id": 47201,
+      "sku": "SKU-0000047201",
+      "name": "Durable Component 0000047201",
+      "categoryId": 1,
+      "unitPrice": 68832.14,
+      "isActive": true
+    },
+    {
+      "id": 47301,
+      "sku": "SKU-0000047301",
+      "name": "Ergonomic Toolkit 0000047301",
+      "categoryId": 1,
+      "unitPrice": 97453.56,
+      "isActive": true
+    },
+    {
+      "id": 47401,
+      "sku": "SKU-0000047401",
+      "name": "Robust Fixture 0000047401",
+      "categoryId": 1,
+      "unitPrice": 17286.80,
+      "isActive": false
+    },
+    {
+      "id": 47501,
+      "sku": "SKU-0000047501",
+      "name": "Modular Widget 0000047501",
+      "categoryId": 1,
+      "unitPrice": 29543.35,
+      "isActive": false
+    },
+    {
+      "id": 47601,
+      "sku": "SKU-0000047601",
+      "name": "Refined Component 0000047601",
+      "categoryId": 4,
+      "unitPrice": 74531.97,
+      "isActive": true
+    },
+    {
+      "id": 47701,
+      "sku": "SKU-0000047701",
+      "name": "Compact Unit 0000047701",
+      "categoryId": 18,
+      "unitPrice": 49061.19,
+      "isActive": true
+    },
+    {
+      "id": 47801,
+      "sku": "SKU-0000047801",
+      "name": "Refined Console 0000047801",
+      "categoryId": 1,
+      "unitPrice": 42892.76,
+      "isActive": true
+    },
+    {
+      "id": 47901,
+      "sku": "SKU-0000047901",
+      "name": "Lightweight Adapter 0000047901",
+      "categoryId": 1,
+      "unitPrice": 80222.65,
+      "isActive": true
+    },
+    {
+      "id": 48001,
+      "sku": "SKU-0000048001",
+      "name": "Practical Module 0000048001",
+      "categoryId": 1,
+      "unitPrice": 54309.62,
+      "isActive": true
+    },
+    {
+      "id": 48101,
+      "sku": "SKU-0000048101",
+      "name": "Compact Widget 0000048101",
+      "categoryId": 5,
+      "unitPrice": 50243.80,
+      "isActive": true
+    },
+    {
+      "id": 48201,
+      "sku": "SKU-0000048201",
+      "name": "Practical Gadget 0000048201",
+      "categoryId": 1,
+      "unitPrice": 57634.73,
+      "isActive": true
+    },
+    {
+      "id": 48301,
+      "sku": "SKU-0000048301",
+      "name": "Classic Console 0000048301",
+      "categoryId": 1,
+      "unitPrice": 64105.22,
+      "isActive": true
+    },
+    {
+      "id": 48401,
+      "sku": "SKU-0000048401",
+      "name": "Durable Bracket 0000048401",
+      "categoryId": 1,
+      "unitPrice": 25265.58,
+      "isActive": false
+    },
+    {
+      "id": 48501,
+      "sku": "SKU-0000048501",
+      "name": "Refined Toolkit 0000048501",
+      "categoryId": 1,
+      "unitPrice": 70432.40,
+      "isActive": true
+    },
+    {
+      "id": 48601,
+      "sku": "SKU-0000048601",
+      "name": "Lightweight Toolkit 0000048601",
+      "categoryId": 1,
+      "unitPrice": 55809.52,
+      "isActive": true
+    },
+    {
+      "id": 48701,
+      "sku": "SKU-0000048701",
+      "name": "Durable Device 0000048701",
+      "categoryId": 1,
+      "unitPrice": 4445.83,
+      "isActive": true
+    },
+    {
+      "id": 48801,
+      "sku": "SKU-0000048801",
+      "name": "Compact Module 0000048801",
+      "categoryId": 1,
+      "unitPrice": 74064.67,
+      "isActive": true
+    },
+    {
+      "id": 48901,
+      "sku": "SKU-0000048901",
+      "name": "Practical Device 0000048901",
+      "categoryId": 1,
+      "unitPrice": 79756.76,
+      "isActive": true
+    },
+    {
+      "id": 49001,
+      "sku": "SKU-0000049001",
+      "name": "Industrial Device 0000049001",
+      "categoryId": 1,
+      "unitPrice": 73850.55,
+      "isActive": true
+    },
+    {
+      "id": 49101,
+      "sku": "SKU-0000049101",
+      "name": "Durable Assembly 0000049101",
+      "categoryId": 16,
+      "unitPrice": 79899.74,
+      "isActive": true
+    },
+    {
+      "id": 49201,
+      "sku": "SKU-0000049201",
+      "name": "Modular Unit 0000049201",
+      "categoryId": 1,
+      "unitPrice": 59916.54,
+      "isActive": true
+    },
+    {
+      "id": 49301,
+      "sku": "SKU-0000049301",
+      "name": "Refined Bracket 0000049301",
+      "categoryId": 11,
+      "unitPrice": 79991.20,
+      "isActive": true
+    },
+    {
+      "id": 49401,
+      "sku": "SKU-0000049401",
+      "name": "Classic Widget 0000049401",
+      "categoryId": 12,
+      "unitPrice": 12486.53,
+      "isActive": true
+    },
+    {
+      "id": 49501,
+      "sku": "SKU-0000049501",
+      "name": "Sleek Adapter 0000049501",
+      "categoryId": 1,
+      "unitPrice": 52021.28,
+      "isActive": true
+    },
+    {
+      "id": 49601,
+      "sku": "SKU-0000049601",
+      "name": "Aerodynamic Device 0000049601",
+      "categoryId": 1,
+      "unitPrice": 77741.12,
+      "isActive": true
+    },
+    {
+      "id": 49701,
+      "sku": "SKU-0000049701",
+      "name": "Practical System 0000049701",
+      "categoryId": 19,
+      "unitPrice": 34385.45,
+      "isActive": true
+    },
+    {
+      "id": 49801,
+      "sku": "SKU-0000049801",
+      "name": "Refined Adapter 0000049801",
+      "categoryId": 16,
+      "unitPrice": 16194.16,
+      "isActive": false
+    },
+    {
+      "id": 49901,
+      "sku": "SKU-0000049901",
+      "name": "Durable Widget 0000049901",
+      "categoryId": 9,
+      "unitPrice": 72069.95,
+      "isActive": true
+    },
+    {
+      "id": 50001,
+      "sku": "SKU-0000050001",
+      "name": "Modular Component 0000050001",
+      "categoryId": 1,
+      "unitPrice": 21642.71,
+      "isActive": true
+    },
+    {
+      "id": 50101,
+      "sku": "SKU-0000050101",
+      "name": "Aerodynamic Console 0000050101",
+      "categoryId": 1,
+      "unitPrice": 13889.95,
+      "isActive": true
+    },
+    {
+      "id": 50201,
+      "sku": "SKU-0000050201",
+      "name": "Robust Device 0000050201",
+      "categoryId": 1,
+      "unitPrice": 89465.50,
+      "isActive": true
+    },
+    {
+      "id": 50301,
+      "sku": "SKU-0000050301",
+      "name": "Modern Unit 0000050301",
+      "categoryId": 11,
+      "unitPrice": 8919.17,
+      "isActive": true
+    },
+    {
+      "id": 50401,
+      "sku": "SKU-0000050401",
+      "name": "Ergonomic Component 0000050401",
+      "categoryId": 1,
+      "unitPrice": 11959.64,
+      "isActive": true
+    },
+    {
+      "id": 50501,
+      "sku": "SKU-0000050501",
+      "name": "Versatile Toolkit 0000050501",
+      "categoryId": 11,
+      "unitPrice": 12437.82,
+      "isActive": false
+    },
+    {
+      "id": 50601,
+      "sku": "SKU-0000050601",
+      "name": "Refined Unit 0000050601",
+      "categoryId": 1,
+      "unitPrice": 9554.02,
+      "isActive": false
+    },
+    {
+      "id": 50701,
+      "sku": "SKU-0000050701",
+      "name": "Precision Component 0000050701",
+      "categoryId": 7,
+      "unitPrice": 51386.76,
+      "isActive": true
+    },
+    {
+      "id": 50801,
+      "sku": "SKU-0000050801",
+      "name": "Modular Bracket 0000050801",
+      "categoryId": 20,
+      "unitPrice": 29675.25,
+      "isActive": true
+    },
+    {
+      "id": 50901,
+      "sku": "SKU-0000050901",
+      "name": "Modular Adapter 0000050901",
+      "categoryId": 3,
+      "unitPrice": 24361.25,
+      "isActive": true
+    },
+    {
+      "id": 51001,
+      "sku": "SKU-0000051001",
+      "name": "Modern Console 0000051001",
+      "categoryId": 1,
+      "unitPrice": 41419.82,
+      "isActive": true
+    },
+    {
+      "id": 51101,
+      "sku": "SKU-0000051101",
+      "name": "Versatile Panel 0000051101",
+      "categoryId": 1,
+      "unitPrice": 26453.96,
+      "isActive": true
+    },
+    {
+      "id": 51201,
+      "sku": "SKU-0000051201",
+      "name": "Modular Assembly 0000051201",
+      "categoryId": 1,
+      "unitPrice": 74193.75,
+      "isActive": false
+    },
+    {
+      "id": 51301,
+      "sku": "SKU-0000051301",
+      "name": "Sleek Device 0000051301",
+      "categoryId": 3,
+      "unitPrice": 22816.05,
+      "isActive": true
+    },
+    {
+      "id": 51401,
+      "sku": "SKU-0000051401",
+      "name": "Aerodynamic Console 0000051401",
+      "categoryId": 1,
+      "unitPrice": 60733.80,
+      "isActive": true
+    },
+    {
+      "id": 51501,
+      "sku": "SKU-0000051501",
+      "name": "Versatile Harness 0000051501",
+      "categoryId": 1,
+      "unitPrice": 2444.59,
+      "isActive": true
+    },
+    {
+      "id": 51601,
+      "sku": "SKU-0000051601",
+      "name": "Compact Controller 0000051601",
+      "categoryId": 1,
+      "unitPrice": 62176.68,
+      "isActive": true
+    },
+    {
+      "id": 51701,
+      "sku": "SKU-0000051701",
+      "name": "Durable Bracket 0000051701",
+      "categoryId": 4,
+      "unitPrice": 99085.76,
+      "isActive": true
+    },
+    {
+      "id": 51801,
+      "sku": "SKU-0000051801",
+      "name": "Classic Console 0000051801",
+      "categoryId": 15,
+      "unitPrice": 39105.09,
+      "isActive": true
+    },
+    {
+      "id": 51901,
+      "sku": "SKU-0000051901",
+      "name": "Robust Gadget 0000051901",
+      "categoryId": 1,
+      "unitPrice": 94181.11,
+      "isActive": true
+    },
+    {
+      "id": 52001,
+      "sku": "SKU-0000052001",
+      "name": "Sleek Assembly 0000052001",
+      "categoryId": 1,
+      "unitPrice": 58244.46,
+      "isActive": true
+    },
+    {
+      "id": 52101,
+      "sku": "SKU-0000052101",
+      "name": "Modular Adapter 0000052101",
+      "categoryId": 1,
+      "unitPrice": 17700.09,
+      "isActive": true
+    },
+    {
+      "id": 52201,
+      "sku": "SKU-0000052201",
+      "name": "Sleek Device 0000052201",
+      "categoryId": 1,
+      "unitPrice": 35948.58,
+      "isActive": true
+    },
+    {
+      "id": 52301,
+      "sku": "SKU-0000052301",
+      "name": "Modern Console 0000052301",
+      "categoryId": 1,
+      "unitPrice": 17374.99,
+      "isActive": true
+    },
+    {
+      "id": 52401,
+      "sku": "SKU-0000052401",
+      "name": "Modular Controller 0000052401",
+      "categoryId": 1,
+      "unitPrice": 3650.08,
+      "isActive": true
+    },
+    {
+      "id": 52501,
+      "sku": "SKU-0000052501",
+      "name": "Modern Controller 0000052501",
+      "categoryId": 1,
+      "unitPrice": 95210.93,
+      "isActive": false
+    },
+    {
+      "id": 52601,
+      "sku": "SKU-0000052601",
+      "name": "Compact Bracket 0000052601",
+      "categoryId": 1,
+      "unitPrice": 48840.79,
+      "isActive": false
+    },
+    {
+      "id": 52701,
+      "sku": "SKU-0000052701",
+      "name": "Modern System 0000052701",
+      "categoryId": 14,
+      "unitPrice": 25443.87,
+      "isActive": false
+    },
+    {
+      "id": 52801,
+      "sku": "SKU-0000052801",
+      "name": "Modern System 0000052801",
+      "categoryId": 1,
+      "unitPrice": 50069.36,
+      "isActive": true
+    },
+    {
+      "id": 52901,
+      "sku": "SKU-0000052901",
+      "name": "Sleek Controller 0000052901",
+      "categoryId": 1,
+      "unitPrice": 79700.84,
+      "isActive": false
+    },
+    {
+      "id": 53001,
+      "sku": "SKU-0000053001",
+      "name": "Rugged Adapter 0000053001",
+      "categoryId": 1,
+      "unitPrice": 77146.74,
+      "isActive": true
+    },
+    {
+      "id": 53101,
+      "sku": "SKU-0000053101",
+      "name": "Aerodynamic Harness 0000053101",
+      "categoryId": 15,
+      "unitPrice": 28855.07,
+      "isActive": true
+    },
+    {
+      "id": 53201,
+      "sku": "SKU-0000053201",
+      "name": "Industrial Fixture 0000053201",
+      "categoryId": 1,
+      "unitPrice": 95880.07,
+      "isActive": true
+    },
+    {
+      "id": 53301,
+      "sku": "SKU-0000053301",
+      "name": "Compact Console 0000053301",
+      "categoryId": 1,
+      "unitPrice": 50144.59,
+      "isActive": true
+    },
+    {
+      "id": 53401,
+      "sku": "SKU-0000053401",
+      "name": "Practical Assembly 0000053401",
+      "categoryId": 13,
+      "unitPrice": 60030.04,
+      "isActive": true
+    },
+    {
+      "id": 53501,
+      "sku": "SKU-0000053501",
+      "name": "Robust Controller 0000053501",
+      "categoryId": 12,
+      "unitPrice": 60144.48,
+      "isActive": true
+    },
+    {
+      "id": 53601,
+      "sku": "SKU-0000053601",
+      "name": "Lightweight Unit 0000053601",
+      "categoryId": 10,
+      "unitPrice": 89583.05,
+      "isActive": true
+    },
+    {
+      "id": 53701,
+      "sku": "SKU-0000053701",
+      "name": "Aerodynamic Bracket 0000053701",
+      "categoryId": 8,
+      "unitPrice": 65079.90,
+      "isActive": false
+    },
+    {
+      "id": 53801,
+      "sku": "SKU-0000053801",
+      "name": "Modern Harness 0000053801",
+      "categoryId": 1,
+      "unitPrice": 96796.63,
+      "isActive": true
+    },
+    {
+      "id": 53901,
+      "sku": "SKU-0000053901",
+      "name": "Lightweight Module 0000053901",
+      "categoryId": 1,
+      "unitPrice": 20716.42,
+      "isActive": true
+    },
+    {
+      "id": 54001,
+      "sku": "SKU-0000054001",
+      "name": "Robust Module 0000054001",
+      "categoryId": 1,
+      "unitPrice": 46518.12,
+      "isActive": true
+    },
+    {
+      "id": 54101,
+      "sku": "SKU-0000054101",
+      "name": "Refined Component 0000054101",
+      "categoryId": 1,
+      "unitPrice": 92985.86,
+      "isActive": true
+    },
+    {
+      "id": 54201,
+      "sku": "SKU-0000054201",
+      "name": "Industrial Controller 0000054201",
+      "categoryId": 1,
+      "unitPrice": 60813.74,
+      "isActive": true
+    },
+    {
+      "id": 54301,
+      "sku": "SKU-0000054301",
+      "name": "Practical Assembly 0000054301",
+      "categoryId": 1,
+      "unitPrice": 92944.91,
+      "isActive": true
+    },
+    {
+      "id": 54401,
+      "sku": "SKU-0000054401",
+      "name": "Modern Console 0000054401",
+      "categoryId": 17,
+      "unitPrice": 52764.81,
+      "isActive": true
+    },
+    {
+      "id": 54501,
+      "sku": "SKU-0000054501",
+      "name": "Precision Harness 0000054501",
+      "categoryId": 1,
+      "unitPrice": 12908.54,
+      "isActive": false
+    },
+    {
+      "id": 54601,
+      "sku": "SKU-0000054601",
+      "name": "Ergonomic Component 0000054601",
+      "categoryId": 1,
+      "unitPrice": 50754.26,
+      "isActive": true
+    },
+    {
+      "id": 54701,
+      "sku": "SKU-0000054701",
+      "name": "Sleek Assembly 0000054701",
+      "categoryId": 1,
+      "unitPrice": 57175.38,
+      "isActive": true
+    },
+    {
+      "id": 54801,
+      "sku": "SKU-0000054801",
+      "name": "Lightweight Panel 0000054801",
+      "categoryId": 18,
+      "unitPrice": 31425.14,
+      "isActive": true
+    },
+    {
+      "id": 54901,
+      "sku": "SKU-0000054901",
+      "name": "Durable Toolkit 0000054901",
+      "categoryId": 1,
+      "unitPrice": 55660.17,
+      "isActive": true
+    },
+    {
+      "id": 55001,
+      "sku": "SKU-0000055001",
+      "name": "Versatile Harness 0000055001",
+      "categoryId": 11,
+      "unitPrice": 89626.10,
+      "isActive": true
+    },
+    {
+      "id": 55101,
+      "sku": "SKU-0000055101",
+      "name": "Lightweight Harness 0000055101",
+      "categoryId": 1,
+      "unitPrice": 44139.14,
+      "isActive": true
+    },
+    {
+      "id": 55201,
+      "sku": "SKU-0000055201",
+      "name": "Rugged Console 0000055201",
+      "categoryId": 15,
+      "unitPrice": 9915.46,
+      "isActive": true
+    },
+    {
+      "id": 55301,
+      "sku": "SKU-0000055301",
+      "name": "Refined Component 0000055301",
+      "categoryId": 1,
+      "unitPrice": 74488.02,
+      "isActive": true
+    },
+    {
+      "id": 55401,
+      "sku": "SKU-0000055401",
+      "name": "Compact Assembly 0000055401",
+      "categoryId": 1,
+      "unitPrice": 99436.20,
+      "isActive": true
+    },
+    {
+      "id": 55501,
+      "sku": "SKU-0000055501",
+      "name": "Classic Gadget 0000055501",
+      "categoryId": 1,
+      "unitPrice": 13155.42,
+      "isActive": false
+    },
+    {
+      "id": 55601,
+      "sku": "SKU-0000055601",
+      "name": "Aerodynamic Assembly 0000055601",
+      "categoryId": 1,
+      "unitPrice": 63853.08,
+      "isActive": true
+    },
+    {
+      "id": 55701,
+      "sku": "SKU-0000055701",
+      "name": "Refined Harness 0000055701",
+      "categoryId": 1,
+      "unitPrice": 83022.02,
+      "isActive": true
+    },
+    {
+      "id": 55801,
+      "sku": "SKU-0000055801",
+      "name": "Rugged Panel 0000055801",
+      "categoryId": 1,
+      "unitPrice": 38359.80,
+      "isActive": true
+    },
+    {
+      "id": 55901,
+      "sku": "SKU-0000055901",
+      "name": "Modular Toolkit 0000055901",
+      "categoryId": 15,
+      "unitPrice": 83870.01,
+      "isActive": false
+    },
+    {
+      "id": 56001,
+      "sku": "SKU-0000056001",
+      "name": "Modular Assembly 0000056001",
+      "categoryId": 1,
+      "unitPrice": 71541.94,
+      "isActive": false
+    },
+    {
+      "id": 56101,
+      "sku": "SKU-0000056101",
+      "name": "Aerodynamic Device 0000056101",
+      "categoryId": 1,
+      "unitPrice": 85788.35,
+      "isActive": true
+    },
+    {
+      "id": 56201,
+      "sku": "SKU-0000056201",
+      "name": "Lightweight Harness 0000056201",
+      "categoryId": 1,
+      "unitPrice": 91739.80,
+      "isActive": true
+    },
+    {
+      "id": 56301,
+      "sku": "SKU-0000056301",
+      "name": "Industrial Component 0000056301",
+      "categoryId": 1,
+      "unitPrice": 67659.40,
+      "isActive": true
+    },
+    {
+      "id": 56401,
+      "sku": "SKU-0000056401",
+      "name": "Rugged Panel 0000056401",
+      "categoryId": 19,
+      "unitPrice": 39643.62,
+      "isActive": true
+    },
+    {
+      "id": 56501,
+      "sku": "SKU-0000056501",
+      "name": "Classic Console 0000056501",
+      "categoryId": 18,
+      "unitPrice": 87150.39,
+      "isActive": false
+    },
+    {
+      "id": 56601,
+      "sku": "SKU-0000056601",
+      "name": "Durable Controller 0000056601",
+      "categoryId": 19,
+      "unitPrice": 75418.84,
+      "isActive": true
+    },
+    {
+      "id": 56701,
+      "sku": "SKU-0000056701",
+      "name": "Industrial Widget 0000056701",
+      "categoryId": 14,
+      "unitPrice": 92255.39,
+      "isActive": true
+    },
+    {
+      "id": 56801,
+      "sku": "SKU-0000056801",
+      "name": "Industrial Module 0000056801",
+      "categoryId": 17,
+      "unitPrice": 31375.64,
+      "isActive": true
+    },
+    {
+      "id": 56901,
+      "sku": "SKU-0000056901",
+      "name": "Ergonomic Console 0000056901",
+      "categoryId": 1,
+      "unitPrice": 66679.33,
+      "isActive": false
+    },
+    {
+      "id": 57001,
+      "sku": "SKU-0000057001",
+      "name": "Modern Console 0000057001",
+      "categoryId": 1,
+      "unitPrice": 24644.01,
+      "isActive": true
+    },
+    {
+      "id": 57101,
+      "sku": "SKU-0000057101",
+      "name": "Modern Panel 0000057101",
+      "categoryId": 1,
+      "unitPrice": 16709.47,
+      "isActive": true
+    },
+    {
+      "id": 57201,
+      "sku": "SKU-0000057201",
+      "name": "Aerodynamic Assembly 0000057201",
+      "categoryId": 4,
+      "unitPrice": 85887.94,
+      "isActive": true
+    },
+    {
+      "id": 57301,
+      "sku": "SKU-0000057301",
+      "name": "Sleek Fixture 0000057301",
+      "categoryId": 1,
+      "unitPrice": 91739.64,
+      "isActive": true
+    },
+    {
+      "id": 57401,
+      "sku": "SKU-0000057401",
+      "name": "Aerodynamic Fixture 0000057401",
+      "categoryId": 1,
+      "unitPrice": 46674.92,
+      "isActive": true
+    },
+    {
+      "id": 57501,
+      "sku": "SKU-0000057501",
+      "name": "Lightweight Module 0000057501",
+      "categoryId": 1,
+      "unitPrice": 4804.88,
+      "isActive": true
+    },
+    {
+      "id": 57601,
+      "sku": "SKU-0000057601",
+      "name": "Sleek Adapter 0000057601",
+      "categoryId": 5,
+      "unitPrice": 12215.36,
+      "isActive": true
+    },
+    {
+      "id": 57701,
+      "sku": "SKU-0000057701",
+      "name": "Classic Widget 0000057701",
+      "categoryId": 4,
+      "unitPrice": 1378.96,
+      "isActive": true
+    },
+    {
+      "id": 57801,
+      "sku": "SKU-0000057801",
+      "name": "Durable Controller 0000057801",
+      "categoryId": 1,
+      "unitPrice": 75262.29,
+      "isActive": false
+    },
+    {
+      "id": 57901,
+      "sku": "SKU-0000057901",
+      "name": "Compact Console 0000057901",
+      "categoryId": 1,
+      "unitPrice": 61171.04,
+      "isActive": false
+    },
+    {
+      "id": 58001,
+      "sku": "SKU-0000058001",
+      "name": "Industrial Panel 0000058001",
+      "categoryId": 4,
+      "unitPrice": 57010.94,
+      "isActive": true
+    },
+    {
+      "id": 58101,
+      "sku": "SKU-0000058101",
+      "name": "Sleek Bracket 0000058101",
+      "categoryId": 1,
+      "unitPrice": 46821.62,
+      "isActive": true
+    },
+    {
+      "id": 58201,
+      "sku": "SKU-0000058201",
+      "name": "Refined Console 0000058201",
+      "categoryId": 1,
+      "unitPrice": 59010.21,
+      "isActive": false
+    },
+    {
+      "id": 58301,
+      "sku": "SKU-0000058301",
+      "name": "Aerodynamic Adapter 0000058301",
+      "categoryId": 1,
+      "unitPrice": 22027.90,
+      "isActive": true
+    },
+    {
+      "id": 58401,
+      "sku": "SKU-0000058401",
+      "name": "Classic Panel 0000058401",
+      "categoryId": 10,
+      "unitPrice": 19579.68,
+      "isActive": true
+    },
+    {
+      "id": 58501,
+      "sku": "SKU-0000058501",
+      "name": "Modern Harness 0000058501",
+      "categoryId": 17,
+      "unitPrice": 447.77,
+      "isActive": false
+    },
+    {
+      "id": 58601,
+      "sku": "SKU-0000058601",
+      "name": "Durable Unit 0000058601",
+      "categoryId": 1,
+      "unitPrice": 59008.36,
+      "isActive": true
+    },
+    {
+      "id": 58701,
+      "sku": "SKU-0000058701",
+      "name": "Ergonomic Unit 0000058701",
+      "categoryId": 1,
+      "unitPrice": 4019.59,
+      "isActive": true
+    },
+    {
+      "id": 58801,
+      "sku": "SKU-0000058801",
+      "name": "Industrial Adapter 0000058801",
+      "categoryId": 1,
+      "unitPrice": 62281.56,
+      "isActive": true
+    },
+    {
+      "id": 58901,
+      "sku": "SKU-0000058901",
+      "name": "Refined Gadget 0000058901",
+      "categoryId": 1,
+      "unitPrice": 41735.36,
+      "isActive": true
+    },
+    {
+      "id": 59001,
+      "sku": "SKU-0000059001",
+      "name": "Sleek Device 0000059001",
+      "categoryId": 16,
+      "unitPrice": 51436.84,
+      "isActive": false
+    },
+    {
+      "id": 59101,
+      "sku": "SKU-0000059101",
+      "name": "Classic Controller 0000059101",
+      "categoryId": 9,
+      "unitPrice": 8270.89,
+      "isActive": true
+    },
+    {
+      "id": 59201,
+      "sku": "SKU-0000059201",
+      "name": "Rugged Component 0000059201",
+      "categoryId": 1,
+      "unitPrice": 10310.36,
+      "isActive": true
+    },
+    {
+      "id": 59301,
+      "sku": "SKU-0000059301",
+      "name": "Durable Unit 0000059301",
+      "categoryId": 1,
+      "unitPrice": 61281.74,
+      "isActive": true
+    },
+    {
+      "id": 59401,
+      "sku": "SKU-0000059401",
+      "name": "Robust System 0000059401",
+      "categoryId": 1,
+      "unitPrice": 58438.24,
+      "isActive": true
+    },
+    {
+      "id": 59501,
+      "sku": "SKU-0000059501",
+      "name": "Modern Adapter 0000059501",
+      "categoryId": 1,
+      "unitPrice": 24479.58,
+      "isActive": true
+    },
+    {
+      "id": 59601,
+      "sku": "SKU-0000059601",
+      "name": "Industrial Gadget 0000059601",
+      "categoryId": 8,
+      "unitPrice": 53995.99,
+      "isActive": true
+    },
+    {
+      "id": 59701,
+      "sku": "SKU-0000059701",
+      "name": "Aerodynamic Component 0000059701",
+      "categoryId": 1,
+      "unitPrice": 8884.99,
+      "isActive": true
+    },
+    {
+      "id": 59801,
+      "sku": "SKU-0000059801",
+      "name": "Robust System 0000059801",
+      "categoryId": 1,
+      "unitPrice": 5296.13,
+      "isActive": true
+    },
+    {
+      "id": 59901,
+      "sku": "SKU-0000059901",
+      "name": "Versatile Module 0000059901",
+      "categoryId": 6,
+      "unitPrice": 95767.22,
+      "isActive": true
+    },
+    {
+      "id": 60001,
+      "sku": "SKU-0000060001",
+      "name": "Ergonomic Unit 0000060001",
+      "categoryId": 1,
+      "unitPrice": 43159.97,
+      "isActive": false
+    },
+    {
+      "id": 60101,
+      "sku": "SKU-0000060101",
+      "name": "Practical Device 0000060101",
+      "categoryId": 15,
+      "unitPrice": 88291.52,
+      "isActive": false
+    },
+    {
+      "id": 60201,
+      "sku": "SKU-0000060201",
+      "name": "Industrial Unit 0000060201",
+      "categoryId": 1,
+      "unitPrice": 25125.44,
+      "isActive": true
+    },
+    {
+      "id": 60301,
+      "sku": "SKU-0000060301",
+      "name": "Rugged System 0000060301",
+      "categoryId": 14,
+      "unitPrice": 6422.96,
+      "isActive": true
+    },
+    {
+      "id": 60401,
+      "sku": "SKU-0000060401",
+      "name": "Robust Toolkit 0000060401",
+      "categoryId": 1,
+      "unitPrice": 34866.30,
+      "isActive": true
+    },
+    {
+      "id": 60501,
+      "sku": "SKU-0000060501",
+      "name": "Classic Widget 0000060501",
+      "categoryId": 1,
+      "unitPrice": 79690.46,
+      "isActive": true
+    },
+    {
+      "id": 60601,
+      "sku": "SKU-0000060601",
+      "name": "Modular System 0000060601",
+      "categoryId": 4,
+      "unitPrice": 63316.21,
+      "isActive": true
+    },
+    {
+      "id": 60701,
+      "sku": "SKU-0000060701",
+      "name": "Sleek Widget 0000060701",
+      "categoryId": 1,
+      "unitPrice": 43383.97,
+      "isActive": true
+    },
+    {
+      "id": 60801,
+      "sku": "SKU-0000060801",
+      "name": "Classic Module 0000060801",
+      "categoryId": 1,
+      "unitPrice": 70732.88,
+      "isActive": true
+    },
+    {
+      "id": 60901,
+      "sku": "SKU-0000060901",
+      "name": "Aerodynamic Device 0000060901",
+      "categoryId": 11,
+      "unitPrice": 94025.70,
+      "isActive": true
+    },
+    {
+      "id": 61001,
+      "sku": "SKU-0000061001",
+      "name": "Practical Console 0000061001",
+      "categoryId": 3,
+      "unitPrice": 28977.91,
+      "isActive": true
+    },
+    {
+      "id": 61101,
+      "sku": "SKU-0000061101",
+      "name": "Versatile Adapter 0000061101",
+      "categoryId": 1,
+      "unitPrice": 67577.10,
+      "isActive": true
+    },
+    {
+      "id": 61201,
+      "sku": "SKU-0000061201",
+      "name": "Sleek Panel 0000061201",
+      "categoryId": 8,
+      "unitPrice": 41656.58,
+      "isActive": true
+    },
+    {
+      "id": 61301,
+      "sku": "SKU-0000061301",
+      "name": "Industrial Adapter 0000061301",
+      "categoryId": 1,
+      "unitPrice": 57264.70,
+      "isActive": true
+    },
+    {
+      "id": 61401,
+      "sku": "SKU-0000061401",
+      "name": "Durable System 0000061401",
+      "categoryId": 17,
+      "unitPrice": 70113.67,
+      "isActive": true
+    },
+    {
+      "id": 61501,
+      "sku": "SKU-0000061501",
+      "name": "Lightweight Toolkit 0000061501",
+      "categoryId": 10,
+      "unitPrice": 15225.18,
+      "isActive": true
+    },
+    {
+      "id": 61601,
+      "sku": "SKU-0000061601",
+      "name": "Robust Gadget 0000061601",
+      "categoryId": 1,
+      "unitPrice": 52036.23,
+      "isActive": true
+    },
+    {
+      "id": 61701,
+      "sku": "SKU-0000061701",
+      "name": "Industrial Gadget 0000061701",
+      "categoryId": 1,
+      "unitPrice": 13812.54,
+      "isActive": false
+    },
+    {
+      "id": 61801,
+      "sku": "SKU-0000061801",
+      "name": "Aerodynamic Gadget 0000061801",
+      "categoryId": 1,
+      "unitPrice": 51853.22,
+      "isActive": true
+    },
+    {
+      "id": 61901,
+      "sku": "SKU-0000061901",
+      "name": "Classic Widget 0000061901",
+      "categoryId": 1,
+      "unitPrice": 77354.71,
+      "isActive": false
+    },
+    {
+      "id": 62001,
+      "sku": "SKU-0000062001",
+      "name": "Classic Controller 0000062001",
+      "categoryId": 12,
+      "unitPrice": 15751.83,
+      "isActive": true
+    },
+    {
+      "id": 62101,
+      "sku": "SKU-0000062101",
+      "name": "Ergonomic Fixture 0000062101",
+      "categoryId": 6,
+      "unitPrice": 24840.19,
+      "isActive": false
+    },
+    {
+      "id": 62201,
+      "sku": "SKU-0000062201",
+      "name": "Durable Device 0000062201",
+      "categoryId": 11,
+      "unitPrice": 56177.27,
+      "isActive": true
+    },
+    {
+      "id": 62301,
+      "sku": "SKU-0000062301",
+      "name": "Compact Gadget 0000062301",
+      "categoryId": 1,
+      "unitPrice": 74888.05,
+      "isActive": true
+    },
+    {
+      "id": 62401,
+      "sku": "SKU-0000062401",
+      "name": "Modular Harness 0000062401",
+      "categoryId": 1,
+      "unitPrice": 61308.00,
+      "isActive": true
+    },
+    {
+      "id": 62501,
+      "sku": "SKU-0000062501",
+      "name": "Industrial Panel 0000062501",
+      "categoryId": 13,
+      "unitPrice": 36192.94,
+      "isActive": true
+    },
+    {
+      "id": 62601,
+      "sku": "SKU-0000062601",
+      "name": "Compact Module 0000062601",
+      "categoryId": 1,
+      "unitPrice": 83947.95,
+      "isActive": true
+    },
+    {
+      "id": 62701,
+      "sku": "SKU-0000062701",
+      "name": "Lightweight Widget 0000062701",
+      "categoryId": 1,
+      "unitPrice": 18518.00,
+      "isActive": true
+    },
+    {
+      "id": 62801,
+      "sku": "SKU-0000062801",
+      "name": "Sleek System 0000062801",
+      "categoryId": 4,
+      "unitPrice": 97752.23,
+      "isActive": true
+    },
+    {
+      "id": 62901,
+      "sku": "SKU-0000062901",
+      "name": "Modular Fixture 0000062901",
+      "categoryId": 15,
+      "unitPrice": 67095.43,
+      "isActive": true
+    },
+    {
+      "id": 63001,
+      "sku": "SKU-0000063001",
+      "name": "Versatile Fixture 0000063001",
+      "categoryId": 16,
+      "unitPrice": 12612.85,
+      "isActive": true
+    },
+    {
+      "id": 63101,
+      "sku": "SKU-0000063101",
+      "name": "Practical Fixture 0000063101",
+      "categoryId": 6,
+      "unitPrice": 4647.30,
+      "isActive": true
+    },
+    {
+      "id": 63201,
+      "sku": "SKU-0000063201",
+      "name": "Practical Assembly 0000063201",
+      "categoryId": 1,
+      "unitPrice": 16000.89,
+      "isActive": true
+    },
+    {
+      "id": 63301,
+      "sku": "SKU-0000063301",
+      "name": "Robust Console 0000063301",
+      "categoryId": 10,
+      "unitPrice": 48797.03,
+      "isActive": true
+    },
+    {
+      "id": 63401,
+      "sku": "SKU-0000063401",
+      "name": "Ergonomic Fixture 0000063401",
+      "categoryId": 10,
+      "unitPrice": 14152.84,
+      "isActive": true
+    },
+    {
+      "id": 63501,
+      "sku": "SKU-0000063501",
+      "name": "Lightweight Bracket 0000063501",
+      "categoryId": 12,
+      "unitPrice": 99667.71,
+      "isActive": true
+    },
+    {
+      "id": 63601,
+      "sku": "SKU-0000063601",
+      "name": "Lightweight Device 0000063601",
+      "categoryId": 1,
+      "unitPrice": 62293.49,
+      "isActive": true
+    },
+    {
+      "id": 63701,
+      "sku": "SKU-0000063701",
+      "name": "Robust Panel 0000063701",
+      "categoryId": 1,
+      "unitPrice": 33754.13,
+      "isActive": true
+    },
+    {
+      "id": 63801,
+      "sku": "SKU-0000063801",
+      "name": "Lightweight Module 0000063801",
+      "categoryId": 14,
+      "unitPrice": 49684.47,
+      "isActive": true
+    },
+    {
+      "id": 63901,
+      "sku": "SKU-0000063901",
+      "name": "Compact Component 0000063901",
+      "categoryId": 1,
+      "unitPrice": 92167.31,
+      "isActive": true
+    },
+    {
+      "id": 64001,
+      "sku": "SKU-0000064001",
+      "name": "Modular Toolkit 0000064001",
+      "categoryId": 16,
+      "unitPrice": 39052.79,
+      "isActive": true
+    },
+    {
+      "id": 64101,
+      "sku": "SKU-0000064101",
+      "name": "Sleek Panel 0000064101",
+      "categoryId": 1,
+      "unitPrice": 79292.90,
+      "isActive": true
+    },
+    {
+      "id": 64201,
+      "sku": "SKU-0000064201",
+      "name": "Practical Bracket 0000064201",
+      "categoryId": 1,
+      "unitPrice": 81310.23,
+      "isActive": true
+    },
+    {
+      "id": 64301,
+      "sku": "SKU-0000064301",
+      "name": "Modern Bracket 0000064301",
+      "categoryId": 13,
+      "unitPrice": 50745.10,
+      "isActive": true
+    },
+    {
+      "id": 64401,
+      "sku": "SKU-0000064401",
+      "name": "Refined Module 0000064401",
+      "categoryId": 1,
+      "unitPrice": 5217.21,
+      "isActive": true
+    },
+    {
+      "id": 64501,
+      "sku": "SKU-0000064501",
+      "name": "Durable Fixture 0000064501",
+      "categoryId": 1,
+      "unitPrice": 82939.68,
+      "isActive": true
+    },
+    {
+      "id": 64601,
+      "sku": "SKU-0000064601",
+      "name": "Classic Widget 0000064601",
+      "categoryId": 1,
+      "unitPrice": 44450.59,
+      "isActive": false
+    },
+    {
+      "id": 64701,
+      "sku": "SKU-0000064701",
+      "name": "Modern Controller 0000064701",
+      "categoryId": 1,
+      "unitPrice": 17772.10,
+      "isActive": true
+    },
+    {
+      "id": 64801,
+      "sku": "SKU-0000064801",
+      "name": "Compact Panel 0000064801",
+      "categoryId": 14,
+      "unitPrice": 64924.42,
+      "isActive": true
+    },
+    {
+      "id": 64901,
+      "sku": "SKU-0000064901",
+      "name": "Aerodynamic Bracket 0000064901",
+      "categoryId": 6,
+      "unitPrice": 73394.99,
+      "isActive": true
+    },
+    {
+      "id": 65001,
+      "sku": "SKU-0000065001",
+      "name": "Classic Unit 0000065001",
+      "categoryId": 1,
+      "unitPrice": 16082.59,
+      "isActive": true
+    },
+    {
+      "id": 65101,
+      "sku": "SKU-0000065101",
+      "name": "Practical Panel 0000065101",
+      "categoryId": 15,
+      "unitPrice": 69638.39,
+      "isActive": true
+    },
+    {
+      "id": 65201,
+      "sku": "SKU-0000065201",
+      "name": "Robust Toolkit 0000065201",
+      "categoryId": 2,
+      "unitPrice": 87503.50,
+      "isActive": true
+    },
+    {
+      "id": 65301,
+      "sku": "SKU-0000065301",
+      "name": "Lightweight Toolkit 0000065301",
+      "categoryId": 1,
+      "unitPrice": 94541.10,
+      "isActive": true
+    },
+    {
+      "id": 65401,
+      "sku": "SKU-0000065401",
+      "name": "Practical Toolkit 0000065401",
+      "categoryId": 1,
+      "unitPrice": 1413.78,
+      "isActive": true
+    },
+    {
+      "id": 65501,
+      "sku": "SKU-0000065501",
+      "name": "Classic Console 0000065501",
+      "categoryId": 6,
+      "unitPrice": 19098.22,
+      "isActive": true
+    },
+    {
+      "id": 65601,
+      "sku": "SKU-0000065601",
+      "name": "Industrial Console 0000065601",
+      "categoryId": 1,
+      "unitPrice": 82131.15,
+      "isActive": false
+    },
+    {
+      "id": 65701,
+      "sku": "SKU-0000065701",
+      "name": "Rugged Controller 0000065701",
+      "categoryId": 13,
+      "unitPrice": 7343.42,
+      "isActive": true
+    },
+    {
+      "id": 65801,
+      "sku": "SKU-0000065801",
+      "name": "Robust System 0000065801",
+      "categoryId": 1,
+      "unitPrice": 88035.91,
+      "isActive": true
+    },
+    {
+      "id": 65901,
+      "sku": "SKU-0000065901",
+      "name": "Refined Bracket 0000065901",
+      "categoryId": 1,
+      "unitPrice": 10015.01,
+      "isActive": true
+    },
+    {
+      "id": 66001,
+      "sku": "SKU-0000066001",
+      "name": "Compact Controller 0000066001",
+      "categoryId": 1,
+      "unitPrice": 98600.04,
+      "isActive": true
+    },
+    {
+      "id": 66101,
+      "sku": "SKU-0000066101",
+      "name": "Sleek Adapter 0000066101",
+      "categoryId": 1,
+      "unitPrice": 18730.67,
+      "isActive": true
+    },
+    {
+      "id": 66201,
+      "sku": "SKU-0000066201",
+      "name": "Lightweight Gadget 0000066201",
+      "categoryId": 1,
+      "unitPrice": 85180.67,
+      "isActive": true
+    },
+    {
+      "id": 66301,
+      "sku": "SKU-0000066301",
+      "name": "Compact Assembly 0000066301",
+      "categoryId": 9,
+      "unitPrice": 46710.45,
+      "isActive": true
+    },
+    {
+      "id": 66401,
+      "sku": "SKU-0000066401",
+      "name": "Precision Widget 0000066401",
+      "categoryId": 12,
+      "unitPrice": 37612.41,
+      "isActive": false
+    },
+    {
+      "id": 66501,
+      "sku": "SKU-0000066501",
+      "name": "Compact Assembly 0000066501",
+      "categoryId": 20,
+      "unitPrice": 14650.67,
+      "isActive": false
+    },
+    {
+      "id": 66601,
+      "sku": "SKU-0000066601",
+      "name": "Robust Console 0000066601",
+      "categoryId": 1,
+      "unitPrice": 88796.17,
+      "isActive": false
+    },
+    {
+      "id": 66701,
+      "sku": "SKU-0000066701",
+      "name": "Sleek System 0000066701",
+      "categoryId": 1,
+      "unitPrice": 69053.38,
+      "isActive": true
+    },
+    {
+      "id": 66801,
+      "sku": "SKU-0000066801",
+      "name": "Lightweight Bracket 0000066801",
+      "categoryId": 15,
+      "unitPrice": 54660.74,
+      "isActive": true
+    },
+    {
+      "id": 66901,
+      "sku": "SKU-0000066901",
+      "name": "Compact Toolkit 0000066901",
+      "categoryId": 1,
+      "unitPrice": 76645.92,
+      "isActive": true
+    },
+    {
+      "id": 67001,
+      "sku": "SKU-0000067001",
+      "name": "Refined Device 0000067001",
+      "categoryId": 8,
+      "unitPrice": 51183.82,
+      "isActive": true
+    },
+    {
+      "id": 67101,
+      "sku": "SKU-0000067101",
+      "name": "Durable Controller 0000067101",
+      "categoryId": 18,
+      "unitPrice": 17006.30,
+      "isActive": true
+    },
+    {
+      "id": 67201,
+      "sku": "SKU-0000067201",
+      "name": "Industrial Unit 0000067201",
+      "categoryId": 15,
+      "unitPrice": 42420.02,
+      "isActive": true
+    },
+    {
+      "id": 67301,
+      "sku": "SKU-0000067301",
+      "name": "Robust Toolkit 0000067301",
+      "categoryId": 1,
+      "unitPrice": 81051.90,
+      "isActive": false
+    },
+    {
+      "id": 67401,
+      "sku": "SKU-0000067401",
+      "name": "Industrial Module 0000067401",
+      "categoryId": 1,
+      "unitPrice": 19377.74,
+      "isActive": true
+    },
+    {
+      "id": 67501,
+      "sku": "SKU-0000067501",
+      "name": "Durable Assembly 0000067501",
+      "categoryId": 16,
+      "unitPrice": 53947.53,
+      "isActive": true
+    },
+    {
+      "id": 67601,
+      "sku": "SKU-0000067601",
+      "name": "Industrial Unit 0000067601",
+      "categoryId": 12,
+      "unitPrice": 27671.67,
+      "isActive": true
+    },
+    {
+      "id": 67701,
+      "sku": "SKU-0000067701",
+      "name": "Modern Harness 0000067701",
+      "categoryId": 8,
+      "unitPrice": 51653.87,
+      "isActive": true
+    },
+    {
+      "id": 67801,
+      "sku": "SKU-0000067801",
+      "name": "Versatile Harness 0000067801",
+      "categoryId": 1,
+      "unitPrice": 78768.22,
+      "isActive": true
+    },
+    {
+      "id": 67901,
+      "sku": "SKU-0000067901",
+      "name": "Ergonomic System 0000067901",
+      "categoryId": 1,
+      "unitPrice": 89156.68,
+      "isActive": true
+    },
+    {
+      "id": 68001,
+      "sku": "SKU-0000068001",
+      "name": "Practical Adapter 0000068001",
+      "categoryId": 1,
+      "unitPrice": 59452.23,
+      "isActive": false
+    },
+    {
+      "id": 68101,
+      "sku": "SKU-0000068101",
+      "name": "Modular Adapter 0000068101",
+      "categoryId": 1,
+      "unitPrice": 9658.97,
+      "isActive": true
+    },
+    {
+      "id": 68201,
+      "sku": "SKU-0000068201",
+      "name": "Refined Console 0000068201",
+      "categoryId": 7,
+      "unitPrice": 80284.06,
+      "isActive": true
+    },
+    {
+      "id": 68301,
+      "sku": "SKU-0000068301",
+      "name": "Durable Controller 0000068301",
+      "categoryId": 1,
+      "unitPrice": 6542.68,
+      "isActive": true
+    },
+    {
+      "id": 68401,
+      "sku": "SKU-0000068401",
+      "name": "Aerodynamic Module 0000068401",
+      "categoryId": 1,
+      "unitPrice": 85644.34,
+      "isActive": true
+    },
+    {
+      "id": 68501,
+      "sku": "SKU-0000068501",
+      "name": "Versatile Toolkit 0000068501",
+      "categoryId": 1,
+      "unitPrice": 31686.24,
+      "isActive": true
+    },
+    {
+      "id": 68601,
+      "sku": "SKU-0000068601",
+      "name": "Practical Fixture 0000068601",
+      "categoryId": 1,
+      "unitPrice": 84955.59,
+      "isActive": true
+    },
+    {
+      "id": 68701,
+      "sku": "SKU-0000068701",
+      "name": "Sleek Toolkit 0000068701",
+      "categoryId": 4,
+      "unitPrice": 8583.60,
+      "isActive": true
+    },
+    {
+      "id": 68801,
+      "sku": "SKU-0000068801",
+      "name": "Modular Component 0000068801",
+      "categoryId": 1,
+      "unitPrice": 92443.29,
+      "isActive": true
+    },
+    {
+      "id": 68901,
+      "sku": "SKU-0000068901",
+      "name": "Durable Fixture 0000068901",
+      "categoryId": 1,
+      "unitPrice": 68293.90,
+      "isActive": true
+    },
+    {
+      "id": 69001,
+      "sku": "SKU-0000069001",
+      "name": "Sleek Device 0000069001",
+      "categoryId": 18,
+      "unitPrice": 16775.95,
+      "isActive": true
+    },
+    {
+      "id": 69101,
+      "sku": "SKU-0000069101",
+      "name": "Ergonomic System 0000069101",
+      "categoryId": 1,
+      "unitPrice": 99260.56,
+      "isActive": true
+    },
+    {
+      "id": 69201,
+      "sku": "SKU-0000069201",
+      "name": "Classic Adapter 0000069201",
+      "categoryId": 2,
+      "unitPrice": 87211.73,
+      "isActive": true
+    },
+    {
+      "id": 69301,
+      "sku": "SKU-0000069301",
+      "name": "Ergonomic Controller 0000069301",
+      "categoryId": 1,
+      "unitPrice": 80161.32,
+      "isActive": true
+    },
+    {
+      "id": 69401,
+      "sku": "SKU-0000069401",
+      "name": "Refined Component 0000069401",
+      "categoryId": 1,
+      "unitPrice": 81166.80,
+      "isActive": true
+    },
+    {
+      "id": 69501,
+      "sku": "SKU-0000069501",
+      "name": "Rugged Toolkit 0000069501",
+      "categoryId": 1,
+      "unitPrice": 51984.26,
+      "isActive": true
+    },
+    {
+      "id": 69601,
+      "sku": "SKU-0000069601",
+      "name": "Refined Component 0000069601",
+      "categoryId": 20,
+      "unitPrice": 50737.95,
+      "isActive": true
+    },
+    {
+      "id": 69701,
+      "sku": "SKU-0000069701",
+      "name": "Aerodynamic Device 0000069701",
+      "categoryId": 15,
+      "unitPrice": 11957.67,
+      "isActive": true
+    },
+    {
+      "id": 69801,
+      "sku": "SKU-0000069801",
+      "name": "Robust System 0000069801",
+      "categoryId": 14,
+      "unitPrice": 65868.21,
+      "isActive": true
+    },
+    {
+      "id": 69901,
+      "sku": "SKU-0000069901",
+      "name": "Rugged Device 0000069901",
+      "categoryId": 10,
+      "unitPrice": 16046.68,
+      "isActive": true
+    },
+    {
+      "id": 70001,
+      "sku": "SKU-0000070001",
+      "name": "Practical Harness 0000070001",
+      "categoryId": 18,
+      "unitPrice": 44812.42,
+      "isActive": true
+    },
+    {
+      "id": 70101,
+      "sku": "SKU-0000070101",
+      "name": "Sleek Module 0000070101",
+      "categoryId": 1,
+      "unitPrice": 91981.29,
+      "isActive": false
+    },
+    {
+      "id": 70201,
+      "sku": "SKU-0000070201",
+      "name": "Durable Module 0000070201",
+      "categoryId": 15,
+      "unitPrice": 22041.85,
+      "isActive": true
+    },
+    {
+      "id": 70301,
+      "sku": "SKU-0000070301",
+      "name": "Modular Module 0000070301",
+      "categoryId": 3,
+      "unitPrice": 63338.65,
+      "isActive": true
+    },
+    {
+      "id": 70401,
+      "sku": "SKU-0000070401",
+      "name": "Industrial Panel 0000070401",
+      "categoryId": 1,
+      "unitPrice": 84163.23,
+      "isActive": true
+    },
+    {
+      "id": 70501,
+      "sku": "SKU-0000070501",
+      "name": "Robust Component 0000070501",
+      "categoryId": 1,
+      "unitPrice": 32306.57,
+      "isActive": false
+    },
+    {
+      "id": 70601,
+      "sku": "SKU-0000070601",
+      "name": "Versatile Console 0000070601",
+      "categoryId": 1,
+      "unitPrice": 98297.30,
+      "isActive": true
+    },
+    {
+      "id": 70701,
+      "sku": "SKU-0000070701",
+      "name": "Refined System 0000070701",
+      "categoryId": 19,
+      "unitPrice": 5811.52,
+      "isActive": true
+    },
+    {
+      "id": 70801,
+      "sku": "SKU-0000070801",
+      "name": "Classic System 0000070801",
+      "categoryId": 1,
+      "unitPrice": 72844.42,
+      "isActive": true
+    },
+    {
+      "id": 70901,
+      "sku": "SKU-0000070901",
+      "name": "Modular Assembly 0000070901",
+      "categoryId": 10,
+      "unitPrice": 89216.16,
+      "isActive": true
+    },
+    {
+      "id": 71001,
+      "sku": "SKU-0000071001",
+      "name": "Modern Widget 0000071001",
+      "categoryId": 1,
+      "unitPrice": 58302.27,
+      "isActive": true
+    },
+    {
+      "id": 71101,
+      "sku": "SKU-0000071101",
+      "name": "Modern Gadget 0000071101",
+      "categoryId": 1,
+      "unitPrice": 31783.83,
+      "isActive": true
+    },
+    {
+      "id": 71201,
+      "sku": "SKU-0000071201",
+      "name": "Rugged Widget 0000071201",
+      "categoryId": 15,
+      "unitPrice": 25873.20,
+      "isActive": true
+    },
+    {
+      "id": 71301,
+      "sku": "SKU-0000071301",
+      "name": "Ergonomic Adapter 0000071301",
+      "categoryId": 1,
+      "unitPrice": 9461.66,
+      "isActive": false
+    },
+    {
+      "id": 71401,
+      "sku": "SKU-0000071401",
+      "name": "Refined Bracket 0000071401",
+      "categoryId": 1,
+      "unitPrice": 61066.48,
+      "isActive": false
+    },
+    {
+      "id": 71501,
+      "sku": "SKU-0000071501",
+      "name": "Robust Unit 0000071501",
+      "categoryId": 19,
+      "unitPrice": 46896.17,
+      "isActive": true
+    },
+    {
+      "id": 71601,
+      "sku": "SKU-0000071601",
+      "name": "Precision Adapter 0000071601",
+      "categoryId": 19,
+      "unitPrice": 90209.86,
+      "isActive": true
+    },
+    {
+      "id": 71701,
+      "sku": "SKU-0000071701",
+      "name": "Sleek Unit 0000071701",
+      "categoryId": 1,
+      "unitPrice": 43773.39,
+      "isActive": false
+    },
+    {
+      "id": 71801,
+      "sku": "SKU-0000071801",
+      "name": "Practical Unit 0000071801",
+      "categoryId": 1,
+      "unitPrice": 22270.46,
+      "isActive": true
+    },
+    {
+      "id": 71901,
+      "sku": "SKU-0000071901",
+      "name": "Compact Assembly 0000071901",
+      "categoryId": 1,
+      "unitPrice": 38463.93,
+      "isActive": true
+    },
+    {
+      "id": 72001,
+      "sku": "SKU-0000072001",
+      "name": "Industrial Harness 0000072001",
+      "categoryId": 1,
+      "unitPrice": 88067.75,
+      "isActive": false
+    },
+    {
+      "id": 72101,
+      "sku": "SKU-0000072101",
+      "name": "Durable Module 0000072101",
+      "categoryId": 3,
+      "unitPrice": 96650.18,
+      "isActive": true
+    },
+    {
+      "id": 72201,
+      "sku": "SKU-0000072201",
+      "name": "Rugged Assembly 0000072201",
+      "categoryId": 1,
+      "unitPrice": 30813.20,
+      "isActive": true
+    },
+    {
+      "id": 72301,
+      "sku": "SKU-0000072301",
+      "name": "Practical Unit 0000072301",
+      "categoryId": 9,
+      "unitPrice": 48772.22,
+      "isActive": false
+    },
+    {
+      "id": 72401,
+      "sku": "SKU-0000072401",
+      "name": "Modern Widget 0000072401",
+      "categoryId": 6,
+      "unitPrice": 7830.00,
+      "isActive": true
+    },
+    {
+      "id": 72501,
+      "sku": "SKU-0000072501",
+      "name": "Lightweight Module 0000072501",
+      "categoryId": 1,
+      "unitPrice": 12167.96,
+      "isActive": true
+    },
+    {
+      "id": 72601,
+      "sku": "SKU-0000072601",
+      "name": "Modular Harness 0000072601",
+      "categoryId": 1,
+      "unitPrice": 17799.45,
+      "isActive": true
+    },
+    {
+      "id": 72701,
+      "sku": "SKU-0000072701",
+      "name": "Practical Fixture 0000072701",
+      "categoryId": 1,
+      "unitPrice": 9291.39,
+      "isActive": true
+    },
+    {
+      "id": 72801,
+      "sku": "SKU-0000072801",
+      "name": "Precision Device 0000072801",
+      "categoryId": 9,
+      "unitPrice": 52501.50,
+      "isActive": true
+    },
+    {
+      "id": 72901,
+      "sku": "SKU-0000072901",
+      "name": "Sleek Widget 0000072901",
+      "categoryId": 17,
+      "unitPrice": 51750.96,
+      "isActive": true
+    },
+    {
+      "id": 73001,
+      "sku": "SKU-0000073001",
+      "name": "Rugged Unit 0000073001",
+      "categoryId": 3,
+      "unitPrice": 75865.05,
+      "isActive": true
+    },
+    {
+      "id": 73101,
+      "sku": "SKU-0000073101",
+      "name": "Versatile Component 0000073101",
+      "categoryId": 1,
+      "unitPrice": 94409.40,
+      "isActive": true
+    },
+    {
+      "id": 73201,
+      "sku": "SKU-0000073201",
+      "name": "Rugged Panel 0000073201",
+      "categoryId": 1,
+      "unitPrice": 93600.55,
+      "isActive": true
+    },
+    {
+      "id": 73301,
+      "sku": "SKU-0000073301",
+      "name": "Classic Panel 0000073301",
+      "categoryId": 1,
+      "unitPrice": 28905.72,
+      "isActive": false
+    },
+    {
+      "id": 73401,
+      "sku": "SKU-0000073401",
+      "name": "Versatile Component 0000073401",
+      "categoryId": 1,
+      "unitPrice": 392.02,
+      "isActive": false
+    },
+    {
+      "id": 73501,
+      "sku": "SKU-0000073501",
+      "name": "Ergonomic Widget 0000073501",
+      "categoryId": 20,
+      "unitPrice": 60670.49,
+      "isActive": true
+    },
+    {
+      "id": 73601,
+      "sku": "SKU-0000073601",
+      "name": "Sleek System 0000073601",
+      "categoryId": 6,
+      "unitPrice": 44799.29,
+      "isActive": true
+    },
+    {
+      "id": 73701,
+      "sku": "SKU-0000073701",
+      "name": "Aerodynamic Bracket 0000073701",
+      "categoryId": 4,
+      "unitPrice": 49207.26,
+      "isActive": false
+    },
+    {
+      "id": 73801,
+      "sku": "SKU-0000073801",
+      "name": "Ergonomic Module 0000073801",
+      "categoryId": 1,
+      "unitPrice": 25662.19,
+      "isActive": true
+    },
+    {
+      "id": 73901,
+      "sku": "SKU-0000073901",
+      "name": "Classic Unit 0000073901",
+      "categoryId": 13,
+      "unitPrice": 50824.74,
+      "isActive": true
+    },
+    {
+      "id": 74001,
+      "sku": "SKU-0000074001",
+      "name": "Classic Controller 0000074001",
+      "categoryId": 11,
+      "unitPrice": 59088.76,
+      "isActive": true
+    },
+    {
+      "id": 74101,
+      "sku": "SKU-0000074101",
+      "name": "Robust Unit 0000074101",
+      "categoryId": 3,
+      "unitPrice": 82531.07,
+      "isActive": true
+    },
+    {
+      "id": 74201,
+      "sku": "SKU-0000074201",
+      "name": "Durable Adapter 0000074201",
+      "categoryId": 1,
+      "unitPrice": 13318.74,
+      "isActive": false
+    },
+    {
+      "id": 74301,
+      "sku": "SKU-0000074301",
+      "name": "Rugged Gadget 0000074301",
+      "categoryId": 1,
+      "unitPrice": 93615.52,
+      "isActive": true
+    },
+    {
+      "id": 74401,
+      "sku": "SKU-0000074401",
+      "name": "Lightweight Toolkit 0000074401",
+      "categoryId": 1,
+      "unitPrice": 57131.73,
+      "isActive": true
+    },
+    {
+      "id": 74501,
+      "sku": "SKU-0000074501",
+      "name": "Modular Assembly 0000074501",
+      "categoryId": 1,
+      "unitPrice": 82396.02,
+      "isActive": true
+    },
+    {
+      "id": 74601,
+      "sku": "SKU-0000074601",
+      "name": "Refined Device 0000074601",
+      "categoryId": 4,
+      "unitPrice": 81711.40,
+      "isActive": true
+    },
+    {
+      "id": 74701,
+      "sku": "SKU-0000074701",
+      "name": "Versatile System 0000074701",
+      "categoryId": 19,
+      "unitPrice": 2295.21,
+      "isActive": true
+    },
+    {
+      "id": 74801,
+      "sku": "SKU-0000074801",
+      "name": "Modern Harness 0000074801",
+      "categoryId": 11,
+      "unitPrice": 87204.99,
+      "isActive": true
+    },
+    {
+      "id": 74901,
+      "sku": "SKU-0000074901",
+      "name": "Industrial Gadget 0000074901",
+      "categoryId": 1,
+      "unitPrice": 44247.46,
+      "isActive": false
+    },
+    {
+      "id": 75001,
+      "sku": "SKU-0000075001",
+      "name": "Robust Module 0000075001",
+      "categoryId": 1,
+      "unitPrice": 45367.26,
+      "isActive": false
+    },
+    {
+      "id": 75101,
+      "sku": "SKU-0000075101",
+      "name": "Durable Bracket 0000075101",
+      "categoryId": 1,
+      "unitPrice": 79694.67,
+      "isActive": true
+    },
+    {
+      "id": 75201,
+      "sku": "SKU-0000075201",
+      "name": "Refined Widget 0000075201",
+      "categoryId": 3,
+      "unitPrice": 55882.15,
+      "isActive": false
+    },
+    {
+      "id": 75301,
+      "sku": "SKU-0000075301",
+      "name": "Modular Device 0000075301",
+      "categoryId": 1,
+      "unitPrice": 77286.38,
+      "isActive": true
+    },
+    {
+      "id": 75401,
+      "sku": "SKU-0000075401",
+      "name": "Refined Panel 0000075401",
+      "categoryId": 12,
+      "unitPrice": 75094.78,
+      "isActive": true
+    },
+    {
+      "id": 75501,
+      "sku": "SKU-0000075501",
+      "name": "Versatile Device 0000075501",
+      "categoryId": 1,
+      "unitPrice": 3606.00,
+      "isActive": true
+    },
+    {
+      "id": 75601,
+      "sku": "SKU-0000075601",
+      "name": "Industrial Widget 0000075601",
+      "categoryId": 1,
+      "unitPrice": 85488.27,
+      "isActive": false
+    },
+    {
+      "id": 75701,
+      "sku": "SKU-0000075701",
+      "name": "Industrial Harness 0000075701",
+      "categoryId": 1,
+      "unitPrice": 58889.07,
+      "isActive": true
+    },
+    {
+      "id": 75801,
+      "sku": "SKU-0000075801",
+      "name": "Practical Controller 0000075801",
+      "categoryId": 1,
+      "unitPrice": 88188.32,
+      "isActive": false
+    },
+    {
+      "id": 75901,
+      "sku": "SKU-0000075901",
+      "name": "Modern Gadget 0000075901",
+      "categoryId": 5,
+      "unitPrice": 95189.18,
+      "isActive": true
+    },
+    {
+      "id": 76001,
+      "sku": "SKU-0000076001",
+      "name": "Precision Module 0000076001",
+      "categoryId": 2,
+      "unitPrice": 55200.03,
+      "isActive": true
+    },
+    {
+      "id": 76101,
+      "sku": "SKU-0000076101",
+      "name": "Versatile Harness 0000076101",
+      "categoryId": 1,
+      "unitPrice": 12215.96,
+      "isActive": true
+    },
+    {
+      "id": 76201,
+      "sku": "SKU-0000076201",
+      "name": "Sleek Module 0000076201",
+      "categoryId": 7,
+      "unitPrice": 85078.61,
+      "isActive": true
+    },
+    {
+      "id": 76301,
+      "sku": "SKU-0000076301",
+      "name": "Durable Fixture 0000076301",
+      "categoryId": 1,
+      "unitPrice": 79683.94,
+      "isActive": true
+    },
+    {
+      "id": 76401,
+      "sku": "SKU-0000076401",
+      "name": "Modern Unit 0000076401",
+      "categoryId": 18,
+      "unitPrice": 206.40,
+      "isActive": true
+    },
+    {
+      "id": 76501,
+      "sku": "SKU-0000076501",
+      "name": "Rugged Fixture 0000076501",
+      "categoryId": 1,
+      "unitPrice": 42077.96,
+      "isActive": true
+    },
+    {
+      "id": 76601,
+      "sku": "SKU-0000076601",
+      "name": "Precision Gadget 0000076601",
+      "categoryId": 1,
+      "unitPrice": 77249.65,
+      "isActive": true
+    },
+    {
+      "id": 76701,
+      "sku": "SKU-0000076701",
+      "name": "Versatile Controller 0000076701",
+      "categoryId": 1,
+      "unitPrice": 98883.87,
+      "isActive": true
+    },
+    {
+      "id": 76801,
+      "sku": "SKU-0000076801",
+      "name": "Aerodynamic Toolkit 0000076801",
+      "categoryId": 1,
+      "unitPrice": 7084.20,
+      "isActive": false
+    },
+    {
+      "id": 76901,
+      "sku": "SKU-0000076901",
+      "name": "Refined Toolkit 0000076901",
+      "categoryId": 12,
+      "unitPrice": 9997.25,
+      "isActive": true
+    },
+    {
+      "id": 77001,
+      "sku": "SKU-0000077001",
+      "name": "Durable Device 0000077001",
+      "categoryId": 12,
+      "unitPrice": 20379.28,
+      "isActive": true
+    },
+    {
+      "id": 77101,
+      "sku": "SKU-0000077101",
+      "name": "Practical System 0000077101",
+      "categoryId": 1,
+      "unitPrice": 53423.37,
+      "isActive": true
+    },
+    {
+      "id": 77201,
+      "sku": "SKU-0000077201",
+      "name": "Rugged Harness 0000077201",
+      "categoryId": 1,
+      "unitPrice": 74737.83,
+      "isActive": true
+    },
+    {
+      "id": 77301,
+      "sku": "SKU-0000077301",
+      "name": "Rugged Console 0000077301",
+      "categoryId": 1,
+      "unitPrice": 72071.77,
+      "isActive": true
+    },
+    {
+      "id": 77401,
+      "sku": "SKU-0000077401",
+      "name": "Practical Gadget 0000077401",
+      "categoryId": 18,
+      "unitPrice": 44969.91,
+      "isActive": true
+    },
+    {
+      "id": 77501,
+      "sku": "SKU-0000077501",
+      "name": "Practical Unit 0000077501",
+      "categoryId": 1,
+      "unitPrice": 4514.28,
+      "isActive": true
+    },
+    {
+      "id": 77601,
+      "sku": "SKU-0000077601",
+      "name": "Durable Fixture 0000077601",
+      "categoryId": 6,
+      "unitPrice": 95222.69,
+      "isActive": true
+    },
+    {
+      "id": 77701,
+      "sku": "SKU-0000077701",
+      "name": "Practical Module 0000077701",
+      "categoryId": 1,
+      "unitPrice": 6.20,
+      "isActive": true
+    },
+    {
+      "id": 77801,
+      "sku": "SKU-0000077801",
+      "name": "Compact Harness 0000077801",
+      "categoryId": 1,
+      "unitPrice": 81678.61,
+      "isActive": true
+    },
+    {
+      "id": 77901,
+      "sku": "SKU-0000077901",
+      "name": "Ergonomic Assembly 0000077901",
+      "categoryId": 1,
+      "unitPrice": 67346.35,
+      "isActive": true
+    },
+    {
+      "id": 78001,
+      "sku": "SKU-0000078001",
+      "name": "Aerodynamic Panel 0000078001",
+      "categoryId": 1,
+      "unitPrice": 79215.39,
+      "isActive": true
+    },
+    {
+      "id": 78101,
+      "sku": "SKU-0000078101",
+      "name": "Modern Module 0000078101",
+      "categoryId": 10,
+      "unitPrice": 97441.12,
+      "isActive": false
+    },
+    {
+      "id": 78201,
+      "sku": "SKU-0000078201",
+      "name": "Modular Unit 0000078201",
+      "categoryId": 9,
+      "unitPrice": 44931.87,
+      "isActive": true
+    },
+    {
+      "id": 78301,
+      "sku": "SKU-0000078301",
+      "name": "Ergonomic Harness 0000078301",
+      "categoryId": 1,
+      "unitPrice": 32358.69,
+      "isActive": true
+    },
+    {
+      "id": 78401,
+      "sku": "SKU-0000078401",
+      "name": "Industrial Panel 0000078401",
+      "categoryId": 14,
+      "unitPrice": 34545.58,
+      "isActive": true
+    },
+    {
+      "id": 78501,
+      "sku": "SKU-0000078501",
+      "name": "Durable Unit 0000078501",
+      "categoryId": 20,
+      "unitPrice": 59472.63,
+      "isActive": true
+    },
+    {
+      "id": 78601,
+      "sku": "SKU-0000078601",
+      "name": "Compact Panel 0000078601",
+      "categoryId": 12,
+      "unitPrice": 27136.95,
+      "isActive": false
+    },
+    {
+      "id": 78701,
+      "sku": "SKU-0000078701",
+      "name": "Robust Widget 0000078701",
+      "categoryId": 1,
+      "unitPrice": 14256.17,
+      "isActive": true
+    },
+    {
+      "id": 78801,
+      "sku": "SKU-0000078801",
+      "name": "Practical Controller 0000078801",
+      "categoryId": 13,
+      "unitPrice": 94093.91,
+      "isActive": true
+    },
+    {
+      "id": 78901,
+      "sku": "SKU-0000078901",
+      "name": "Industrial Adapter 0000078901",
+      "categoryId": 1,
+      "unitPrice": 39932.43,
+      "isActive": true
+    },
+    {
+      "id": 79001,
+      "sku": "SKU-0000079001",
+      "name": "Compact Device 0000079001",
+      "categoryId": 16,
+      "unitPrice": 44705.88,
+      "isActive": true
+    },
+    {
+      "id": 79101,
+      "sku": "SKU-0000079101",
+      "name": "Rugged Module 0000079101",
+      "categoryId": 1,
+      "unitPrice": 2716.41,
+      "isActive": true
+    },
+    {
+      "id": 79201,
+      "sku": "SKU-0000079201",
+      "name": "Ergonomic Unit 0000079201",
+      "categoryId": 1,
+      "unitPrice": 57205.93,
+      "isActive": true
+    },
+    {
+      "id": 79301,
+      "sku": "SKU-0000079301",
+      "name": "Lightweight Panel 0000079301",
+      "categoryId": 1,
+      "unitPrice": 69119.52,
+      "isActive": false
+    },
+    {
+      "id": 79401,
+      "sku": "SKU-0000079401",
+      "name": "Practical Console 0000079401",
+      "categoryId": 1,
+      "unitPrice": 67550.99,
+      "isActive": true
+    },
+    {
+      "id": 79501,
+      "sku": "SKU-0000079501",
+      "name": "Robust Bracket 0000079501",
+      "categoryId": 19,
+      "unitPrice": 20179.89,
+      "isActive": false
+    },
+    {
+      "id": 79601,
+      "sku": "SKU-0000079601",
+      "name": "Durable Bracket 0000079601",
+      "categoryId": 1,
+      "unitPrice": 50924.33,
+      "isActive": true
+    },
+    {
+      "id": 79701,
+      "sku": "SKU-0000079701",
+      "name": "Ergonomic Adapter 0000079701",
+      "categoryId": 1,
+      "unitPrice": 12645.85,
+      "isActive": true
+    },
+    {
+      "id": 79801,
+      "sku": "SKU-0000079801",
+      "name": "Versatile Panel 0000079801",
+      "categoryId": 6,
+      "unitPrice": 38864.48,
+      "isActive": false
+    },
+    {
+      "id": 79901,
+      "sku": "SKU-0000079901",
+      "name": "Modern System 0000079901",
+      "categoryId": 20,
+      "unitPrice": 4678.71,
+      "isActive": false
+    },
+    {
+      "id": 80001,
+      "sku": "SKU-0000080001",
+      "name": "Robust Component 0000080001",
+      "categoryId": 1,
+      "unitPrice": 34673.17,
+      "isActive": true
+    },
+    {
+      "id": 80101,
+      "sku": "SKU-0000080101",
+      "name": "Durable Widget 0000080101",
+      "categoryId": 1,
+      "unitPrice": 76553.47,
+      "isActive": false
+    },
+    {
+      "id": 80201,
+      "sku": "SKU-0000080201",
+      "name": "Lightweight Toolkit 0000080201",
+      "categoryId": 1,
+      "unitPrice": 44629.94,
+      "isActive": true
+    },
+    {
+      "id": 80301,
+      "sku": "SKU-0000080301",
+      "name": "Robust Adapter 0000080301",
+      "categoryId": 1,
+      "unitPrice": 55330.97,
+      "isActive": false
+    },
+    {
+      "id": 80401,
+      "sku": "SKU-0000080401",
+      "name": "Lightweight Controller 0000080401",
+      "categoryId": 8,
+      "unitPrice": 48702.45,
+      "isActive": true
+    },
+    {
+      "id": 80501,
+      "sku": "SKU-0000080501",
+      "name": "Lightweight Module 0000080501",
+      "categoryId": 1,
+      "unitPrice": 69947.14,
+      "isActive": true
+    },
+    {
+      "id": 80601,
+      "sku": "SKU-0000080601",
+      "name": "Industrial Unit 0000080601",
+      "categoryId": 1,
+      "unitPrice": 10034.42,
+      "isActive": false
+    },
+    {
+      "id": 80701,
+      "sku": "SKU-0000080701",
+      "name": "Robust Harness 0000080701",
+      "categoryId": 9,
+      "unitPrice": 86695.49,
+      "isActive": true
+    },
+    {
+      "id": 80801,
+      "sku": "SKU-0000080801",
+      "name": "Durable Assembly 0000080801",
+      "categoryId": 1,
+      "unitPrice": 30439.45,
+      "isActive": true
+    },
+    {
+      "id": 80901,
+      "sku": "SKU-0000080901",
+      "name": "Compact Unit 0000080901",
+      "categoryId": 1,
+      "unitPrice": 94182.79,
+      "isActive": true
+    },
+    {
+      "id": 81001,
+      "sku": "SKU-0000081001",
+      "name": "Lightweight Console 0000081001",
+      "categoryId": 6,
+      "unitPrice": 7774.20,
+      "isActive": true
+    },
+    {
+      "id": 81101,
+      "sku": "SKU-0000081101",
+      "name": "Refined Bracket 0000081101",
+      "categoryId": 1,
+      "unitPrice": 71379.90,
+      "isActive": true
+    },
+    {
+      "id": 81201,
+      "sku": "SKU-0000081201",
+      "name": "Lightweight Module 0000081201",
+      "categoryId": 7,
+      "unitPrice": 83020.65,
+      "isActive": true
+    },
+    {
+      "id": 81301,
+      "sku": "SKU-0000081301",
+      "name": "Rugged Module 0000081301",
+      "categoryId": 3,
+      "unitPrice": 76798.42,
+      "isActive": true
+    },
+    {
+      "id": 81401,
+      "sku": "SKU-0000081401",
+      "name": "Classic Toolkit 0000081401",
+      "categoryId": 1,
+      "unitPrice": 93869.73,
+      "isActive": true
+    },
+    {
+      "id": 81501,
+      "sku": "SKU-0000081501",
+      "name": "Ergonomic Component 0000081501",
+      "categoryId": 1,
+      "unitPrice": 16258.01,
+      "isActive": true
+    },
+    {
+      "id": 81601,
+      "sku": "SKU-0000081601",
+      "name": "Modern Adapter 0000081601",
+      "categoryId": 14,
+      "unitPrice": 68327.90,
+      "isActive": false
+    },
+    {
+      "id": 81701,
+      "sku": "SKU-0000081701",
+      "name": "Refined Adapter 0000081701",
+      "categoryId": 1,
+      "unitPrice": 42402.48,
+      "isActive": true
+    },
+    {
+      "id": 81801,
+      "sku": "SKU-0000081801",
+      "name": "Versatile Console 0000081801",
+      "categoryId": 1,
+      "unitPrice": 35588.89,
+      "isActive": true
+    },
+    {
+      "id": 81901,
+      "sku": "SKU-0000081901",
+      "name": "Lightweight Component 0000081901",
+      "categoryId": 1,
+      "unitPrice": 11857.38,
+      "isActive": true
+    },
+    {
+      "id": 82001,
+      "sku": "SKU-0000082001",
+      "name": "Aerodynamic Controller 0000082001",
+      "categoryId": 1,
+      "unitPrice": 20163.06,
+      "isActive": true
+    },
+    {
+      "id": 82101,
+      "sku": "SKU-0000082101",
+      "name": "Modern Controller 0000082101",
+      "categoryId": 20,
+      "unitPrice": 18990.80,
+      "isActive": true
+    },
+    {
+      "id": 82201,
+      "sku": "SKU-0000082201",
+      "name": "Lightweight Widget 0000082201",
+      "categoryId": 8,
+      "unitPrice": 10831.03,
+      "isActive": true
+    },
+    {
+      "id": 82301,
+      "sku": "SKU-0000082301",
+      "name": "Modular Device 0000082301",
+      "categoryId": 1,
+      "unitPrice": 29050.32,
+      "isActive": true
+    },
+    {
+      "id": 82401,
+      "sku": "SKU-0000082401",
+      "name": "Practical Panel 0000082401",
+      "categoryId": 2,
+      "unitPrice": 32457.49,
+      "isActive": true
+    },
+    {
+      "id": 82501,
+      "sku": "SKU-0000082501",
+      "name": "Precision Bracket 0000082501",
+      "categoryId": 9,
+      "unitPrice": 12217.63,
+      "isActive": false
+    },
+    {
+      "id": 82601,
+      "sku": "SKU-0000082601",
+      "name": "Lightweight Module 0000082601",
+      "categoryId": 10,
+      "unitPrice": 25522.06,
+      "isActive": true
+    },
+    {
+      "id": 82701,
+      "sku": "SKU-0000082701",
+      "name": "Modular Console 0000082701",
+      "categoryId": 1,
+      "unitPrice": 77241.91,
+      "isActive": true
+    },
+    {
+      "id": 82801,
+      "sku": "SKU-0000082801",
+      "name": "Modular Unit 0000082801",
+      "categoryId": 1,
+      "unitPrice": 65237.34,
+      "isActive": false
+    },
+    {
+      "id": 82901,
+      "sku": "SKU-0000082901",
+      "name": "Robust Fixture 0000082901",
+      "categoryId": 1,
+      "unitPrice": 8693.48,
+      "isActive": true
+    },
+    {
+      "id": 83001,
+      "sku": "SKU-0000083001",
+      "name": "Lightweight Assembly 0000083001",
+      "categoryId": 1,
+      "unitPrice": 99826.77,
+      "isActive": true
+    },
+    {
+      "id": 83101,
+      "sku": "SKU-0000083101",
+      "name": "Ergonomic Toolkit 0000083101",
+      "categoryId": 1,
+      "unitPrice": 76617.98,
+      "isActive": true
+    },
+    {
+      "id": 83201,
+      "sku": "SKU-0000083201",
+      "name": "Modern Device 0000083201",
+      "categoryId": 1,
+      "unitPrice": 82630.79,
+      "isActive": true
+    },
+    {
+      "id": 83301,
+      "sku": "SKU-0000083301",
+      "name": "Versatile Widget 0000083301",
+      "categoryId": 1,
+      "unitPrice": 15484.47,
+      "isActive": true
+    },
+    {
+      "id": 83401,
+      "sku": "SKU-0000083401",
+      "name": "Compact Adapter 0000083401",
+      "categoryId": 1,
+      "unitPrice": 83870.72,
+      "isActive": true
+    },
+    {
+      "id": 83501,
+      "sku": "SKU-0000083501",
+      "name": "Sleek Console 0000083501",
+      "categoryId": 1,
+      "unitPrice": 8605.30,
+      "isActive": true
+    },
+    {
+      "id": 83601,
+      "sku": "SKU-0000083601",
+      "name": "Modern Bracket 0000083601",
+      "categoryId": 1,
+      "unitPrice": 46182.89,
+      "isActive": true
+    },
+    {
+      "id": 83701,
+      "sku": "SKU-0000083701",
+      "name": "Aerodynamic Panel 0000083701",
+      "categoryId": 1,
+      "unitPrice": 69102.39,
+      "isActive": true
+    },
+    {
+      "id": 83801,
+      "sku": "SKU-0000083801",
+      "name": "Sleek Fixture 0000083801",
+      "categoryId": 16,
+      "unitPrice": 79065.97,
+      "isActive": true
+    },
+    {
+      "id": 83901,
+      "sku": "SKU-0000083901",
+      "name": "Lightweight Panel 0000083901",
+      "categoryId": 9,
+      "unitPrice": 32680.22,
+      "isActive": true
+    },
+    {
+      "id": 84001,
+      "sku": "SKU-0000084001",
+      "name": "Compact Fixture 0000084001",
+      "categoryId": 1,
+      "unitPrice": 83028.67,
+      "isActive": true
+    },
+    {
+      "id": 84101,
+      "sku": "SKU-0000084101",
+      "name": "Durable Component 0000084101",
+      "categoryId": 17,
+      "unitPrice": 48331.29,
+      "isActive": true
+    },
+    {
+      "id": 84201,
+      "sku": "SKU-0000084201",
+      "name": "Modern System 0000084201",
+      "categoryId": 12,
+      "unitPrice": 95838.44,
+      "isActive": false
+    },
+    {
+      "id": 84301,
+      "sku": "SKU-0000084301",
+      "name": "Durable Panel 0000084301",
+      "categoryId": 1,
+      "unitPrice": 13985.14,
+      "isActive": true
+    },
+    {
+      "id": 84401,
+      "sku": "SKU-0000084401",
+      "name": "Lightweight System 0000084401",
+      "categoryId": 1,
+      "unitPrice": 13276.68,
+      "isActive": true
+    },
+    {
+      "id": 84501,
+      "sku": "SKU-0000084501",
+      "name": "Compact Device 0000084501",
+      "categoryId": 2,
+      "unitPrice": 76990.63,
+      "isActive": true
+    },
+    {
+      "id": 84601,
+      "sku": "SKU-0000084601",
+      "name": "Practical System 0000084601",
+      "categoryId": 1,
+      "unitPrice": 59879.79,
+      "isActive": false
+    },
+    {
+      "id": 84701,
+      "sku": "SKU-0000084701",
+      "name": "Practical Gadget 0000084701",
+      "categoryId": 1,
+      "unitPrice": 96003.04,
+      "isActive": true
+    },
+    {
+      "id": 84801,
+      "sku": "SKU-0000084801",
+      "name": "Precision Bracket 0000084801",
+      "categoryId": 1,
+      "unitPrice": 85124.70,
+      "isActive": true
+    },
+    {
+      "id": 84901,
+      "sku": "SKU-0000084901",
+      "name": "Compact Bracket 0000084901",
+      "categoryId": 17,
+      "unitPrice": 7927.74,
+      "isActive": true
+    },
+    {
+      "id": 85001,
+      "sku": "SKU-0000085001",
+      "name": "Lightweight Toolkit 0000085001",
+      "categoryId": 1,
+      "unitPrice": 10335.36,
+      "isActive": true
+    },
+    {
+      "id": 85101,
+      "sku": "SKU-0000085101",
+      "name": "Versatile System 0000085101",
+      "categoryId": 20,
+      "unitPrice": 74808.21,
+      "isActive": true
+    },
+    {
+      "id": 85201,
+      "sku": "SKU-0000085201",
+      "name": "Compact Bracket 0000085201",
+      "categoryId": 1,
+      "unitPrice": 71180.99,
+      "isActive": false
+    },
+    {
+      "id": 85301,
+      "sku": "SKU-0000085301",
+      "name": "Modular Toolkit 0000085301",
+      "categoryId": 1,
+      "unitPrice": 84074.04,
+      "isActive": true
+    },
+    {
+      "id": 85401,
+      "sku": "SKU-0000085401",
+      "name": "Compact Assembly 0000085401",
+      "categoryId": 9,
+      "unitPrice": 97767.55,
+      "isActive": true
+    },
+    {
+      "id": 85501,
+      "sku": "SKU-0000085501",
+      "name": "Modern Fixture 0000085501",
+      "categoryId": 2,
+      "unitPrice": 89046.58,
+      "isActive": true
+    },
+    {
+      "id": 85601,
+      "sku": "SKU-0000085601",
+      "name": "Robust Panel 0000085601",
+      "categoryId": 1,
+      "unitPrice": 32823.71,
+      "isActive": true
+    },
+    {
+      "id": 85701,
+      "sku": "SKU-0000085701",
+      "name": "Industrial Bracket 0000085701",
+      "categoryId": 1,
+      "unitPrice": 79157.34,
+      "isActive": true
+    },
+    {
+      "id": 85801,
+      "sku": "SKU-0000085801",
+      "name": "Rugged Module 0000085801",
+      "categoryId": 1,
+      "unitPrice": 59554.61,
+      "isActive": true
+    },
+    {
+      "id": 85901,
+      "sku": "SKU-0000085901",
+      "name": "Robust Assembly 0000085901",
+      "categoryId": 1,
+      "unitPrice": 92391.60,
+      "isActive": true
+    },
+    {
+      "id": 86001,
+      "sku": "SKU-0000086001",
+      "name": "Lightweight Module 0000086001",
+      "categoryId": 1,
+      "unitPrice": 80848.25,
+      "isActive": true
+    },
+    {
+      "id": 86101,
+      "sku": "SKU-0000086101",
+      "name": "Precision Module 0000086101",
+      "categoryId": 7,
+      "unitPrice": 98441.75,
+      "isActive": true
+    },
+    {
+      "id": 86201,
+      "sku": "SKU-0000086201",
+      "name": "Rugged Module 0000086201",
+      "categoryId": 4,
+      "unitPrice": 45140.68,
+      "isActive": true
+    },
+    {
+      "id": 86301,
+      "sku": "SKU-0000086301",
+      "name": "Rugged Adapter 0000086301",
+      "categoryId": 1,
+      "unitPrice": 9892.49,
+      "isActive": true
+    },
+    {
+      "id": 86401,
+      "sku": "SKU-0000086401",
+      "name": "Sleek Assembly 0000086401",
+      "categoryId": 1,
+      "unitPrice": 53063.56,
+      "isActive": true
+    },
+    {
+      "id": 86501,
+      "sku": "SKU-0000086501",
+      "name": "Aerodynamic Fixture 0000086501",
+      "categoryId": 1,
+      "unitPrice": 76486.55,
+      "isActive": false
+    },
+    {
+      "id": 86601,
+      "sku": "SKU-0000086601",
+      "name": "Lightweight Controller 0000086601",
+      "categoryId": 16,
+      "unitPrice": 35204.01,
+      "isActive": true
+    },
+    {
+      "id": 86701,
+      "sku": "SKU-0000086701",
+      "name": "Rugged Console 0000086701",
+      "categoryId": 14,
+      "unitPrice": 11779.92,
+      "isActive": true
+    },
+    {
+      "id": 86801,
+      "sku": "SKU-0000086801",
+      "name": "Modern Widget 0000086801",
+      "categoryId": 1,
+      "unitPrice": 40271.80,
+      "isActive": false
+    },
+    {
+      "id": 86901,
+      "sku": "SKU-0000086901",
+      "name": "Robust Toolkit 0000086901",
+      "categoryId": 6,
+      "unitPrice": 69294.65,
+      "isActive": true
+    },
+    {
+      "id": 87001,
+      "sku": "SKU-0000087001",
+      "name": "Aerodynamic Component 0000087001",
+      "categoryId": 1,
+      "unitPrice": 80235.75,
+      "isActive": true
+    },
+    {
+      "id": 87101,
+      "sku": "SKU-0000087101",
+      "name": "Durable Assembly 0000087101",
+      "categoryId": 1,
+      "unitPrice": 93594.41,
+      "isActive": true
+    },
+    {
+      "id": 87201,
+      "sku": "SKU-0000087201",
+      "name": "Industrial Controller 0000087201",
+      "categoryId": 17,
+      "unitPrice": 14748.09,
+      "isActive": false
+    },
+    {
+      "id": 87301,
+      "sku": "SKU-0000087301",
+      "name": "Aerodynamic System 0000087301",
+      "categoryId": 15,
+      "unitPrice": 75150.48,
+      "isActive": true
+    },
+    {
+      "id": 87401,
+      "sku": "SKU-0000087401",
+      "name": "Versatile Toolkit 0000087401",
+      "categoryId": 1,
+      "unitPrice": 82963.30,
+      "isActive": true
+    },
+    {
+      "id": 87501,
+      "sku": "SKU-0000087501",
+      "name": "Versatile System 0000087501",
+      "categoryId": 1,
+      "unitPrice": 38683.33,
+      "isActive": true
+    },
+    {
+      "id": 87601,
+      "sku": "SKU-0000087601",
+      "name": "Compact Console 0000087601",
+      "categoryId": 1,
+      "unitPrice": 73845.62,
+      "isActive": true
+    },
+    {
+      "id": 87701,
+      "sku": "SKU-0000087701",
+      "name": "Lightweight Toolkit 0000087701",
+      "categoryId": 19,
+      "unitPrice": 92723.87,
+      "isActive": true
+    },
+    {
+      "id": 87801,
+      "sku": "SKU-0000087801",
+      "name": "Precision Gadget 0000087801",
+      "categoryId": 20,
+      "unitPrice": 24665.10,
+      "isActive": true
+    },
+    {
+      "id": 87901,
+      "sku": "SKU-0000087901",
+      "name": "Industrial Controller 0000087901",
+      "categoryId": 1,
+      "unitPrice": 2634.97,
+      "isActive": true
+    },
+    {
+      "id": 88001,
+      "sku": "SKU-0000088001",
+      "name": "Sleek Harness 0000088001",
+      "categoryId": 2,
+      "unitPrice": 26428.82,
+      "isActive": true
+    },
+    {
+      "id": 88101,
+      "sku": "SKU-0000088101",
+      "name": "Classic Widget 0000088101",
+      "categoryId": 1,
+      "unitPrice": 82009.90,
+      "isActive": false
+    },
+    {
+      "id": 88201,
+      "sku": "SKU-0000088201",
+      "name": "Aerodynamic Component 0000088201",
+      "categoryId": 10,
+      "unitPrice": 98639.93,
+      "isActive": true
+    },
+    {
+      "id": 88301,
+      "sku": "SKU-0000088301",
+      "name": "Robust Module 0000088301",
+      "categoryId": 1,
+      "unitPrice": 92439.16,
+      "isActive": true
+    },
+    {
+      "id": 88401,
+      "sku": "SKU-0000088401",
+      "name": "Classic Harness 0000088401",
+      "categoryId": 1,
+      "unitPrice": 66975.75,
+      "isActive": true
+    },
+    {
+      "id": 88501,
+      "sku": "SKU-0000088501",
+      "name": "Durable Controller 0000088501",
+      "categoryId": 1,
+      "unitPrice": 789.15,
+      "isActive": false
+    },
+    {
+      "id": 88601,
+      "sku": "SKU-0000088601",
+      "name": "Ergonomic Module 0000088601",
+      "categoryId": 1,
+      "unitPrice": 7995.43,
+      "isActive": true
+    },
+    {
+      "id": 88701,
+      "sku": "SKU-0000088701",
+      "name": "Versatile Bracket 0000088701",
+      "categoryId": 1,
+      "unitPrice": 22559.66,
+      "isActive": true
+    },
+    {
+      "id": 88801,
+      "sku": "SKU-0000088801",
+      "name": "Practical Assembly 0000088801",
+      "categoryId": 20,
+      "unitPrice": 16289.14,
+      "isActive": true
+    },
+    {
+      "id": 88901,
+      "sku": "SKU-0000088901",
+      "name": "Rugged Gadget 0000088901",
+      "categoryId": 1,
+      "unitPrice": 54340.90,
+      "isActive": true
+    },
+    {
+      "id": 89001,
+      "sku": "SKU-0000089001",
+      "name": "Refined Adapter 0000089001",
+      "categoryId": 2,
+      "unitPrice": 75548.72,
+      "isActive": true
+    },
+    {
+      "id": 89101,
+      "sku": "SKU-0000089101",
+      "name": "Robust Component 0000089101",
+      "categoryId": 1,
+      "unitPrice": 72137.20,
+      "isActive": true
+    },
+    {
+      "id": 89201,
+      "sku": "SKU-0000089201",
+      "name": "Sleek Component 0000089201",
+      "categoryId": 14,
+      "unitPrice": 62547.33,
+      "isActive": true
+    },
+    {
+      "id": 89301,
+      "sku": "SKU-0000089301",
+      "name": "Rugged Gadget 0000089301",
+      "categoryId": 1,
+      "unitPrice": 45913.89,
+      "isActive": true
+    },
+    {
+      "id": 89401,
+      "sku": "SKU-0000089401",
+      "name": "Durable Fixture 0000089401",
+      "categoryId": 1,
+      "unitPrice": 13417.54,
+      "isActive": true
+    },
+    {
+      "id": 89501,
+      "sku": "SKU-0000089501",
+      "name": "Ergonomic Gadget 0000089501",
+      "categoryId": 1,
+      "unitPrice": 28829.94,
+      "isActive": true
+    },
+    {
+      "id": 89601,
+      "sku": "SKU-0000089601",
+      "name": "Industrial System 0000089601",
+      "categoryId": 3,
+      "unitPrice": 64583.99,
+      "isActive": true
+    },
+    {
+      "id": 89701,
+      "sku": "SKU-0000089701",
+      "name": "Rugged Panel 0000089701",
+      "categoryId": 16,
+      "unitPrice": 98657.45,
+      "isActive": false
+    },
+    {
+      "id": 89801,
+      "sku": "SKU-0000089801",
+      "name": "Industrial Component 0000089801",
+      "categoryId": 5,
+      "unitPrice": 52812.20,
+      "isActive": true
+    },
+    {
+      "id": 89901,
+      "sku": "SKU-0000089901",
+      "name": "Durable Console 0000089901",
+      "categoryId": 1,
+      "unitPrice": 36331.22,
+      "isActive": true
+    },
+    {
+      "id": 90001,
+      "sku": "SKU-0000090001",
+      "name": "Lightweight Widget 0000090001",
+      "categoryId": 1,
+      "unitPrice": 17787.13,
+      "isActive": true
+    },
+    {
+      "id": 90101,
+      "sku": "SKU-0000090101",
+      "name": "Lightweight Widget 0000090101",
+      "categoryId": 18,
+      "unitPrice": 93104.95,
+      "isActive": true
+    },
+    {
+      "id": 90201,
+      "sku": "SKU-0000090201",
+      "name": "Sleek Controller 0000090201",
+      "categoryId": 10,
+      "unitPrice": 13462.15,
+      "isActive": true
+    },
+    {
+      "id": 90301,
+      "sku": "SKU-0000090301",
+      "name": "Refined Module 0000090301",
+      "categoryId": 1,
+      "unitPrice": 81621.93,
+      "isActive": true
+    },
+    {
+      "id": 90401,
+      "sku": "SKU-0000090401",
+      "name": "Precision Fixture 0000090401",
+      "categoryId": 1,
+      "unitPrice": 87489.91,
+      "isActive": true
+    },
+    {
+      "id": 90501,
+      "sku": "SKU-0000090501",
+      "name": "Rugged Controller 0000090501",
+      "categoryId": 1,
+      "unitPrice": 58593.43,
+      "isActive": true
+    },
+    {
+      "id": 90601,
+      "sku": "SKU-0000090601",
+      "name": "Modern Controller 0000090601",
+      "categoryId": 3,
+      "unitPrice": 52935.95,
+      "isActive": true
+    },
+    {
+      "id": 90701,
+      "sku": "SKU-0000090701",
+      "name": "Refined System 0000090701",
+      "categoryId": 1,
+      "unitPrice": 65788.01,
+      "isActive": true
+    },
+    {
+      "id": 90801,
+      "sku": "SKU-0000090801",
+      "name": "Modern Unit 0000090801",
+      "categoryId": 9,
+      "unitPrice": 3046.94,
+      "isActive": true
+    },
+    {
+      "id": 90901,
+      "sku": "SKU-0000090901",
+      "name": "Sleek Unit 0000090901",
+      "categoryId": 13,
+      "unitPrice": 86637.89,
+      "isActive": true
+    },
+    {
+      "id": 91001,
+      "sku": "SKU-0000091001",
+      "name": "Durable Fixture 0000091001",
+      "categoryId": 1,
+      "unitPrice": 70141.73,
+      "isActive": true
+    },
+    {
+      "id": 91101,
+      "sku": "SKU-0000091101",
+      "name": "Modern Harness 0000091101",
+      "categoryId": 13,
+      "unitPrice": 25691.97,
+      "isActive": false
+    },
+    {
+      "id": 91201,
+      "sku": "SKU-0000091201",
+      "name": "Robust Module 0000091201",
+      "categoryId": 1,
+      "unitPrice": 82143.17,
+      "isActive": true
+    },
+    {
+      "id": 91301,
+      "sku": "SKU-0000091301",
+      "name": "Versatile Harness 0000091301",
+      "categoryId": 1,
+      "unitPrice": 54884.06,
+      "isActive": true
+    },
+    {
+      "id": 91401,
+      "sku": "SKU-0000091401",
+      "name": "Aerodynamic Assembly 0000091401",
+      "categoryId": 1,
+      "unitPrice": 29304.54,
+      "isActive": true
+    },
+    {
+      "id": 91501,
+      "sku": "SKU-0000091501",
+      "name": "Modern Widget 0000091501",
+      "categoryId": 1,
+      "unitPrice": 36138.17,
+      "isActive": true
+    },
+    {
+      "id": 91601,
+      "sku": "SKU-0000091601",
+      "name": "Modular Harness 0000091601",
+      "categoryId": 1,
+      "unitPrice": 47347.32,
+      "isActive": true
+    },
+    {
+      "id": 91701,
+      "sku": "SKU-0000091701",
+      "name": "Sleek Controller 0000091701",
+      "categoryId": 12,
+      "unitPrice": 53286.81,
+      "isActive": true
+    },
+    {
+      "id": 91801,
+      "sku": "SKU-0000091801",
+      "name": "Classic Widget 0000091801",
+      "categoryId": 20,
+      "unitPrice": 18321.83,
+      "isActive": true
+    },
+    {
+      "id": 91901,
+      "sku": "SKU-0000091901",
+      "name": "Classic Gadget 0000091901",
+      "categoryId": 1,
+      "unitPrice": 70829.82,
+      "isActive": false
+    },
+    {
+      "id": 92001,
+      "sku": "SKU-0000092001",
+      "name": "Sleek Controller 0000092001",
+      "categoryId": 5,
+      "unitPrice": 65862.18,
+      "isActive": true
+    },
+    {
+      "id": 92101,
+      "sku": "SKU-0000092101",
+      "name": "Refined Component 0000092101",
+      "categoryId": 2,
+      "unitPrice": 27105.22,
+      "isActive": true
+    },
+    {
+      "id": 92201,
+      "sku": "SKU-0000092201",
+      "name": "Versatile Device 0000092201",
+      "categoryId": 1,
+      "unitPrice": 53287.04,
+      "isActive": false
+    },
+    {
+      "id": 92301,
+      "sku": "SKU-0000092301",
+      "name": "Compact Widget 0000092301",
+      "categoryId": 15,
+      "unitPrice": 13677.51,
+      "isActive": true
+    },
+    {
+      "id": 92401,
+      "sku": "SKU-0000092401",
+      "name": "Rugged Adapter 0000092401",
+      "categoryId": 1,
+      "unitPrice": 73877.15,
+      "isActive": false
+    },
+    {
+      "id": 92501,
+      "sku": "SKU-0000092501",
+      "name": "Robust Device 0000092501",
+      "categoryId": 1,
+      "unitPrice": 9862.76,
+      "isActive": true
+    },
+    {
+      "id": 92601,
+      "sku": "SKU-0000092601",
+      "name": "Modern Harness 0000092601",
+      "categoryId": 5,
+      "unitPrice": 65345.86,
+      "isActive": true
+    },
+    {
+      "id": 92701,
+      "sku": "SKU-0000092701",
+      "name": "Lightweight Fixture 0000092701",
+      "categoryId": 1,
+      "unitPrice": 65391.56,
+      "isActive": false
+    },
+    {
+      "id": 92801,
+      "sku": "SKU-0000092801",
+      "name": "Robust Component 0000092801",
+      "categoryId": 1,
+      "unitPrice": 39342.80,
+      "isActive": true
+    },
+    {
+      "id": 92901,
+      "sku": "SKU-0000092901",
+      "name": "Modern Component 0000092901",
+      "categoryId": 1,
+      "unitPrice": 38700.70,
+      "isActive": true
+    },
+    {
+      "id": 93001,
+      "sku": "SKU-0000093001",
+      "name": "Classic Gadget 0000093001",
+      "categoryId": 19,
+      "unitPrice": 95980.65,
+      "isActive": true
+    },
+    {
+      "id": 93101,
+      "sku": "SKU-0000093101",
+      "name": "Ergonomic Module 0000093101",
+      "categoryId": 1,
+      "unitPrice": 92201.32,
+      "isActive": true
+    },
+    {
+      "id": 93201,
+      "sku": "SKU-0000093201",
+      "name": "Compact Toolkit 0000093201",
+      "categoryId": 1,
+      "unitPrice": 74402.57,
+      "isActive": true
+    },
+    {
+      "id": 93301,
+      "sku": "SKU-0000093301",
+      "name": "Refined Harness 0000093301",
+      "categoryId": 11,
+      "unitPrice": 24279.95,
+      "isActive": true
+    },
+    {
+      "id": 93401,
+      "sku": "SKU-0000093401",
+      "name": "Durable Toolkit 0000093401",
+      "categoryId": 1,
+      "unitPrice": 22181.14,
+      "isActive": true
+    },
+    {
+      "id": 93501,
+      "sku": "SKU-0000093501",
+      "name": "Industrial System 0000093501",
+      "categoryId": 1,
+      "unitPrice": 11882.70,
+      "isActive": true
+    },
+    {
+      "id": 93601,
+      "sku": "SKU-0000093601",
+      "name": "Industrial Bracket 0000093601",
+      "categoryId": 1,
+      "unitPrice": 15151.60,
+      "isActive": true
+    },
+    {
+      "id": 93701,
+      "sku": "SKU-0000093701",
+      "name": "Versatile Device 0000093701",
+      "categoryId": 1,
+      "unitPrice": 18920.33,
+      "isActive": true
+    },
+    {
+      "id": 93801,
+      "sku": "SKU-0000093801",
+      "name": "Modular Adapter 0000093801",
+      "categoryId": 1,
+      "unitPrice": 14699.20,
+      "isActive": true
+    },
+    {
+      "id": 93901,
+      "sku": "SKU-0000093901",
+      "name": "Refined Harness 0000093901",
+      "categoryId": 1,
+      "unitPrice": 54851.09,
+      "isActive": true
+    },
+    {
+      "id": 94001,
+      "sku": "SKU-0000094001",
+      "name": "Classic Module 0000094001",
+      "categoryId": 1,
+      "unitPrice": 81003.45,
+      "isActive": true
+    },
+    {
+      "id": 94101,
+      "sku": "SKU-0000094101",
+      "name": "Robust Component 0000094101",
+      "categoryId": 17,
+      "unitPrice": 24772.35,
+      "isActive": true
+    },
+    {
+      "id": 94201,
+      "sku": "SKU-0000094201",
+      "name": "Ergonomic Device 0000094201",
+      "categoryId": 1,
+      "unitPrice": 90978.87,
+      "isActive": true
+    },
+    {
+      "id": 94301,
+      "sku": "SKU-0000094301",
+      "name": "Compact Gadget 0000094301",
+      "categoryId": 9,
+      "unitPrice": 43085.89,
+      "isActive": true
+    },
+    {
+      "id": 94401,
+      "sku": "SKU-0000094401",
+      "name": "Precision Console 0000094401",
+      "categoryId": 14,
+      "unitPrice": 23168.52,
+      "isActive": true
+    },
+    {
+      "id": 94501,
+      "sku": "SKU-0000094501",
+      "name": "Precision Harness 0000094501",
+      "categoryId": 1,
+      "unitPrice": 43397.37,
+      "isActive": true
+    },
+    {
+      "id": 94601,
+      "sku": "SKU-0000094601",
+      "name": "Refined Panel 0000094601",
+      "categoryId": 12,
+      "unitPrice": 20793.64,
+      "isActive": true
+    },
+    {
+      "id": 94701,
+      "sku": "SKU-0000094701",
+      "name": "Durable System 0000094701",
+      "categoryId": 1,
+      "unitPrice": 53557.99,
+      "isActive": true
+    },
+    {
+      "id": 94801,
+      "sku": "SKU-0000094801",
+      "name": "Lightweight System 0000094801",
+      "categoryId": 7,
+      "unitPrice": 74584.38,
+      "isActive": true
+    },
+    {
+      "id": 94901,
+      "sku": "SKU-0000094901",
+      "name": "Lightweight Panel 0000094901",
+      "categoryId": 1,
+      "unitPrice": 99092.12,
+      "isActive": true
+    },
+    {
+      "id": 95001,
+      "sku": "SKU-0000095001",
+      "name": "Practical Module 0000095001",
+      "categoryId": 4,
+      "unitPrice": 34262.99,
+      "isActive": true
+    },
+    {
+      "id": 95101,
+      "sku": "SKU-0000095101",
+      "name": "Sleek Controller 0000095101",
+      "categoryId": 4,
+      "unitPrice": 42064.30,
+      "isActive": false
+    },
+    {
+      "id": 95201,
+      "sku": "SKU-0000095201",
+      "name": "Precision Module 0000095201",
+      "categoryId": 12,
+      "unitPrice": 15221.19,
+      "isActive": true
+    },
+    {
+      "id": 95301,
+      "sku": "SKU-0000095301",
+      "name": "Modern Adapter 0000095301",
+      "categoryId": 2,
+      "unitPrice": 42537.56,
+      "isActive": true
+    },
+    {
+      "id": 95401,
+      "sku": "SKU-0000095401",
+      "name": "Compact Gadget 0000095401",
+      "categoryId": 6,
+      "unitPrice": 82054.12,
+      "isActive": true
+    },
+    {
+      "id": 95501,
+      "sku": "SKU-0000095501",
+      "name": "Precision System 0000095501",
+      "categoryId": 1,
+      "unitPrice": 15982.80,
+      "isActive": true
+    },
+    {
+      "id": 95601,
+      "sku": "SKU-0000095601",
+      "name": "Precision Panel 0000095601",
+      "categoryId": 1,
+      "unitPrice": 22313.75,
+      "isActive": true
+    },
+    {
+      "id": 95701,
+      "sku": "SKU-0000095701",
+      "name": "Industrial Assembly 0000095701",
+      "categoryId": 1,
+      "unitPrice": 16511.02,
+      "isActive": false
+    },
+    {
+      "id": 95801,
+      "sku": "SKU-0000095801",
+      "name": "Industrial Widget 0000095801",
+      "categoryId": 9,
+      "unitPrice": 11870.29,
+      "isActive": false
+    },
+    {
+      "id": 95901,
+      "sku": "SKU-0000095901",
+      "name": "Lightweight Assembly 0000095901",
+      "categoryId": 5,
+      "unitPrice": 14265.00,
+      "isActive": true
+    },
+    {
+      "id": 96001,
+      "sku": "SKU-0000096001",
+      "name": "Practical Unit 0000096001",
+      "categoryId": 10,
+      "unitPrice": 49963.43,
+      "isActive": true
+    },
+    {
+      "id": 96101,
+      "sku": "SKU-0000096101",
+      "name": "Versatile Toolkit 0000096101",
+      "categoryId": 6,
+      "unitPrice": 50724.58,
+      "isActive": true
+    },
+    {
+      "id": 96201,
+      "sku": "SKU-0000096201",
+      "name": "Rugged Device 0000096201",
+      "categoryId": 1,
+      "unitPrice": 12793.38,
+      "isActive": true
+    },
+    {
+      "id": 96301,
+      "sku": "SKU-0000096301",
+      "name": "Aerodynamic Module 0000096301",
+      "categoryId": 20,
+      "unitPrice": 83358.48,
+      "isActive": true
+    },
+    {
+      "id": 96401,
+      "sku": "SKU-0000096401",
+      "name": "Compact System 0000096401",
+      "categoryId": 13,
+      "unitPrice": 36246.23,
+      "isActive": true
+    },
+    {
+      "id": 96501,
+      "sku": "SKU-0000096501",
+      "name": "Practical Bracket 0000096501",
+      "categoryId": 1,
+      "unitPrice": 64540.08,
+      "isActive": true
+    },
+    {
+      "id": 96601,
+      "sku": "SKU-0000096601",
+      "name": "Modern Harness 0000096601",
+      "categoryId": 1,
+      "unitPrice": 28541.37,
+      "isActive": true
+    },
+    {
+      "id": 96701,
+      "sku": "SKU-0000096701",
+      "name": "Rugged Module 0000096701",
+      "categoryId": 1,
+      "unitPrice": 48354.53,
+      "isActive": false
+    },
+    {
+      "id": 96801,
+      "sku": "SKU-0000096801",
+      "name": "Industrial Adapter 0000096801",
+      "categoryId": 18,
+      "unitPrice": 23538.35,
+      "isActive": true
+    },
+    {
+      "id": 96901,
+      "sku": "SKU-0000096901",
+      "name": "Practical Device 0000096901",
+      "categoryId": 11,
+      "unitPrice": 42726.89,
+      "isActive": true
+    },
+    {
+      "id": 97001,
+      "sku": "SKU-0000097001",
+      "name": "Sleek Controller 0000097001",
+      "categoryId": 1,
+      "unitPrice": 26389.19,
+      "isActive": false
+    },
+    {
+      "id": 97101,
+      "sku": "SKU-0000097101",
+      "name": "Modular System 0000097101",
+      "categoryId": 1,
+      "unitPrice": 72687.72,
+      "isActive": false
+    },
+    {
+      "id": 97201,
+      "sku": "SKU-0000097201",
+      "name": "Compact Bracket 0000097201",
+      "categoryId": 1,
+      "unitPrice": 41485.33,
+      "isActive": true
+    },
+    {
+      "id": 97301,
+      "sku": "SKU-0000097301",
+      "name": "Sleek Toolkit 0000097301",
+      "categoryId": 1,
+      "unitPrice": 79690.64,
+      "isActive": false
+    },
+    {
+      "id": 97401,
+      "sku": "SKU-0000097401",
+      "name": "Modern Unit 0000097401",
+      "categoryId": 5,
+      "unitPrice": 3826.46,
+      "isActive": true
+    },
+    {
+      "id": 97501,
+      "sku": "SKU-0000097501",
+      "name": "Durable Unit 0000097501",
+      "categoryId": 1,
+      "unitPrice": 83247.38,
+      "isActive": true
+    },
+    {
+      "id": 97601,
+      "sku": "SKU-0000097601",
+      "name": "Modern Console 0000097601",
+      "categoryId": 1,
+      "unitPrice": 22466.69,
+      "isActive": true
+    },
+    {
+      "id": 97701,
+      "sku": "SKU-0000097701",
+      "name": "Modular System 0000097701",
+      "categoryId": 1,
+      "unitPrice": 75793.51,
+      "isActive": false
+    },
+    {
+      "id": 97801,
+      "sku": "SKU-0000097801",
+      "name": "Industrial Fixture 0000097801",
+      "categoryId": 1,
+      "unitPrice": 24416.08,
+      "isActive": false
+    },
+    {
+      "id": 97901,
+      "sku": "SKU-0000097901",
+      "name": "Classic Widget 0000097901",
+      "categoryId": 1,
+      "unitPrice": 70973.94,
+      "isActive": true
+    },
+    {
+      "id": 98001,
+      "sku": "SKU-0000098001",
+      "name": "Practical Toolkit 0000098001",
+      "categoryId": 1,
+      "unitPrice": 3235.63,
+      "isActive": true
+    },
+    {
+      "id": 98101,
+      "sku": "SKU-0000098101",
+      "name": "Sleek Widget 0000098101",
+      "categoryId": 8,
+      "unitPrice": 25451.74,
+      "isActive": true
+    },
+    {
+      "id": 98201,
+      "sku": "SKU-0000098201",
+      "name": "Practical Controller 0000098201",
+      "categoryId": 1,
+      "unitPrice": 97365.14,
+      "isActive": true
+    },
+    {
+      "id": 98301,
+      "sku": "SKU-0000098301",
+      "name": "Practical Controller 0000098301",
+      "categoryId": 1,
+      "unitPrice": 14538.34,
+      "isActive": false
+    },
+    {
+      "id": 98401,
+      "sku": "SKU-0000098401",
+      "name": "Classic Fixture 0000098401",
+      "categoryId": 12,
+      "unitPrice": 8301.37,
+      "isActive": true
+    },
+    {
+      "id": 98501,
+      "sku": "SKU-0000098501",
+      "name": "Lightweight Adapter 0000098501",
+      "categoryId": 1,
+      "unitPrice": 51609.72,
+      "isActive": true
+    },
+    {
+      "id": 98601,
+      "sku": "SKU-0000098601",
+      "name": "Industrial Fixture 0000098601",
+      "categoryId": 1,
+      "unitPrice": 62890.99,
+      "isActive": true
+    },
+    {
+      "id": 98701,
+      "sku": "SKU-0000098701",
+      "name": "Precision Console 0000098701",
+      "categoryId": 5,
+      "unitPrice": 23135.63,
+      "isActive": true
+    },
+    {
+      "id": 98801,
+      "sku": "SKU-0000098801",
+      "name": "Practical Toolkit 0000098801",
+      "categoryId": 9,
+      "unitPrice": 81281.05,
+      "isActive": true
+    },
+    {
+      "id": 98901,
+      "sku": "SKU-0000098901",
+      "name": "Industrial Toolkit 0000098901",
+      "categoryId": 1,
+      "unitPrice": 33863.93,
+      "isActive": true
+    },
+    {
+      "id": 99001,
+      "sku": "SKU-0000099001",
+      "name": "Durable Gadget 0000099001",
+      "categoryId": 1,
+      "unitPrice": 51326.41,
+      "isActive": true
+    },
+    {
+      "id": 99101,
+      "sku": "SKU-0000099101",
+      "name": "Lightweight Module 0000099101",
+      "categoryId": 16,
+      "unitPrice": 54565.30,
+      "isActive": true
+    },
+    {
+      "id": 99201,
+      "sku": "SKU-0000099201",
+      "name": "Modular Panel 0000099201",
+      "categoryId": 1,
+      "unitPrice": 68898.21,
+      "isActive": true
+    },
+    {
+      "id": 99301,
+      "sku": "SKU-0000099301",
+      "name": "Lightweight Component 0000099301",
+      "categoryId": 7,
+      "unitPrice": 29371.88,
+      "isActive": false
+    },
+    {
+      "id": 99401,
+      "sku": "SKU-0000099401",
+      "name": "Practical Module 0000099401",
+      "categoryId": 1,
+      "unitPrice": 84624.68,
+      "isActive": true
+    },
+    {
+      "id": 99501,
+      "sku": "SKU-0000099501",
+      "name": "Robust Widget 0000099501",
+      "categoryId": 18,
+      "unitPrice": 38167.05,
+      "isActive": true
+    },
+    {
+      "id": 99601,
+      "sku": "SKU-0000099601",
+      "name": "Modern Bracket 0000099601",
+      "categoryId": 1,
+      "unitPrice": 24130.87,
+      "isActive": true
+    },
+    {
+      "id": 99701,
+      "sku": "SKU-0000099701",
+      "name": "Precision Bracket 0000099701",
+      "categoryId": 13,
+      "unitPrice": 44370.44,
+      "isActive": true
+    },
+    {
+      "id": 99801,
+      "sku": "SKU-0000099801",
+      "name": "Industrial Panel 0000099801",
+      "categoryId": 20,
+      "unitPrice": 8326.93,
+      "isActive": true
+    },
+    {
+      "id": 99901,
+      "sku": "SKU-0000099901",
+      "name": "Industrial Unit 0000099901",
+      "categoryId": 16,
+      "unitPrice": 75983.18,
+      "isActive": true
+    }
+  ]
+}

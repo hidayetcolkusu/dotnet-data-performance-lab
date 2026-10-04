@@ -1,0 +1,22 @@
+{
+  "jobId": "6b79f85a-80d5-4912-9718-4d35c37b6053",
+  "fileHash": "c9a573cd1756bdb60a57db28fa49c33b015dfdc0db9c8ce15ad23cceb6ee0138",
+  "parserVersion": 1,
+  "status": "CompletedWithErrors",
+  "totalRecords": 3,
+  "inserted": 2,
+  "skipped": 0,
+  "rejected": 1,
+  "lastProcessedRecord": 3,
+  "lastErrorCode": "InjectedImportFaultException",
+  "createdAtUtc": "2026-09-13T11:09:35.2668972",
+  "completedAtUtc": "2026-09-13T11:09:38.0109445",
+  "rejectedRows": [
+    {
+      "recordNumber": 3,
+      "sku": "IMP-0000000201",
+      "errorCode": "DuplicateSkuInFile",
+      "outcome": "Rejected"
+    }
+  ]
+}

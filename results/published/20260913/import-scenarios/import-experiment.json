@@ -1,0 +1,86 @@
+{
+  "schema": "dpl.import-experiment.v1",
+  "runId": "20260913T110918Z",
+  "database": "DataPerformanceLab_Test_import110918",
+  "batchSize": 100,
+  "notes": [
+    "Every exit code here is the real CLI exit code of the command shown, not an assertion.",
+    "Scenario 6 exits 2 because it returns the stored result of a job that had rejections.",
+    "A different byte sequence carrying the same products would create its own job and skip them.",
+    "Reports are regenerated from SQL with the original CSV absent.",
+    "Scenario 7 holds the applock from a separate SQL session so the refusal is deterministic."
+  ],
+  "scenarios": [
+    {
+      "scenario": "1-success",
+      "expectation": "every row accepted; exit 0",
+      "command": "dpl import --file data/samples/catalog-valid.csv --batch-size 100 --database DataPerformanceLab_Test_import110918",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "matched": true,
+      "log": "logs/1-success.log"
+    },
+    {
+      "scenario": "2-file-rejected",
+      "expectation": "bad header rejects the whole file; exit 1 and no job created",
+      "command": "dpl import --file data/samples/catalog-bad-header.csv --batch-size 100 --database DataPerformanceLab_Test_import110918",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "matched": true,
+      "log": "logs/2-file-rejected.log"
+    },
+    {
+      "scenario": "3-row-rejected",
+      "expectation": "invalid rows are rejected, valid rows land; exit 2",
+      "command": "dpl import --file data/samples/catalog-mixed.csv --batch-size 100 --database DataPerformanceLab_Test_import110918",
+      "expectedExit": 2,
+      "actualExit": 2,
+      "matched": true,
+      "log": "logs/3-row-rejected.log"
+    },
+    {
+      "scenario": "4-interrupted-before-commit",
+      "expectation": "aborts before batch 2 commits; exit 1, job left resumable",
+      "command": "dpl import --file data/samples/catalog-duplicate-sku.csv --batch-size 1 --fail-before-commit-on-batch 2 --database DataPerformanceLab_Test_import110918",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "matched": true,
+      "log": "logs/4-interrupted-before-commit.log"
+    },
+    {
+      "scenario": "5-resumed",
+      "expectation": "resumes from the SQL checkpoint without the CSV; completes with rejections",
+      "command": "dpl resume --job-id 6b79f85a-80d5-4912-9718-4d35c37b6053 --batch-size 1 --database DataPerformanceLab_Test_import110918",
+      "expectedExit": 2,
+      "actualExit": 2,
+      "matched": true,
+      "log": "logs/5-resumed.log"
+    },
+    {
+      "scenario": "6-reimport-same-bytes",
+      "expectation": "identical bytes return the stored result: same job id, same exit 2",
+      "command": "dpl import --file data/samples/catalog-mixed.csv --batch-size 100 --database DataPerformanceLab_Test_import110918",
+      "expectedExit": 2,
+      "actualExit": 2,
+      "matched": true,
+      "log": "logs/6-reimport-same-bytes.log"
+    },
+    {
+      "scenario": "7-busy",
+      "expectation": "another session holds the import lock; exit 3 and nothing is changed",
+      "command": "dpl import --file data/samples/catalog-valid.csv --batch-size 100 --database DataPerformanceLab_Test_import110918",
+      "expectedExit": 3,
+      "actualExit": 3,
+      "matched": true,
+      "log": "logs/7-busy.log"
+    }
+  ],
+  "jobIds": {
+    "success": "35dec81d-299f-4d56-a3f2-935018de7a2a",
+    "mixed": "5a3ddd40-50ca-4953-8988-3b0c5978db5b",
+    "interrupted": "6b79f85a-80d5-4912-9718-4d35c37b6053",
+    "reimport": "5a3ddd40-50ca-4953-8988-3b0c5978db5b"
+  },
+  "reimportReusedTheJob": true,
+  "status": "completed"
+}

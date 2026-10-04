@@ -1,0 +1,1914 @@
+{
+  "experiment": "Projection",
+  "categoryId": 20,
+  "rowCount": 50,
+  "resultsIdentical": true,
+  "resultHashByVariant": {
+    "EntityThenMap": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB",
+    "SqlProjection": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+  },
+  "roundStats": [
+    {
+      "round": 1,
+      "variant": 2,
+      "sampleCount": 20,
+      "minMs": 2.7221,
+      "meanMs": 5.265140000000001,
+      "medianMs": 3.3515,
+      "p95Ms": 9.1902,
+      "maxMs": 15.5227
+    },
+    {
+      "round": 1,
+      "variant": 3,
+      "sampleCount": 20,
+      "minMs": 1.8711,
+      "meanMs": 2.753635,
+      "medianMs": 2.2445,
+      "p95Ms": 5.8047,
+      "maxMs": 7.7653
+    },
+    {
+      "round": 2,
+      "variant": 2,
+      "sampleCount": 20,
+      "minMs": 2.3832,
+      "meanMs": 3.0329650000000004,
+      "medianMs": 2.7671,
+      "p95Ms": 3.8541,
+      "maxMs": 7.2721
+    },
+    {
+      "round": 2,
+      "variant": 3,
+      "sampleCount": 20,
+      "minMs": 1.7173,
+      "meanMs": 2.367655,
+      "medianMs": 1.9349,
+      "p95Ms": 2.6473,
+      "maxMs": 10.1289
+    },
+    {
+      "round": 3,
+      "variant": 2,
+      "sampleCount": 20,
+      "minMs": 2.2722,
+      "meanMs": 2.475555,
+      "medianMs": 2.4921,
+      "p95Ms": 2.586,
+      "maxMs": 2.704
+    },
+    {
+      "round": 3,
+      "variant": 3,
+      "sampleCount": 20,
+      "minMs": 1.4737,
+      "meanMs": 1.659205,
+      "medianMs": 1.6221,
+      "p95Ms": 1.8612,
+      "maxMs": 1.8621
+    },
+    {
+      "round": 4,
+      "variant": 2,
+      "sampleCount": 20,
+      "minMs": 2.521,
+      "meanMs": 2.8162250000000006,
+      "medianMs": 2.8291,
+      "p95Ms": 3.0041,
+      "maxMs": 3.0482
+    },
+    {
+      "round": 4,
+      "variant": 3,
+      "sampleCount": 20,
+      "minMs": 1.4881,
+      "meanMs": 1.5968349999999998,
+      "medianMs": 1.5651,
+      "p95Ms": 1.7508,
+      "maxMs": 1.9854
+    },
+    {
+      "round": 5,
+      "variant": 2,
+      "sampleCount": 20,
+      "minMs": 2.5743,
+      "meanMs": 2.9110799999999997,
+      "medianMs": 2.9295,
+      "p95Ms": 3.149,
+      "maxMs": 3.1508
+    },
+    {
+      "round": 5,
+      "variant": 3,
+      "sampleCount": 20,
+      "minMs": 1.5119,
+      "meanMs": 1.6226500000000001,
+      "medianMs": 1.5965,
+      "p95Ms": 1.7434,
+      "maxMs": 1.7948
+    }
+  ],
+  "samples": [
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 1,
+      "elapsedMs": 9.1902,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 2,
+      "elapsedMs": 5.8054,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 3,
+      "elapsedMs": 3.3687,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 4,
+      "elapsedMs": 2.8687,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 5,
+      "elapsedMs": 2.7221,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 6,
+      "elapsedMs": 2.9333,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 7,
+      "elapsedMs": 3.0009,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 8,
+      "elapsedMs": 2.7924,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 9,
+      "elapsedMs": 2.7412,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 10,
+      "elapsedMs": 7.4065,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 11,
+      "elapsedMs": 8.9486,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 12,
+      "elapsedMs": 15.5227,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 13,
+      "elapsedMs": 3.6649,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 14,
+      "elapsedMs": 3.3091,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 15,
+      "elapsedMs": 8.1669,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 16,
+      "elapsedMs": 6.3981,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 17,
+      "elapsedMs": 6.6877,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 18,
+      "elapsedMs": 3.2325,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 19,
+      "elapsedMs": 3.1914,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 20,
+      "elapsedMs": 3.3515,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 1,
+      "elapsedMs": 2.59,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 2,
+      "elapsedMs": 2.2445,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 3,
+      "elapsedMs": 7.7653,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 4,
+      "elapsedMs": 5.8047,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 5,
+      "elapsedMs": 3.7589,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 6,
+      "elapsedMs": 2.4887,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 7,
+      "elapsedMs": 2.4228,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 8,
+      "elapsedMs": 2.3042,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 9,
+      "elapsedMs": 2.2145,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 10,
+      "elapsedMs": 2.3883,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 11,
+      "elapsedMs": 2.2248,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 12,
+      "elapsedMs": 2.0574,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 13,
+      "elapsedMs": 2.1181,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 14,
+      "elapsedMs": 2.0646,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 15,
+      "elapsedMs": 2.3039,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 16,
+      "elapsedMs": 2.3397,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 17,
+      "elapsedMs": 2.0801,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 18,
+      "elapsedMs": 2.051,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 19,
+      "elapsedMs": 1.8711,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 1,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 20,
+      "elapsedMs": 1.9801,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 1,
+      "elapsedMs": 1.9349,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 2,
+      "elapsedMs": 1.8365,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 3,
+      "elapsedMs": 1.9861,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 4,
+      "elapsedMs": 1.781,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 5,
+      "elapsedMs": 1.7577,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 6,
+      "elapsedMs": 1.9683,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 7,
+      "elapsedMs": 2.2127,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 8,
+      "elapsedMs": 1.9737,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 9,
+      "elapsedMs": 1.949,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 10,
+      "elapsedMs": 1.8187,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 11,
+      "elapsedMs": 1.8345,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 12,
+      "elapsedMs": 1.7585,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 13,
+      "elapsedMs": 10.1289,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 14,
+      "elapsedMs": 2.6473,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 15,
+      "elapsedMs": 2.1086,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 16,
+      "elapsedMs": 2.2801,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 17,
+      "elapsedMs": 2.1023,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 18,
+      "elapsedMs": 1.8102,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 19,
+      "elapsedMs": 1.7173,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 20,
+      "elapsedMs": 1.7468,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 1,
+      "elapsedMs": 3.3052,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 2,
+      "elapsedMs": 3.8541,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 3,
+      "elapsedMs": 2.9442,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 4,
+      "elapsedMs": 2.8206,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 5,
+      "elapsedMs": 2.8193,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 6,
+      "elapsedMs": 2.7671,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 7,
+      "elapsedMs": 2.8729,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 8,
+      "elapsedMs": 2.7827,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 9,
+      "elapsedMs": 2.6326,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 10,
+      "elapsedMs": 2.629,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 11,
+      "elapsedMs": 2.737,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 12,
+      "elapsedMs": 3.0694,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 13,
+      "elapsedMs": 7.2721,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 14,
+      "elapsedMs": 2.5769,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 15,
+      "elapsedMs": 2.4886,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 16,
+      "elapsedMs": 2.653,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 17,
+      "elapsedMs": 2.8454,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 18,
+      "elapsedMs": 2.6698,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 19,
+      "elapsedMs": 2.5362,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 2,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 20,
+      "elapsedMs": 2.3832,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 1,
+      "elapsedMs": 2.5204,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 2,
+      "elapsedMs": 2.5785,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 3,
+      "elapsedMs": 2.586,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 4,
+      "elapsedMs": 2.5328,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 5,
+      "elapsedMs": 2.4478,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 6,
+      "elapsedMs": 2.2722,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 7,
+      "elapsedMs": 2.4921,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 8,
+      "elapsedMs": 2.5691,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 9,
+      "elapsedMs": 2.5092,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 10,
+      "elapsedMs": 2.704,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 11,
+      "elapsedMs": 2.4025,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 12,
+      "elapsedMs": 2.5633,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 13,
+      "elapsedMs": 2.5361,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 14,
+      "elapsedMs": 2.3612,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 15,
+      "elapsedMs": 2.3626,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 16,
+      "elapsedMs": 2.3997,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 17,
+      "elapsedMs": 2.2811,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 18,
+      "elapsedMs": 2.4276,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 19,
+      "elapsedMs": 2.3928,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 20,
+      "elapsedMs": 2.5721,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 1,
+      "elapsedMs": 1.8612,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 2,
+      "elapsedMs": 1.7681,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 3,
+      "elapsedMs": 1.5975,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 4,
+      "elapsedMs": 1.7727,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 5,
+      "elapsedMs": 1.5278,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 6,
+      "elapsedMs": 1.7971,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 7,
+      "elapsedMs": 1.8621,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 8,
+      "elapsedMs": 1.8098,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 9,
+      "elapsedMs": 1.6927,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 10,
+      "elapsedMs": 1.7694,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 11,
+      "elapsedMs": 1.5892,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 12,
+      "elapsedMs": 1.6349,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 13,
+      "elapsedMs": 1.5489,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 14,
+      "elapsedMs": 1.5153,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 15,
+      "elapsedMs": 1.4737,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 16,
+      "elapsedMs": 1.5342,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 17,
+      "elapsedMs": 1.701,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 18,
+      "elapsedMs": 1.5746,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 19,
+      "elapsedMs": 1.6221,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 3,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 20,
+      "elapsedMs": 1.5318,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 1,
+      "elapsedMs": 1.5546,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 2,
+      "elapsedMs": 1.5752,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 3,
+      "elapsedMs": 1.5152,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 4,
+      "elapsedMs": 1.6917,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 5,
+      "elapsedMs": 1.5694,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 6,
+      "elapsedMs": 1.5924,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 7,
+      "elapsedMs": 1.6708,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 8,
+      "elapsedMs": 1.5482,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 9,
+      "elapsedMs": 1.5651,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 10,
+      "elapsedMs": 1.5062,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 11,
+      "elapsedMs": 1.5076,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 12,
+      "elapsedMs": 1.5206,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 13,
+      "elapsedMs": 1.491,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 14,
+      "elapsedMs": 1.4881,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 15,
+      "elapsedMs": 1.54,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 16,
+      "elapsedMs": 1.7508,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 17,
+      "elapsedMs": 1.6288,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 18,
+      "elapsedMs": 1.587,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 19,
+      "elapsedMs": 1.6486,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 3,
+      "sampleIndex": 20,
+      "elapsedMs": 1.9854,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 1,
+      "elapsedMs": 2.58,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 2,
+      "elapsedMs": 2.8291,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 3,
+      "elapsedMs": 2.908,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 4,
+      "elapsedMs": 2.8954,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 5,
+      "elapsedMs": 2.8611,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 6,
+      "elapsedMs": 3.0482,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 7,
+      "elapsedMs": 2.9528,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 8,
+      "elapsedMs": 2.903,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 9,
+      "elapsedMs": 2.9509,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 10,
+      "elapsedMs": 2.7377,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 11,
+      "elapsedMs": 2.6448,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 12,
+      "elapsedMs": 2.8823,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 13,
+      "elapsedMs": 3.0041,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 14,
+      "elapsedMs": 2.6672,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 15,
+      "elapsedMs": 2.9318,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 16,
+      "elapsedMs": 2.8025,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 17,
+      "elapsedMs": 2.8151,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 18,
+      "elapsedMs": 2.6454,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 19,
+      "elapsedMs": 2.521,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 4,
+      "roundOrder": "BA",
+      "variant": 2,
+      "sampleIndex": 20,
+      "elapsedMs": 2.7441,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 1,
+      "elapsedMs": 2.794,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 2,
+      "elapsedMs": 2.6862,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 3,
+      "elapsedMs": 2.7967,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 4,
+      "elapsedMs": 3.0452,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 5,
+      "elapsedMs": 3.0186,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 6,
+      "elapsedMs": 3.0899,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 7,
+      "elapsedMs": 3.0049,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 8,
+      "elapsedMs": 3.149,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 9,
+      "elapsedMs": 3.1508,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 10,
+      "elapsedMs": 3.0037,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 11,
+      "elapsedMs": 3.0402,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 12,
+      "elapsedMs": 2.8894,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 13,
+      "elapsedMs": 2.9295,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 14,
+      "elapsedMs": 2.7628,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 15,
+      "elapsedMs": 3.0216,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 16,
+      "elapsedMs": 2.9672,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 17,
+      "elapsedMs": 2.6638,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 18,
+      "elapsedMs": 2.9279,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 19,
+      "elapsedMs": 2.7059,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 2,
+      "sampleIndex": 20,
+      "elapsedMs": 2.5743,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 1,
+      "elapsedMs": 1.6715,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 2,
+      "elapsedMs": 1.6277,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 3,
+      "elapsedMs": 1.7062,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 4,
+      "elapsedMs": 1.7948,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 5,
+      "elapsedMs": 1.7434,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 6,
+      "elapsedMs": 1.674,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 7,
+      "elapsedMs": 1.5304,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 8,
+      "elapsedMs": 1.555,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 9,
+      "elapsedMs": 1.6824,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 10,
+      "elapsedMs": 1.6606,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 11,
+      "elapsedMs": 1.5514,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 12,
+      "elapsedMs": 1.6149,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 13,
+      "elapsedMs": 1.5757,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 14,
+      "elapsedMs": 1.5119,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 15,
+      "elapsedMs": 1.591,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 16,
+      "elapsedMs": 1.56,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 17,
+      "elapsedMs": 1.5665,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 18,
+      "elapsedMs": 1.6539,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 19,
+      "elapsedMs": 1.5852,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    },
+    {
+      "round": 5,
+      "roundOrder": "AB",
+      "variant": 3,
+      "sampleIndex": 20,
+      "elapsedMs": 1.5965,
+      "rowCount": 50,
+      "resultHash": "965AF452929C8CA38346A8E7C72A877C6F127A1875324BC448979397B3BD55DB"
+    }
+  ]
+}
