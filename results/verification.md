@@ -13,8 +13,8 @@ began, are in [history/](history/verification-2026-09-11-to-10-04.md). Nothing b
 | Integration tests | **106 passed**, 0 failed, 0 skipped, against real SQL Server and Redis containers |
 | Release build | 0 warnings, 0 errors (`TreatWarningsAsErrors` is on) |
 | `dotnet format --verify-no-changes` | exit 0 |
-| Fresh clone of the release commit | recorded in the next commit after the release |
-| CI on the release commit | recorded in the next commit after the release |
+| Fresh clone of the release commit | `ecc2a895e17bc20a2ca69c401aa6ac94876ec82f`, cloned with `git clone --no-local`: locked restore from scratch, Release build, **185 unit + 106 integration passed, 0 failed, 0 skipped**, `dotnet format` exit 0, README flow and k6 smoke (900/900 checks) exit 0, tree clean afterwards |
+| CI on the release commit | **success**, [run 37213488651](https://github.com/hidayetcolkusu/dotnet-data-performance-lab/actions/runs/37213488651) on `ecc2a895e17bc20a2ca69c401aa6ac94876ec82f` (`build-and-test` and `hygiene` both passed) |
 
 The tree hashes identify the code independently of any commit SHA. They are the same trees the
 canonical Q3 measurement was taken on
